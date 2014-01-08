@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Serveur: localhost
--- G√©n√©r√© le : Mer 04 Mai 2011 √† 08:18
+-- GÈnÈrÈ le : Mer 04 Mai 2011 ‡ 08:18
 -- Version du serveur: 5.0.67
 -- Version de PHP: 5.2.6
 
@@ -12,7 +12,7 @@ SET FOREIGN_KEY_CHECKS=0;
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 
 --
--- Base de donn√©es: `Sooth ERP 2_063_0`
+-- Base de donnÈes: `Sooth ERP 2_063_0`
 --
 
 -- --------------------------------------------------------
@@ -133,7 +133,7 @@ CREATE TABLE IF NOT EXISTS `agendas_events` (
   KEY `ref_agenda` (`ref_agenda`),
   KEY `ref_agenda_event_parent` (`ref_agenda_event_parent`),
   KEY `id_type_event` (`id_type_event`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Liste des √©v√®nements d''un agenda';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Liste des ÈvËnements d''un agenda';
 
 --
 -- Contenu de la table `agendas_events`
@@ -151,7 +151,7 @@ CREATE TABLE IF NOT EXISTS `agendas_events_location` (
   `id_stock` smallint(5) unsigned NOT NULL,
   `quantite` double default NULL,
   PRIMARY KEY  (`ref_agenda_event`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Quantit√© des √©v√©nements location dans l''agenda';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='QuantitÈ des ÈvÈnements location dans l''agenda';
 
 --
 -- Contenu de la table `agendas_events_location`
@@ -259,19 +259,19 @@ CREATE TABLE IF NOT EXISTS `agendas_permissions` (
 --
 
 INSERT INTO `agendas_permissions` (`id_permission`, `lib_permission`, `desc_permission`, `id_permission_parent`, `ordre`) VALUES
-(0, 'Permission refus√©e', 'Permission refus√©e pour r√©aliser l''action demand√©e.\r\nCe doit peut porter sur :\r\n- les agendas\r\n- les types d''√©v√©nements\r\n- les types d''agendas', NULL, 0),
-(1, 'Voir des agendas', 'Ce droit porte sur les agendas\r\n\r\nIl autorise √† voir les agendas (et les √©v√©nements qui le compose)', NULL, 1),
-(2, 'Modifier des agendas', 'Ce droit porte sur les agendas\r\n\r\nIl autorise √† voir et √† modifier* les agendas\r\n\r\nmodifier :\r\n- ajouter un √©v√©nement\r\n- supprimer un √©v√©nement\r\n- √©diter un √©v√©nement', 1, 2),
-(3, 'Cr√©er/supprimer des agendas', 'Ce droit porte sur les agendas\r\n\r\nIl autorise √† voir, √† modifier, √† cr√©er et √† supprimer les agendas', 2, 3),
-(5, 'Voir la disponibilit√©', '', 1, 5),
-(6, 'Voir la totalit√© de l''√©v√©nement', '', 1, 6),
-(7, 'Modifier √©v√©nement de ce type', '', 1, 7),
-(10, 'Voir les agendas [listes d''agendas]', 'Ce droit porte sur les listes d''agendas\r\n\r\nIl autorise √† voir les agendas de la liste s√©lectionn√©e', 1, 10),
-(20, 'Modifier les agendas [listes d''agendas]', 'Ce droit porte sur les listes d''agendas\r\n\r\nIl autorise √† voir et √† modifier les agendas de la liste s√©lectionn√©e', 2, 20),
-(500, 'Voir la disponibilit√© [type d''√©v√©nement]', 'Ce droit porte sur les type d''√©v√©nement.\r\n\r\nIl autorise √† voir une partie des donn√©es* des √©v√©nements du type s√©lectionn√©.\r\n\r\n*les donn√©es visibles d√© l''√©v√©nement sont:\r\n- ref de l''agenda\r\n- ref des √©v√©nements fils/parent\r\n- date et dur√©e\r\n- type de l''√©v√©', 5, 500),
-(600, 'Voir tout l''√©v√©nement [type d''√©v√©nement]', 'Ce droit porte sur les type d''√©v√©nement.\r\n\r\nIl autorise √† voir la totalit√© des donn√©es des √©v√©nements du type s√©lectionn√©.\r\n', 6, 600),
-(700, 'Modifier un √©v√©nement [type d''√©v√©nement]', 'Ce droit porte sur les type d''√©v√©nement.\r\n\r\nIl autorise √† voir et √† modifier la totalit√© des donn√©es du type s√©lectionn√©.', 3, 700),
-(9999, 'Permission accord√©e', 'Permission accord√©e pour r√©aliser l''action demand√©e.\r\nCe doit peut porter sur :\r\n- les agendas\r\n- les types d''√©v√©nements\r\n- les types d''agendas', NULL, 50);
+(0, 'Permission refusÈe', 'Permission refusÈe pour rÈaliser l''action demandÈe.\r\nCe doit peut porter sur :\r\n- les agendas\r\n- les types d''ÈvÈnements\r\n- les types d''agendas', NULL, 0),
+(1, 'Voir des agendas', 'Ce droit porte sur les agendas\r\n\r\nIl autorise ‡ voir les agendas (et les ÈvÈnements qui le compose)', NULL, 1),
+(2, 'Modifier des agendas', 'Ce droit porte sur les agendas\r\n\r\nIl autorise ‡ voir et ‡ modifier* les agendas\r\n\r\nmodifier :\r\n- ajouter un ÈvÈnement\r\n- supprimer un ÈvÈnement\r\n- Èditer un ÈvÈnement', 1, 2),
+(3, 'CrÈer/supprimer des agendas', 'Ce droit porte sur les agendas\r\n\r\nIl autorise ‡ voir, ‡ modifier, ‡ crÈer et ‡ supprimer les agendas', 2, 3),
+(5, 'Voir la disponibilitÈ', '', 1, 5),
+(6, 'Voir la totalitÈ de l''ÈvÈnement', '', 1, 6),
+(7, 'Modifier ÈvÈnement de ce type', '', 1, 7),
+(10, 'Voir les agendas [listes d''agendas]', 'Ce droit porte sur les listes d''agendas\r\n\r\nIl autorise ‡ voir les agendas de la liste sÈlectionnÈe', 1, 10),
+(20, 'Modifier les agendas [listes d''agendas]', 'Ce droit porte sur les listes d''agendas\r\n\r\nIl autorise ‡ voir et ‡ modifier les agendas de la liste sÈlectionnÈe', 2, 20),
+(500, 'Voir la disponibilitÈ [type d''ÈvÈnement]', 'Ce droit porte sur les type d''ÈvÈnement.\r\n\r\nIl autorise ‡ voir une partie des donnÈes* des ÈvÈnements du type sÈlectionnÈ.\r\n\r\n*les donnÈes visibles dÈ l''ÈvÈnement sont:\r\n- ref de l''agenda\r\n- ref des ÈvÈnements fils/parent\r\n- date et durÈe\r\n- type de l''ÈvÈ', 5, 500),
+(600, 'Voir tout l''ÈvÈnement [type d''ÈvÈnement]', 'Ce droit porte sur les type d''ÈvÈnement.\r\n\r\nIl autorise ‡ voir la totalitÈ des donnÈes des ÈvÈnements du type sÈlectionnÈ.\r\n', 6, 600),
+(700, 'Modifier un ÈvÈnement [type d''ÈvÈnement]', 'Ce droit porte sur les type d''ÈvÈnement.\r\n\r\nIl autorise ‡ voir et ‡ modifier la totalitÈ des donnÈes du type sÈlectionnÈ.', 3, 700),
+(9999, 'Permission accordÈe', 'Permission accordÈe pour rÈaliser l''action demandÈe.\r\nCe doit peut porter sur :\r\n- les agendas\r\n- les types d''ÈvÈnements\r\n- les types d''agendas', NULL, 50);
 
 -- --------------------------------------------------------
 
@@ -292,7 +292,7 @@ CREATE TABLE IF NOT EXISTS `agendas_types` (
 INSERT INTO `agendas_types` (`id_type_agenda`, `lib_type_agenda`) VALUES
 (1, 'Location Materiel'),
 (2, 'Contact'),
-(3, 'R√©servation de Ressource');
+(3, 'RÈservation de Ressource');
 
 -- --------------------------------------------------------
 
@@ -306,7 +306,7 @@ CREATE TABLE IF NOT EXISTS `agendas_types_contacts` (
   `type_event_defaut` smallint(5) unsigned NOT NULL default '2',
   KEY `ref_agenda` (`ref_agenda`),
   KEY `ref_contact` (`ref_contact`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Liste des agendas ratach√©s √† un contact';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Liste des agendas ratachÈs ‡ un contact';
 
 --
 -- Contenu de la table `agendas_types_contacts`
@@ -325,7 +325,7 @@ CREATE TABLE IF NOT EXISTS `agendas_types_location` (
   `type_event_defaut` smallint(5) unsigned NOT NULL default '1',
   KEY `ref_agenda` (`ref_agenda`),
   KEY `ref_article` (`ref_article`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Liste des agendas ratach√©s √† un article';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Liste des agendas ratachÈs ‡ un article';
 
 --
 -- Contenu de la table `agendas_types_location`
@@ -344,7 +344,7 @@ CREATE TABLE IF NOT EXISTS `agendas_types_ressources` (
   `type_event_defaut` smallint(5) unsigned NOT NULL default '3',
   KEY `ref_agenda` (`ref_agenda`),
   KEY `ref_ressource` (`ref_ressource`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Liste des agendas ratach√©s √† une ressource';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Liste des agendas ratachÈs ‡ une ressource';
 
 --
 -- Contenu de la table `agendas_types_ressources`
@@ -363,7 +363,7 @@ CREATE TABLE IF NOT EXISTS `agendas_users_agendas_affichage` (
   `affiche` tinyint(1) NOT NULL default '1',
   KEY `ref_user` (`ref_user`),
   KEY `ref_agenda` (`ref_agenda`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Liste des agendas s√©lectionn√© par un user';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Liste des agendas sÈlectionnÈ par un user';
 
 --
 -- Contenu de la table `agendas_users_agendas_affichage`
@@ -458,7 +458,7 @@ CREATE TABLE IF NOT EXISTS `annuaire_categories` (
   `ordre` tinyint(3) unsigned NOT NULL,
   `app_tarifs` enum('HT','TTC') NOT NULL default 'HT',
   PRIMARY KEY  (`id_categorie`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COMMENT='Liste des cat√©gories de contacts' AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COMMENT='Liste des catÈgories de contacts' AUTO_INCREMENT=6 ;
 
 --
 -- Contenu de la table `annuaire_categories`
@@ -515,9 +515,9 @@ CREATE TABLE IF NOT EXISTS `annuaire_liaisons_types` (
 
 INSERT INTO `annuaire_liaisons_types` (`id_liaison_type`, `lib_liaison_type`, `lib_liaison_type_vers`, `lib_liaison_type_depuis`, `ordre`, `actif`, `systeme`) VALUES
 (1, 'Membre', '%LIB_CONTACT% est membre de ', '%LIB_CONTACT%  a pour membre ', 1, 1, 0),
-(2, 'Dirigeant', '%LIB_CONTACT%  dirige ', '%LIB_CONTACT%  est dirig√©(e) par ', 2, 1, 0),
-(3, 'Salari√©', '%LIB_CONTACT%  est salari√©(e) de ', '%LIB_CONTACT%  a pour salari√©(e) ', 3, 1, 0),
-(4, 'Conseil', '%LIB_CONTACT%  est conseill√©(e) de ', '%LIB_CONTACT%  a pour conseill√©(e) ', 4, 1, 0);
+(2, 'Dirigeant', '%LIB_CONTACT%  dirige ', '%LIB_CONTACT%  est dirigÈ(e) par ', 2, 1, 0),
+(3, 'SalariÈ', '%LIB_CONTACT%  est salariÈ(e) de ', '%LIB_CONTACT%  a pour salariÈ(e) ', 3, 1, 0),
+(4, 'Conseil', '%LIB_CONTACT%  est conseillÈ(e) de ', '%LIB_CONTACT%  a pour conseillÈ(e) ', 4, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -592,7 +592,7 @@ CREATE TABLE IF NOT EXISTS `annu_admin` (
   `ref_contact` varchar(32) NOT NULL,
   `type_admin` enum('Interne','Externe') NOT NULL default 'Interne',
   PRIMARY KEY  (`ref_contact`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Informations compl√©mentaires sur les contacts administrateur';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Informations complÈmentaires sur les contacts administrateur';
 
 --
 -- Contenu de la table `annu_admin`
@@ -610,7 +610,7 @@ INSERT INTO `annu_admin` (`ref_contact`, `type_admin`) VALUES
 CREATE TABLE IF NOT EXISTS `annu_client` (
   `ref_contact` varchar(32) NOT NULL,
   `id_client_categ` smallint(5) unsigned default NULL,
-  `type_client` enum('Piste','Prospect','Client','Ancien client','Compte bloqu√©') default NULL,
+  `type_client` enum('Piste','Prospect','Client','Ancien client','Compte bloquÈ') default NULL,
   `id_tarif` smallint(5) unsigned default NULL,
   `ref_commercial` varchar(32) default NULL,
   `ref_adr_livraison` varchar(32) default NULL,
@@ -632,7 +632,7 @@ CREATE TABLE IF NOT EXISTS `annu_client` (
   KEY `ref_commercial` (`ref_commercial`),
   KEY `id_edition_mode_favori` (`id_edition_mode_favori`),
   KEY `id_reglement_mode_favori` (`id_reglement_mode_favori`,`id_edition_mode_favori`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Informations compl√©mentaires sur les contacts clients';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Informations complÈmentaires sur les contacts clients';
 
 --
 -- Contenu de la table `annu_client`
@@ -654,7 +654,7 @@ CREATE TABLE IF NOT EXISTS `annu_collab` (
   `situation_famille` varchar(128) NOT NULL,
   `nbre_enfants` tinyint(3) unsigned default NULL,
   PRIMARY KEY  (`ref_contact`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Informations compl√©mentaires sur les contacts collaborateurs';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Informations complÈmentaires sur les contacts collaborateurs';
 
 --
 -- Contenu de la table `annu_collab`
@@ -714,7 +714,7 @@ CREATE TABLE IF NOT EXISTS `annu_constructeur` (
   `identifiant_revendeur` varchar(32) NOT NULL,
   `conditions_garantie` mediumtext NOT NULL,
   PRIMARY KEY  (`ref_contact`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Informations compl√©mentaires sur les contacts constructeurs';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Informations complÈmentaires sur les contacts constructeurs';
 
 --
 -- Contenu de la table `annu_constructeur`
@@ -741,7 +741,7 @@ CREATE TABLE IF NOT EXISTS `annu_fournisseur` (
   KEY `id_fournisseur_categ` (`id_fournisseur_categ`),
   KEY `ref_acheteur` (`ref_acheteur`),
   KEY `id_stock_livraison` (`id_stock_livraison`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Informations compl√©mentaires sur les contacts fournisseurs';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Informations complÈmentaires sur les contacts fournisseurs';
 
 --
 -- Contenu de la table `annu_fournisseur`
@@ -804,7 +804,7 @@ CREATE TABLE IF NOT EXISTS `articles` (
 --
 
 INSERT INTO `articles` (`ref_article`, `ref_oem`, `ref_interne`, `lib_article`, `lib_ticket`, `desc_courte`, `desc_longue`, `ref_art_categ`, `modele`, `id_modele_spe`, `ref_constructeur`, `prix_public_ht`, `prix_achat_ht`, `paa_ht`, `paa_last_maj`, `id_tva`, `promo`, `id_valo`, `valo_indice`, `lot`, `composant`, `variante`, `gestion_sn`, `date_debut_dispo`, `date_fin_dispo`, `dispo`, `date_creation`, `date_modification`, `numero_compte_achat`, `numero_compte_vente`, `is_achetable`, `is_vendable`) VALUES
-('A-000000-00001', NULL, NULL, 'Mat√©riel', '', '', '', 'A.C-000000-00001', 'materiel', NULL, NULL, 0, 0, NULL, '0000-00-00 00:00:00', 2, 0, 1, 1, 0, 0, 0, 0, '2010-03-17 09:43:30', '2030-01-01 00:00:00', 1, '2010-03-17 09:43:30', '2010-03-17 09:43:30', NULL, NULL, 1, 1),
+('A-000000-00001', NULL, NULL, 'MatÈriel', '', '', '', 'A.C-000000-00001', 'materiel', NULL, NULL, 0, 0, NULL, '0000-00-00 00:00:00', 2, 0, 1, 1, 0, 0, 0, 0, '2010-03-17 09:43:30', '2030-01-01 00:00:00', 1, '2010-03-17 09:43:30', '2010-03-17 09:43:30', NULL, NULL, 1, 1),
 ('A-000000-00002', NULL, NULL, 'Service', '', '', '', 'A.C-000000-00002', 'service', NULL, NULL, 0, 0, NULL, '0000-00-00 00:00:00', 2, 0, 1, 1, 0, 0, 0, 0, '2010-03-17 09:43:30', '2030-01-01 00:00:00', 1, '2010-03-17 09:43:30', '2010-03-17 09:43:30', NULL, NULL, 1, 1);
 
 -- --------------------------------------------------------
@@ -866,7 +866,7 @@ CREATE TABLE IF NOT EXISTS `articles_caracs` (
   KEY `ref_article` (`ref_article`),
   KEY `ref_carac` (`ref_carac`),
   KEY `valeur` (`valeur`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Caract√©ristiques des articles du catalogue';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='CaractÈristiques des articles du catalogue';
 
 --
 -- Contenu de la table `articles_caracs`
@@ -884,7 +884,7 @@ CREATE TABLE IF NOT EXISTS `articles_codes_barres` (
   `code_barre` varchar(32) NOT NULL,
   UNIQUE KEY `code_barre` (`code_barre`),
   KEY `ref_article` (`ref_article`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Liste des codes barres associ√©s aux articles';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Liste des codes barres associÈs aux articles';
 
 --
 -- Contenu de la table `articles_codes_barres`
@@ -970,7 +970,7 @@ CREATE TABLE IF NOT EXISTS `articles_formules_tarifs` (
   UNIQUE KEY `ref_article` (`ref_article`,`id_tarif`,`indice_qte`),
   KEY `id_tarif` (`id_tarif`),
   KEY `indice_qte` (`indice_qte`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Formules de tarifs des cat√©gories d''articles';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Formules de tarifs des catÈgories d''articles';
 
 --
 -- Contenu de la table `articles_formules_tarifs`
@@ -1029,7 +1029,7 @@ CREATE TABLE IF NOT EXISTS `articles_modele_materiel` (
   `colisage` varchar(32) NOT NULL,
   `duree_garantie` smallint(5) unsigned NOT NULL,
   PRIMARY KEY  (`ref_article`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Informations compl√©mentaires sur les articles mat√©riels';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Informations complÈmentaires sur les articles matÈriels';
 
 --
 -- Contenu de la table `articles_modele_materiel`
@@ -1201,7 +1201,7 @@ CREATE TABLE IF NOT EXISTS `articles_ref_fournisseur` (
   `date_pa` date NOT NULL,
   KEY `ref_article` (`ref_article`),
   KEY `ref_fournisseur` (`ref_fournisseur`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Liste des r√©f√©rences des articles chez les fournisseurs';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Liste des rÈfÈrences des articles chez les fournisseurs';
 
 --
 -- Contenu de la table `articles_ref_fournisseur`
@@ -1241,7 +1241,7 @@ CREATE TABLE IF NOT EXISTS `articles_tarifs` (
   `pu_ht` double NOT NULL,
   UNIQUE KEY `ref_article` (`ref_article`,`id_tarif`,`indice_qte`),
   KEY `id_tarif` (`id_tarif`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Prix de vente en cours des diff√©rents articles';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Prix de vente en cours des diffÈrents articles';
 
 --
 -- Contenu de la table `articles_tarifs`
@@ -1260,7 +1260,7 @@ CREATE TABLE IF NOT EXISTS `articles_tarifs_maj` (
   `date_demande` datetime NOT NULL,
   UNIQUE KEY `ref_article` (`ref_article`,`id_tarif`),
   KEY `id_tarif` (`id_tarif`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Liste des articles dont le tarif doit etre mis √† jour';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Liste des articles dont le tarif doit etre mis ‡ jour';
 
 --
 -- Contenu de la table `articles_tarifs_maj`
@@ -1279,7 +1279,7 @@ CREATE TABLE IF NOT EXISTS `articles_taxes` (
   `montant_taxe` double unsigned NOT NULL,
   PRIMARY KEY  (`ref_article`,`id_taxe`),
   KEY `id_taxe` (`id_taxe`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Taxes associ√©es aux articles';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Taxes associÈes aux articles';
 
 --
 -- Contenu de la table `articles_taxes`
@@ -1294,7 +1294,7 @@ CREATE TABLE IF NOT EXISTS `articles_taxes` (
 
 CREATE TABLE IF NOT EXISTS `articles_valorisations` (
   `id_valo` smallint(5) unsigned NOT NULL auto_increment,
-  `groupe` enum('Quantit√©','Poids','Temps','Longueur','Surface','Volume') NOT NULL,
+  `groupe` enum('QuantitÈ','Poids','Temps','Longueur','Surface','Volume') NOT NULL,
   `lib_valo` varchar(64) NOT NULL,
   `abrev_valo` varchar(6) NOT NULL,
   `popup` tinyint(4) NOT NULL,
@@ -1306,16 +1306,16 @@ CREATE TABLE IF NOT EXISTS `articles_valorisations` (
 --
 
 INSERT INTO `articles_valorisations` (`id_valo`, `groupe`, `lib_valo`, `abrev_valo`, `popup`) VALUES
-(1, 'Quantit√©', 'Unit√©', 'U.', 0),
+(1, 'QuantitÈ', 'UnitÈ', 'U.', 0),
 (2, 'Poids', 'Gramme', 'Gr.', 0),
 (3, 'Poids', 'Kilogramme', 'Kg.', 0),
 (4, 'Poids', 'Tonne', 'T.', 0),
 (5, 'Temps', 'Heure', 'H.', 0),
 (6, 'Temps', 'Jour', 'J.', 0),
-(7, 'Temps', 'Ann√©e', 'An', 1),
-(8, 'Longueur', 'M√®tre lin√©aire', 'Ml', 1),
-(9, 'Surface', 'M√®tre carr√©', 'm¬≤', 1),
-(10, 'Volume', 'M√®tre cube', 'm3', 1),
+(7, 'Temps', 'AnnÈe', 'An', 1),
+(8, 'Longueur', 'MËtre linÈaire', 'Ml', 1),
+(9, 'Surface', 'MËtre carrÈ', 'm≤', 1),
+(10, 'Volume', 'MËtre cube', 'm3', 1),
 (11, 'Volume', 'Litre', 'L.', 0);
 
 -- --------------------------------------------------------
@@ -1329,7 +1329,7 @@ CREATE TABLE IF NOT EXISTS `articles_variantes` (
   `ref_article_variante` varchar(32) NOT NULL,
   KEY `ref_article_modele` (`ref_article_modele`),
   KEY `ref_article_variante` (`ref_article_variante`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Liste associant les variantes √† leur mod√®le';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Liste associant les variantes ‡ leur modËle';
 
 --
 -- Contenu de la table `articles_variantes`
@@ -1360,14 +1360,14 @@ CREATE TABLE IF NOT EXISTS `art_categs` (
   KEY `id_article_modele` (`modele`),
   KEY `defaut_id_tva` (`defaut_id_tva`),
   KEY `id_modele_spe` (`id_modele_spe`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Liste des cat√©gories d''articles';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Liste des catÈgories d''articles';
 
 --
 -- Contenu de la table `art_categs`
 --
 
 INSERT INTO `art_categs` (`ref_art_categ`, `lib_art_categ`, `modele`, `id_modele_spe`, `desc_art_categ`, `defaut_id_tva`, `duree_dispo`, `defaut_numero_compte_vente`, `defaut_numero_compte_achat`, `ref_art_categ_parent`, `restriction`) VALUES
-('A.C-000000-00001', 'Divers Mat√©riels', 'materiel', NULL, '', NULL, 157680000, '', '', NULL, 'aucune'),
+('A.C-000000-00001', 'Divers MatÈriels', 'materiel', NULL, '', NULL, 157680000, '', '', NULL, 'aucune'),
 ('A.C-000000-00002', 'Divers Services', 'service', NULL, '', NULL, 157680000, '', '', NULL, 'aucune');
 
 -- --------------------------------------------------------
@@ -1394,7 +1394,7 @@ CREATE TABLE IF NOT EXISTS `art_categs_caracs` (
   KEY `affichage` (`affichage`),
   KEY `ordre` (`ordre`),
   KEY `ref_carac_groupe` (`ref_carac_groupe`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Liste des caract√©ristiques';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Liste des caractÈristiques';
 
 --
 -- Contenu de la table `art_categs_caracs`
@@ -1415,7 +1415,7 @@ CREATE TABLE IF NOT EXISTS `art_categs_caracs_groupes` (
   PRIMARY KEY  (`ref_carac_groupe`),
   KEY `ref_art_categ` (`ref_art_categ`),
   KEY `ordre` (`ordre`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Groupes de caract√©ristiques des cat√©gories d''articles';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Groupes de caractÈristiques des catÈgories d''articles';
 
 --
 -- Contenu de la table `art_categs_caracs_groupes`
@@ -1434,7 +1434,7 @@ CREATE TABLE IF NOT EXISTS `art_categs_formules_tarifs` (
   `formule_tarif` varchar(32) NOT NULL,
   UNIQUE KEY `ref_art_categ` (`ref_art_categ`,`id_tarif`),
   KEY `id_tarif` (`id_tarif`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Formules de tarifs des cat√©gories d''articles';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Formules de tarifs des catÈgories d''articles';
 
 --
 -- Contenu de la table `art_categs_formules_tarifs`
@@ -1477,11 +1477,11 @@ CREATE TABLE IF NOT EXISTS `art_categs_specificites` (
 --
 
 INSERT INTO `art_categs_specificites` (`id_modele_spe`, `lib_modele_spe`) VALUES
-(1, 'Disponible √† l‚Äôachat uniquement'),
-(2, 'Disponible √† la fabrication uniquement'),
+(1, 'Disponible ‡ líachat uniquement'),
+(2, 'Disponible ‡ la fabrication uniquement'),
 (3, 'Frais de transport'),
-(4, 'Frais de d√©placement'),
-(5, 'Indemnit√© de retard de r√®glement'),
+(4, 'Frais de dÈplacement'),
+(5, 'IndemnitÈ de retard de rËglement'),
 (6, 'Codes promo');
 
 -- --------------------------------------------------------
@@ -1495,7 +1495,7 @@ CREATE TABLE IF NOT EXISTS `art_categs_taxes` (
   `id_taxe` smallint(5) unsigned NOT NULL,
   PRIMARY KEY  (`ref_art_categ`,`id_taxe`),
   KEY `id_taxe` (`id_taxe`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Liste des taxes applicables aux articles de cette cat√©gorie';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Liste des taxes applicables aux articles de cette catÈgorie';
 
 --
 -- Contenu de la table `art_categs_taxes`
@@ -1525,10 +1525,10 @@ CREATE TABLE IF NOT EXISTS `art_liaisons_types` (
 --
 
 INSERT INTO `art_liaisons_types` (`id_liaison_type`, `lib_liaison_type`, `lib_liaison_type_vers`, `lib_liaison_type_depuis`, `ordre`, `actif`, `systeme`) VALUES
-(1, 'Articles associ√©s', '%LIB_ARTICLE% associe', '%LIB_ARTICLE% est associ√©(e) √†', 1, 1, 0),
+(1, 'Articles associÈs', '%LIB_ARTICLE% associe', '%LIB_ARTICLE% est associÈ(e) ‡', 1, 1, 0),
 (2, 'Options', 'Options', 'Options', 2, 1, 0),
 (3, 'Consommables', '%LIB_ARTICLE% a pour consommable', '%LIB_ARTICLE% est un consommable de', 4, 1, 0),
-(4, 'Les clients ayant command√© cet article ont √©galement command√©...', 'Les clients ayant command√© cet article ont √©galeme...', 'Les clients ayant command√© cet article ont √©galeme...', 3, 0, 0),
+(4, 'Les clients ayant commandÈ cet article ont Ègalement commandÈ...', 'Les clients ayant commandÈ cet article ont Ègaleme...', 'Les clients ayant commandÈ cet article ont Ègaleme...', 3, 0, 0),
 (5, 'Variante de cet article', '%LIB_ARTICLE% a pour variante', '%LIB_ARTICLE% est vriante de', 5, 1, 1),
 (6, 'Accessoires', '%LIB_ARTICLE% a pour accessoire', '%LIB_ARTICLE% a pour accessoire', 6, 1, 0),
 (7, 'Produits de substitution', '%LIB_ARTICLE% a pour produit de substitution', '%LIB_ARTICLE% est un produit de substitution de', 7, 1, 0);
@@ -1543,7 +1543,7 @@ CREATE TABLE IF NOT EXISTS `cartes_bancaires_types` (
   `id_cb_type` smallint(5) unsigned NOT NULL auto_increment,
   `lib_cb_type` varchar(32) NOT NULL,
   PRIMARY KEY  (`id_cb_type`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COMMENT='Diff√©rents types de cartes bancaires' AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COMMENT='DiffÈrents types de cartes bancaires' AUTO_INCREMENT=4 ;
 
 --
 -- Contenu de la table `cartes_bancaires_types`
@@ -1587,7 +1587,7 @@ CREATE TABLE IF NOT EXISTS `catalogues_clients_dirs` (
   KEY `id_catalogue_client` (`id_catalogue_client`),
   KEY `id_catalogue_dir_parent` (`id_catalogue_dir_parent`),
   KEY `ref_art_categ` (`ref_art_categ`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Liste des r√©pertoires \r\ndes catalogues clients' AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Liste des rÈpertoires \r\ndes catalogues clients' AUTO_INCREMENT=1 ;
 
 --
 -- Contenu de la table `catalogues_clients_dirs`
@@ -1604,7 +1604,7 @@ CREATE TABLE IF NOT EXISTS `civilites` (
   `id_civilite` smallint(5) unsigned NOT NULL auto_increment,
   `lib_civ_court` varchar(16) NOT NULL,
   `lib_civ_long` varchar(64) NOT NULL,
-  `categorie` enum('Particulier','Soci√©t√©','Administration','Education','Association','Autre') NOT NULL default 'Particulier',
+  `categorie` enum('Particulier','SociÈtÈ','Administration','Education','Association','Autre') NOT NULL default 'Particulier',
   PRIMARY KEY  (`id_civilite`),
   KEY `lib_civ_court` (`lib_civ_court`),
   KEY `lib_civ_long` (`lib_civ_long`)
@@ -1617,24 +1617,24 @@ CREATE TABLE IF NOT EXISTS `civilites` (
 INSERT INTO `civilites` (`id_civilite`, `lib_civ_court`, `lib_civ_long`, `categorie`) VALUES
 (1, 'M.', 'Monsieur', 'Particulier'),
 (2, 'Mme', 'Madame', 'Particulier'),
-(3, 'S.A.R.L.', 'Soci√©t√© √† responsabilit√© limit√©e', 'Soci√©t√©'),
-(4, 'S.A.', 'Soci√©t√© anonyme', 'Soci√©t√©'),
+(3, 'S.A.R.L.', 'SociÈtÈ ‡ responsabilitÈ limitÈe', 'SociÈtÈ'),
+(4, 'S.A.', 'SociÈtÈ anonyme', 'SociÈtÈ'),
 (5, '', '', 'Administration'),
-(6, 'Me', 'Ma√Ætre', 'Soci√©t√©'),
+(6, 'Me', 'MaÓtre', 'SociÈtÈ'),
 (7, 'Melle', 'Mademoiselle', 'Particulier'),
 (8, 'M. ou Mme', 'Monsieur ou Madame  ', 'Particulier'),
-(9, 'E.U.R.L.', 'Entreprise unipersonelle √†responsabilit√© limit√©e', 'Soci√©t√©'),
-(10, 'S.A.S.', 'Soci√©t√© par action simplifi√©e', 'Soci√©t√©'),
-(11, 'S.A.S.U.', 'Soci√©t√© par action simplifi√©e unipersonelle', 'Soci√©t√©'),
-(12, 'Ets.', 'Etablissement', 'Soci√©t√©'),
-(13, 'S.C.I.', 'Soci√©t√© civile immobili√®re', 'Soci√©t√©'),
-(14, 'S.N.C.', 'Soci√©t√© en nom collectif', 'Soci√©t√©'),
+(9, 'E.U.R.L.', 'Entreprise unipersonelle ‡responsabilitÈ limitÈe', 'SociÈtÈ'),
+(10, 'S.A.S.', 'SociÈtÈ par action simplifiÈe', 'SociÈtÈ'),
+(11, 'S.A.S.U.', 'SociÈtÈ par action simplifiÈe unipersonelle', 'SociÈtÈ'),
+(12, 'Ets.', 'Etablissement', 'SociÈtÈ'),
+(13, 'S.C.I.', 'SociÈtÈ civile immobiliËre', 'SociÈtÈ'),
+(14, 'S.N.C.', 'SociÈtÈ en nom collectif', 'SociÈtÈ'),
 (15, 'Assoc.', 'Association', 'Association'),
-(16, 'E.I.', 'Entreprise individuelle', 'Soci√©t√©'),
-(17, 'S.E.M.', 'Soci√©t√© d''√©conomie mixte', 'Soci√©t√©'),
-(18, 'S.E.L.', 'Soci√©t√© d''exercice lib√©ral', 'Soci√©t√©'),
-(19, 'S.C.P.', 'Soci√©t√© civile professionnelle', 'Soci√©t√©'),
-(20, 'E.A.R.L.', 'Entreprise Agricole a Responsabilit√© Limit√©e', 'Soci√©t√©');
+(16, 'E.I.', 'Entreprise individuelle', 'SociÈtÈ'),
+(17, 'S.E.M.', 'SociÈtÈ d''Èconomie mixte', 'SociÈtÈ'),
+(18, 'S.E.L.', 'SociÈtÈ d''exercice libÈral', 'SociÈtÈ'),
+(19, 'S.C.P.', 'SociÈtÈ civile professionnelle', 'SociÈtÈ'),
+(20, 'E.A.R.L.', 'Entreprise Agricole a ResponsabilitÈ LimitÈe', 'SociÈtÈ');
 
 -- --------------------------------------------------------
 
@@ -1647,7 +1647,7 @@ CREATE TABLE IF NOT EXISTS `civilites_categories` (
   `id_civilite` smallint(5) unsigned NOT NULL,
   KEY `id_categorie` (`id_categorie`),
   KEY `id_civilite` (`id_civilite`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Liste des civilit√©s possible en fonction de la cat√©gorie de ';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Liste des civilitÈs possible en fonction de la catÈgorie de ';
 
 --
 -- Contenu de la table `civilites_categories`
@@ -1703,7 +1703,7 @@ CREATE TABLE IF NOT EXISTS `clients_categories` (
   PRIMARY KEY  (`id_client_categ`),
   KEY `ref_commercial` (`ref_commercial`),
   KEY `id_tarif` (`id_tarif`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COMMENT='Liste des cat√©gories de clients' AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COMMENT='Liste des catÈgories de clients' AUTO_INCREMENT=2 ;
 
 --
 -- Contenu de la table `clients_categories`
@@ -1879,14 +1879,14 @@ CREATE TABLE IF NOT EXISTS `comm_events_types` (
 --
 
 INSERT INTO `comm_events_types` (`id_comm_event_type`, `lib_comm_event_type`, `systeme`) VALUES
-(1, 'Appel re√ßu', 1),
-(2, 'Appel √©mis', 1),
-(3, 'Courrier re√ßu', 1),
-(4, 'Courrier envoy√©', 1),
-(5, 'Email re√ßu', 1),
-(6, 'Email envoy√©', 1),
-(7, 'Fax re√ßu', 1),
-(8, 'Fax envoy√©', 1),
+(1, 'Appel reÁu', 1),
+(2, 'Appel Èmis', 1),
+(3, 'Courrier reÁu', 1),
+(4, 'Courrier envoyÈ', 1),
+(5, 'Email reÁu', 1),
+(6, 'Email envoyÈ', 1),
+(7, 'Fax reÁu', 1),
+(8, 'Fax envoyÈ', 1),
 (9, 'RDV', 1),
 (10, 'RDV sur site', 1);
 
@@ -1971,19 +1971,19 @@ CREATE TABLE IF NOT EXISTS `compta_export_champs` (
 
 INSERT INTO `compta_export_champs` (`idcompta_export_champs`, `lib_champ`, `desc_champ`, `type_champ`, `type_script`, `script`, `index`) VALUES
 (1, 'ID', 'Identifiant de la ligne', 0, 'auto_increment', 'id_ligne', NULL),
-(2, 'Date cr√©ation', 'Date de la creation du document', 0, 'date', 'date_creation_doc', 'fiche'),
+(2, 'Date crÈation', 'Date de la creation du document', 0, 'date', 'date_creation_doc', 'fiche'),
 (3, 'Code Journal', '', 0, 'method', 'get_journalexport', 'this'),
 (4, 'Num. Compte', '', 0, 'attribute', 'numero_compte', 'fiche'),
 (5, 'Type Facture', '', 0, 'method', 'get_typefacture', 'this'),
 (6, 'Libelle du compte', '', 0, 'eval', 'return substr($fiche->lib_compte,0,40);', ''),
-(7, 'Ref√©rence du Doc', 'r√©f√©rence simple', 0, 'eval', 'return substr($fiche->ref_doc,0,3).substr($fiche->ref_doc,11,16);', NULL),
-(8, 'Ref√©rence du Doc (complet)', 'r√©f√©rence complette', 0, 'attribute', 'ref_doc', 'this'),
+(7, 'RefÈrence du Doc', 'rÈfÈrence simple', 0, 'eval', 'return substr($fiche->ref_doc,0,3).substr($fiche->ref_doc,11,16);', NULL),
+(8, 'RefÈrence du Doc (complet)', 'rÈfÈrence complette', 0, 'attribute', 'ref_doc', 'this'),
 (9, 'Montant', 'Imprime le montant', 0, 'attribute', 'montant', 'fiche'),
-(10, 'D√©bit ou Cr√©dit', NULL, 0, 'method', 'get_DorC', 'this'),
+(10, 'DÈbit ou CrÈdit', NULL, 0, 'method', 'get_DorC', 'this'),
 (11, 'Date d''''echeance', NULL, 0, 'date', 'date_echeance', 'fiche'),
 (12, 'Type de Monaie', NULL, 0, 'global', 'MONNAIE', '2'),
 (13, 'Champ vide', 'espace', 0, 'string', '&nbsp;', NULL),
-(14, 'E', 'Lettre E, symbole d''''√©criture....', 0, 'string', 'E', NULL),
+(14, 'E', 'Lettre E, symbole d''''Ècriture....', 0, 'string', 'E', NULL),
 (16, 'Libelle du mouvement', NULL, 9, 'attribute', 'lib_move', 'fiche'),
 (17, 'Montant du mouvement', NULL, 9, 'attribute', 'montant_move', 'fiche'),
 (18, 'Date mouvement', NULL, 9, 'attribute', 'date_move', 'fiche'),
@@ -2039,9 +2039,9 @@ CREATE TABLE IF NOT EXISTS `compta_export_modele` (
 --
 
 INSERT INTO `compta_export_modele` (`idcompta_export_modele`, `lib_modele`, `idcompta_export_logiciels`, `id_journal_type`, `separateur`, `finaliseur`, `extention`, `compatible`) VALUES
-(1, 'Mod√®le g√©n√©ral (A/V) EBP', 1, 0, ',', '', 'txt', '1;2;'),
-(2, 'Mod√®le g√©n√©ral (A/V) EBI', 2, 0, ';', ';', 'edi', '1;2;'),
-(3, 'Mod√®le EBI Banque', 2, 9, ';', ';', 'ebi', '9');
+(1, 'ModËle gÈnÈral (A/V) EBP', 1, 0, ',', '', 'txt', '1;2;'),
+(2, 'ModËle gÈnÈral (A/V) EBI', 2, 0, ';', ';', 'edi', '1;2;'),
+(3, 'ModËle EBI Banque', 2, 9, ';', ';', 'ebi', '9');
 
 -- --------------------------------------------------------
 
@@ -2121,10 +2121,10 @@ INSERT INTO `compta_journaux` (`id_journal`, `lib_journal`, `desc_journal`, `id_
 (1, 'Journal des ventes', 'Journal des ventes', 0, 2, ''),
 (2, 'Journal des achats', 'Journal des achats', 0, 1, ''),
 (3, 'HT', 'Compte de vente HT', 1, 2, ''),
-(4, 'TVA', 'Compte de TVA collect√©e', 1, 2, ''),
+(4, 'TVA', 'Compte de TVA collectÈe', 1, 2, ''),
 (5, 'TTC', 'Compte tiers client', 1, 2, ''),
 (6, 'HT', 'Compte d''achat HT', 2, 1, ''),
-(7, 'TVA', 'Compte de TVA d√©caiss√©e', 2, 1, ''),
+(7, 'TVA', 'Compte de TVA dÈcaissÈe', 2, 1, ''),
 (8, 'TTC', 'Compte tiers fournisseur', 2, 1, ''),
 (9, 'Journal de banque', 'Journal de banque', 0, 4, ''),
 (10, 'Journal de caisse', 'Journal de caisse', 0, 4, ''),
@@ -2235,7 +2235,7 @@ CREATE TABLE IF NOT EXISTS `comptes_bancaires` (
   KEY `actif` (`actif`),
   KEY `ref_contact` (`ref_contact`),
   KEY `ref_contact_2` (`ref_contact`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Liste des comptes bancaires de la soci√©t√©' AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Liste des comptes bancaires de la sociÈtÈ' AUTO_INCREMENT=1 ;
 
 --
 -- Contenu de la table `comptes_bancaires`
@@ -2661,7 +2661,7 @@ CREATE TABLE IF NOT EXISTS `comptes_cbs` (
   KEY `id_compte_bancaire` (`id_compte_bancaire`),
   KEY `ref_porteur` (`ref_porteur`),
   KEY `id_cb_type` (`id_cb_type`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Liste des cartes bancaires de la soci√©t√©' AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Liste des cartes bancaires de la sociÈtÈ' AUTO_INCREMENT=1 ;
 
 --
 -- Contenu de la table `comptes_cbs`
@@ -2685,13 +2685,13 @@ CREATE TABLE IF NOT EXISTS `comptes_moves_types` (
 --
 
 INSERT INTO `comptes_moves_types` (`id_move_type`, `lib_move_type`) VALUES
-(1, 'R√®glement'),
+(1, 'RËglement'),
 (2, 'Transfert entre caisses'),
 (3, 'Retrait bancaire'),
 (4, 'Remise en banque'),
-(5, 'R√©initialisation de la caisse'),
+(5, 'RÈinitialisation de la caisse'),
 (6, 'Erreur de caisse'),
-(7, 'Op√©ration Diverse');
+(7, 'OpÈration Diverse');
 
 -- --------------------------------------------------------
 
@@ -2831,7 +2831,7 @@ CREATE TABLE IF NOT EXISTS `coordonnees` (
   KEY `ref_contact` (`ref_contact`),
   KEY `ref_coord_parent` (`ref_coord_parent`),
   KEY `id_type_coordonnee` (`id_type_coordonnee`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Liste des coordonn√©es des contacts de l''annuaire';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Liste des coordonnÈes des contacts de l''annuaire';
 
 --
 -- Contenu de la table `coordonnees`
@@ -2922,7 +2922,7 @@ CREATE TABLE IF NOT EXISTS `courriers_editions` (
   KEY `id_courrier` (`id_courrier`),
   KEY `id_edition_mode` (`id_edition_mode`),
   KEY `ref_user` (`ref_user`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Historique des √©ditions de courriers' AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Historique des Èditions de courriers' AUTO_INCREMENT=1 ;
 
 --
 -- Contenu de la table `courriers_editions`
@@ -2949,8 +2949,8 @@ CREATE TABLE IF NOT EXISTS `courriers_etats` (
 
 INSERT INTO `courriers_etats` (`id_etat_courrier`, `lib_etat_courrier`, `ordre`) VALUES
 (1, 'En cours de redaction', 1),
-(2, 'Courrier r√©dig√©', 1),
-(3, 'Courrier annul√©', 1);
+(2, 'Courrier rÈdigÈ', 1),
+(3, 'Courrier annulÈ', 1);
 
 -- --------------------------------------------------------
 
@@ -2969,7 +2969,7 @@ CREATE TABLE IF NOT EXISTS `courriers_events` (
   KEY `id_courrier` (`id_courrier`),
   KEY `id_courrier_event_type` (`id_courrier_event_type`),
   KEY `ref_user` (`ref_user`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Liste des √©vennements concernant un courrier' AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Liste des Èvennements concernant un courrier' AUTO_INCREMENT=1 ;
 
 --
 -- Contenu de la table `courriers_events`
@@ -2986,16 +2986,16 @@ CREATE TABLE IF NOT EXISTS `courriers_events_types` (
   `id_courrier_event_type` smallint(5) unsigned NOT NULL auto_increment,
   `lib_courrier_event_type` varchar(64) NOT NULL,
   PRIMARY KEY  (`id_courrier_event_type`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COMMENT='Cr√©ation, Modification, Changement d √©tat' AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COMMENT='CrÈation, Modification, Changement d Ètat' AUTO_INCREMENT=4 ;
 
 --
 -- Contenu de la table `courriers_events_types`
 --
 
 INSERT INTO `courriers_events_types` (`id_courrier_event_type`, `lib_courrier_event_type`) VALUES
-(1, 'Cr√©ation'),
+(1, 'CrÈation'),
 (2, 'Modification'),
-(3, 'Changement d''√©tat');
+(3, 'Changement d''Ètat');
 
 -- --------------------------------------------------------
 
@@ -3032,7 +3032,7 @@ CREATE TABLE IF NOT EXISTS `courriers_types` (
   `code_courrier` varchar(32) NOT NULL,
   `actif` tinyint(3) unsigned NOT NULL,
   PRIMARY KEY  (`id_type_courrier`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COMMENT='Liste des types de courriers utilis√©s' AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COMMENT='Liste des types de courriers utilisÈs' AUTO_INCREMENT=2 ;
 
 --
 -- Contenu de la table `courriers_types`
@@ -3162,7 +3162,7 @@ CREATE TABLE IF NOT EXISTS `csv_import_cdc` (
   `type_ref_article` enum('non defini','interne','oem','lmb') NOT NULL,
   `id_categ_client` smallint(5) NOT NULL,
   `date` date NOT NULL COMMENT 'Date de l''import',
-  `etape` smallint(5) default NULL COMMENT '√âtape √† laquelle se trouve l''import',
+  `etape` smallint(5) default NULL COMMENT '…tape ‡ laquelle se trouve l''import',
   PRIMARY KEY  (`id_import_cdc`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
@@ -3237,10 +3237,10 @@ CREATE TABLE IF NOT EXISTS `csv_import_cdc_infos_lines` (
 
 CREATE TABLE IF NOT EXISTS `csv_import_tarifs_fournisseur` (
   `id_import_tarifs_fournisseur` smallint(5) NOT NULL auto_increment COMMENT 'Identifiant de l''import',
-  `ref_fournisseur` varchar(32) NOT NULL COMMENT 'R√©f√©rence du contact Fournisseur',
+  `ref_fournisseur` varchar(32) NOT NULL COMMENT 'RÈfÈrence du contact Fournisseur',
   `date_tarif` date NOT NULL COMMENT 'Date de l''import',
-  `etape` smallint(5) default NULL COMMENT '√âtape √† laquelle se trouve l''import',
-  `id_colonne_ref_article_existant` varchar(32) NOT NULL COMMENT 'Identifiant de la colonne permettant de stocker la r√©f√©rence LMB de l''article existant (trouv√© par correspondance)',
+  `etape` smallint(5) default NULL COMMENT '…tape ‡ laquelle se trouve l''import',
+  `id_colonne_ref_article_existant` varchar(32) NOT NULL COMMENT 'Identifiant de la colonne permettant de stocker la rÈfÈrence LMB de l''article existant (trouvÈ par correspondance)',
   PRIMARY KEY  (`id_import_tarifs_fournisseur`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
@@ -3351,7 +3351,7 @@ CREATE TABLE IF NOT EXISTS `docs_lines_sn` (
   `sn_qte` double NOT NULL default '1',
   KEY `ref_doc_line` (`ref_doc_line`),
   KEY `numero_serie` (`numero_serie`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Num√©ros de s√©ries des √©l√©ments contenus dans les documents';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='NumÈros de sÈries des ÈlÈments contenus dans les documents';
 
 --
 -- Contenu de la table `docs_lines_sn`
@@ -3409,7 +3409,7 @@ CREATE TABLE IF NOT EXISTS `documents_editions` (
   KEY `ref_doc` (`ref_doc`),
   KEY `id_edition_mode` (`id_edition_mode`),
   KEY `date_edition` (`date_edition`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Historique des √©ditions de documents';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Historique des Èditions de documents';
 
 --
 -- Contenu de la table `documents_editions`
@@ -3431,79 +3431,79 @@ CREATE TABLE IF NOT EXISTS `documents_etats` (
   PRIMARY KEY  (`id_etat_doc`),
   KEY `ordre` (`ordre`),
   KEY `id_type_doc` (`id_type_doc`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COMMENT='Liste des √©tats possibles pour un document' AUTO_INCREMENT=67 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COMMENT='Liste des Ètats possibles pour un document' AUTO_INCREMENT=67 ;
 
 --
 -- Contenu de la table `documents_etats`
 --
 
 INSERT INTO `documents_etats` (`id_etat_doc`, `id_type_doc`, `lib_etat_doc`, `ordre`, `is_open`) VALUES
-(1, 1, 'A r√©aliser', 1, 1),
-(2, 1, 'Annul√©', 2, 0),
-(3, 1, 'Attente r√©ponse client', 3, 0),
-(4, 1, 'Accept√©', 4, 0),
-(5, 1, 'Refus√©', 5, 0),
+(1, 1, 'A rÈaliser', 1, 1),
+(2, 1, 'AnnulÈ', 2, 0),
+(3, 1, 'Attente rÈponse client', 3, 0),
+(4, 1, 'AcceptÈ', 4, 0),
+(5, 1, 'RefusÈ', 5, 0),
 (6, 2, 'En saisie', 1, 1),
-(7, 2, 'Annul√©e', 2, 0),
+(7, 2, 'AnnulÈe', 2, 0),
 (8, 2, 'A valider', 3, 1),
 (9, 2, 'En cours', 4, 1),
-(10, 2, 'Trait√©e', 5, 0),
+(10, 2, 'TraitÈe', 5, 0),
 (11, 3, 'En saisie', 1, 1),
-(12, 3, 'Annul√©', 2, 0),
-(13, 3, 'Pr√™t au d√©part', 3, 1),
+(12, 3, 'AnnulÈ', 2, 0),
+(13, 3, 'PrÍt au dÈpart', 3, 1),
 (14, 3, 'En cours de livraison', 4, 0),
-(15, 3, 'Livr√©', 5, 0),
+(15, 3, 'LivrÈ', 5, 0),
 (16, 4, 'En saisie', 1, 1),
-(17, 4, 'Annul√©e', 2, 0),
-(18, 4, 'A r√©gler', 3, 1),
-(19, 4, 'Acquitt√©e', 4, 0),
+(17, 4, 'AnnulÈe', 2, 0),
+(18, 4, 'A rÈgler', 3, 1),
+(19, 4, 'AcquittÈe', 4, 0),
 (20, 5, 'En saisie', 1, 1),
-(21, 5, 'Annul√©', 2, 0),
+(21, 5, 'AnnulÈ', 2, 0),
 (22, 5, 'Attente validation', 3, 0),
-(23, 5, 'Accept√©', 4, 0),
-(24, 5, 'Refus√©', 5, 0),
+(23, 5, 'AcceptÈ', 4, 0),
+(24, 5, 'RefusÈ', 5, 0),
 (25, 6, 'En saisie', 1, 1),
-(26, 6, 'Annul√©e', 2, 0),
+(26, 6, 'AnnulÈe', 2, 0),
 (27, 6, 'En cours', 3, 1),
-(28, 6, 'Trait√©e', 4, 0),
+(28, 6, 'TraitÈe', 4, 0),
 (29, 7, 'En saisie', 1, 1),
-(30, 7, 'Annul√©', 2, 0),
-(31, 7, 'R√©ception effectu√©e', 3, 0),
+(30, 7, 'AnnulÈ', 2, 0),
+(31, 7, 'RÈception effectuÈe', 3, 0),
 (32, 8, 'En saisie', 1, 1),
-(33, 8, 'Annul√©e', 2, 0),
-(34, 8, 'A r√©gler', 3, 1),
-(35, 8, 'Acquitt√©e', 4, 0),
+(33, 8, 'AnnulÈe', 2, 0),
+(34, 8, 'A rÈgler', 3, 1),
+(35, 8, 'AcquittÈe', 4, 0),
 (36, 9, 'En saisie', 1, 1),
-(37, 9, 'Annul√©', 2, 0),
-(38, 9, 'Pr√™t au d√©part', 3, 1),
+(37, 9, 'AnnulÈ', 2, 0),
+(38, 9, 'PrÍt au dÈpart', 3, 1),
 (39, 9, 'En cours de transfert', 4, 0),
-(40, 9, 'Effectu√©', 5, 0),
+(40, 9, 'EffectuÈ', 5, 0),
 (41, 10, 'En saisie', 1, 1),
-(42, 10, 'Valid√©', 2, 0),
-(43, 10, 'Annul√©', 3, 0),
+(42, 10, 'ValidÈ', 2, 0),
+(43, 10, 'AnnulÈ', 3, 0),
 (44, 11, 'En saisie', 1, 1),
-(45, 11, 'Annul√©', 2, 0),
-(46, 11, 'Valid√©', 3, 0),
+(45, 11, 'AnnulÈ', 2, 0),
+(46, 11, 'ValidÈ', 3, 0),
 (47, 12, 'En saisie', 1, 1),
-(48, 12, 'Annul√©', 2, 0),
+(48, 12, 'AnnulÈ', 2, 0),
 (49, 12, 'A Fabriquer', 3, 1),
 (50, 12, 'Fabrication en cours', 4, 1),
-(51, 12, 'Fabrication termin√©e', 5, 0),
+(51, 12, 'Fabrication terminÈe', 5, 0),
 (52, 13, 'En saisie', 1, 1),
-(53, 13, 'Annul√©', 2, 0),
-(54, 13, 'A D√©sassembler', 3, 1),
-(55, 13, 'D√©sassemblage en cours', 4, 1),
-(56, 13, 'D√©sassemblage termin√©', 5, 0),
-(57, 14, 'Mod√®le actif', 1, 1),
-(58, 14, 'Mod√®le annul√©', 2, 0),
+(53, 13, 'AnnulÈ', 2, 0),
+(54, 13, 'A DÈsassembler', 3, 1),
+(55, 13, 'DÈsassemblage en cours', 4, 1),
+(56, 13, 'DÈsassemblage terminÈ', 5, 0),
+(57, 14, 'ModËle actif', 1, 1),
+(58, 14, 'ModËle annulÈ', 2, 0),
 (59, 15, 'En saisie', 1, 1),
-(60, 15, 'Annul√©', 2, 0),
+(60, 15, 'AnnulÈ', 2, 0),
 (61, 15, 'En Attente', 3, 0),
-(62, 15, 'Encaiss√©', 4, 0),
+(62, 15, 'EncaissÈ', 4, 0),
 (63, 16, 'En saisie', 1, 1),
 (64, 16, 'Cotation en cours', 2, 1),
-(65, 16, 'Cotation termin√©e', 3, 1),
-(66, 16, 'Annul√©e', 4, 0);
+(65, 16, 'Cotation terminÈe', 3, 1),
+(66, 16, 'AnnulÈe', 4, 0);
 
 -- --------------------------------------------------------
 
@@ -3523,7 +3523,7 @@ CREATE TABLE IF NOT EXISTS `documents_events` (
   KEY `date_event` (`date_event`),
   KEY `ref_user` (`ref_user`),
   KEY `id_event_type` (`id_event_type`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Liste des √©vennements concernant un document';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Liste des Èvennements concernant un document';
 
 --
 -- Contenu de la table `documents_events`
@@ -3540,17 +3540,17 @@ CREATE TABLE IF NOT EXISTS `documents_events_types` (
   `id_event_type` smallint(5) unsigned NOT NULL auto_increment,
   `lib_event_type` varchar(64) NOT NULL,
   PRIMARY KEY  (`id_event_type`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COMMENT='Types d''√©vennements pour les documents' AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COMMENT='Types d''Èvennements pour les documents' AUTO_INCREMENT=7 ;
 
 --
 -- Contenu de la table `documents_events_types`
 --
 
 INSERT INTO `documents_events_types` (`id_event_type`, `lib_event_type`) VALUES
-(1, 'Cr√©ation du document'),
-(2, 'Nouvel √©tat'),
-(3, 'G√©n√©ration d''un nouveau document'),
-(4, 'Modification de la date de cr√©ation'),
+(1, 'CrÈation du document'),
+(2, 'Nouvel Ètat'),
+(3, 'GÈnÈration d''un nouveau document'),
+(4, 'Modification de la date de crÈation'),
 (5, 'Fusion du document'),
 (6, 'Changement de contact');
 
@@ -3613,7 +3613,7 @@ CREATE TABLE IF NOT EXISTS `documents_types` (
   KEY `actif` (`actif`),
   KEY `id_pdf_modele` (`id_pdf_modele`),
   KEY `id_type_groupe` (`id_type_groupe`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COMMENT='Liste des types de documents utilis√©s' AUTO_INCREMENT=17 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COMMENT='Liste des types de documents utilisÈs' AUTO_INCREMENT=17 ;
 
 --
 -- Contenu de la table `documents_types`
@@ -3626,14 +3626,14 @@ INSERT INTO `documents_types` (`id_type_doc`, `lib_type_doc`, `lib_type_printed`
 (4, 'Facture Client', 'Facture', 'FAC', 1, 1, 21),
 (5, 'Devis Fournisseur', 'Cotation fournisseur', 'DEF', 2, 1, 1),
 (6, 'Commande Fournisseur', 'Commande fournisseur', 'CDF', 2, 1, 1),
-(7, 'Bon de r√©ception Fournisseur', 'Bon de r√©ception', 'BLF', 2, 1, 1),
+(7, 'Bon de rÈception Fournisseur', 'Bon de rÈception', 'BLF', 2, 1, 1),
 (8, 'Facture Fournisseur', 'Facture fournisseur', 'FAF', 2, 1, 1),
 (9, 'Transfert de marchandises', 'Transfert de marchandises', 'TRM', 3, 1, 7),
 (10, 'Panier Client', 'Panier', 'PAC', 1, 1, 1),
 (11, 'Inventaire', 'Inventaire', 'INV', 3, 1, 1),
 (12, 'Bon de Fabrication', 'Bon de fabrication', 'FAB', 3, 1, 8),
-(13, 'Bon de D√©sassemblage', 'Bon de d√©sassemblage', 'DES', 3, 1, 1),
-(14, 'Mod√®le', 'Mod√®le de document', 'MOD', 0, 1, 1),
+(13, 'Bon de DÈsassemblage', 'Bon de dÈsassemblage', 'DES', 3, 1, 1),
+(14, 'ModËle', 'ModËle de document', 'MOD', 0, 1, 1),
 (15, 'Ticket de caisse', 'Ticket de caisse', 'TIC', 1, 1, 1),
 (16, 'Cotation Client', 'Cotation', 'COT', 1, 1, 20);
 
@@ -3675,7 +3675,7 @@ CREATE TABLE IF NOT EXISTS `doc_blc` (
   KEY `id_stock` (`id_stock`),
   KEY `id_magasin` (`id_magasin`),
   KEY `id_livraison_mode` (`id_livraison_mode`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Liste des informations compl√©mentaires concernant les docume';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Liste des informations complÈmentaires concernant les docume';
 
 --
 -- Contenu de la table `doc_blc`
@@ -3694,7 +3694,7 @@ CREATE TABLE IF NOT EXISTS `doc_blf` (
   `id_stock` smallint(5) unsigned default NULL,
   PRIMARY KEY  (`ref_doc`),
   KEY `id_stock` (`id_stock`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Liste des informations compl√©mentaires concernant les docume';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Liste des informations complÈmentaires concernant les docume';
 
 --
 -- Contenu de la table `doc_blf`
@@ -3725,7 +3725,7 @@ CREATE TABLE IF NOT EXISTS `doc_cdc` (
   KEY `id_magasin` (`id_magasin`),
   KEY `id_pays_livraison` (`id_pays_livraison`),
   KEY `id_livraison_mode` (`id_livraison_mode`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Informations compl√©mentaires sur les documents Devis Client';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Informations complÈmentaires sur les documents Devis Client';
 
 --
 -- Contenu de la table `doc_cdc`
@@ -3745,7 +3745,7 @@ CREATE TABLE IF NOT EXISTS `doc_cdf` (
   `id_stock` smallint(5) unsigned NOT NULL,
   PRIMARY KEY  (`ref_doc`),
   KEY `id_stock` (`id_stock`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Liste des informations compl√©mentaires concernant les docume';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Liste des informations complÈmentaires concernant les docume';
 
 --
 -- Contenu de la table `doc_cdf`
@@ -3774,7 +3774,7 @@ CREATE TABLE IF NOT EXISTS `doc_cot` (
   KEY `ref_adr_livraison` (`ref_adr_livraison`),
   KEY `id_pays_livraison` (`id_pays_livraison`),
   KEY `id_livraison_mode` (`id_livraison_mode`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Informations compl√©mentaires sur les documents Cotation Clie';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Informations complÈmentaires sur les documents Cotation Clie';
 
 --
 -- Contenu de la table `doc_cot`
@@ -3794,7 +3794,7 @@ CREATE TABLE IF NOT EXISTS `doc_def` (
   `id_stock` smallint(5) unsigned NOT NULL default '1',
   PRIMARY KEY  (`ref_doc`),
   KEY `id_stock` (`id_stock`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Liste des informations compl√©mentaires concernant les docume';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Liste des informations complÈmentaires concernant les docume';
 
 --
 -- Contenu de la table `doc_def`
@@ -3862,7 +3862,7 @@ CREATE TABLE IF NOT EXISTS `doc_dev` (
   KEY `ref_adr_livraison` (`ref_adr_livraison`),
   KEY `id_pays_livraison` (`id_pays_livraison`),
   KEY `id_livraison_mode` (`id_livraison_mode`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Informations compl√©mentaires sur les documents Devis Client';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Informations complÈmentaires sur les documents Devis Client';
 
 --
 -- Contenu de la table `doc_dev`
@@ -3950,7 +3950,7 @@ CREATE TABLE IF NOT EXISTS `doc_fac` (
   PRIMARY KEY  (`ref_doc`),
   KEY `id_niveau_relance` (`id_niveau_relance`),
   KEY `id_magasin` (`id_magasin`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Informations compl√©mentaires sur les documents Devis Client';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Informations complÈmentaires sur les documents Devis Client';
 
 --
 -- Contenu de la table `doc_fac`
@@ -3968,7 +3968,7 @@ CREATE TABLE IF NOT EXISTS `doc_faf` (
   `ref_doc_externe` varchar(32) NOT NULL,
   `date_echeance` date NOT NULL,
   PRIMARY KEY  (`ref_doc`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Informations compl√©mentaires sur les documents Devis Client';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Informations complÈmentaires sur les documents Devis Client';
 
 --
 -- Contenu de la table `doc_faf`
@@ -4005,7 +4005,7 @@ CREATE TABLE IF NOT EXISTS `doc_lines_blc` (
   `ref_doc_line_cdc` varchar(32) default NULL,
   PRIMARY KEY  (`ref_doc_line`),
   KEY `ref_doc_line_cdc` (`ref_doc_line_cdc`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Informations compl√©mentaires sur le contenu des commandes cl';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Informations complÈmentaires sur le contenu des commandes cl';
 
 --
 -- Contenu de la table `doc_lines_blc`
@@ -4024,7 +4024,7 @@ CREATE TABLE IF NOT EXISTS `doc_lines_blf` (
   `ref_article_externe` varchar(32) NOT NULL,
   PRIMARY KEY  (`ref_doc_line`),
   KEY `ref_doc_line_cdf` (`ref_doc_line_cdf`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Informations compl√©mentaires sur le \r\n\r\ncontenu des commande';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Informations complÈmentaires sur le \r\n\r\ncontenu des commande';
 
 --
 -- Contenu de la table `doc_lines_blf`
@@ -4041,7 +4041,7 @@ CREATE TABLE IF NOT EXISTS `doc_lines_cdc` (
   `ref_doc_line` varchar(32) NOT NULL,
   `qte_livree` double NOT NULL,
   PRIMARY KEY  (`ref_doc_line`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Informations compl√©mentaires sur le contenu des commandes cl';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Informations complÈmentaires sur le contenu des commandes cl';
 
 --
 -- Contenu de la table `doc_lines_cdc`
@@ -4059,7 +4059,7 @@ CREATE TABLE IF NOT EXISTS `doc_lines_cdf` (
   `qte_recue` double NOT NULL,
   `ref_article_externe` varchar(32) NOT NULL,
   PRIMARY KEY  (`ref_doc_line`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Informations compl√©mentaires sur le contenu des commandes cl';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Informations complÈmentaires sur le contenu des commandes cl';
 
 --
 -- Contenu de la table `doc_lines_cdf`
@@ -4076,7 +4076,7 @@ CREATE TABLE IF NOT EXISTS `doc_lines_def` (
   `ref_doc_line` varchar(32) NOT NULL,
   `ref_article_externe` varchar(32) NOT NULL,
   PRIMARY KEY  (`ref_doc_line`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Informations compl√©mentaires sur le \r\n\r\ncontenu des devis';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Informations complÈmentaires sur le \r\n\r\ncontenu des devis';
 
 --
 -- Contenu de la table `doc_lines_def`
@@ -4093,7 +4093,7 @@ CREATE TABLE IF NOT EXISTS `doc_lines_faf` (
   `ref_doc_line` varchar(32) NOT NULL,
   `ref_article_externe` varchar(32) NOT NULL,
   PRIMARY KEY  (`ref_doc_line`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Informations compl√©mentaires sur le \r\n\r\ncontenu des faf';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Informations complÈmentaires sur le \r\n\r\ncontenu des faf';
 
 --
 -- Contenu de la table `doc_lines_faf`
@@ -4111,7 +4111,7 @@ CREATE TABLE IF NOT EXISTS `doc_line_duree` (
   `date_debut` date default NULL,
   `duree` varchar(32) default NULL,
   PRIMARY KEY  (`ref_doc_line`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Dur√©es pour les articles de type bonnements';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='DurÈes pour les articles de type bonnements';
 
 --
 -- Contenu de la table `doc_line_duree`
@@ -4205,7 +4205,7 @@ CREATE TABLE IF NOT EXISTS `doc_pac` (
   KEY `ref_adr_livraison` (`ref_adr_livraison`),
   KEY `id_pays_livraison` (`id_pays_livraison`),
   KEY `id_livraison_mode` (`id_livraison_mode`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Informations compl√©mentaires sur les documents Panier Client';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Informations complÈmentaires sur les documents Panier Client';
 
 --
 -- Contenu de la table `doc_pac`
@@ -4226,7 +4226,7 @@ CREATE TABLE IF NOT EXISTS `doc_tic` (
   PRIMARY KEY  (`ref_doc`),
   KEY `id_stock` (`id_stock`),
   KEY `id_magasin` (`id_magasin`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Liste des informations compl√©mentaires concernant les docume';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Liste des informations complÈmentaires concernant les docume';
 
 --
 -- Contenu de la table `doc_tic`
@@ -4250,7 +4250,7 @@ CREATE TABLE IF NOT EXISTS `doc_trm` (
   KEY `id_stock_cible` (`id_stock_cible`),
   KEY `ref_transporteur` (`ref_transporteur`),
   KEY `id_livraison_mode` (`id_livraison_mode`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Informations compl√©mentaires sur les Transferts de Marchandi';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Informations complÈmentaires sur les Transferts de Marchandi';
 
 --
 -- Contenu de la table `doc_trm`
@@ -4326,7 +4326,7 @@ CREATE TABLE IF NOT EXISTS `editions_modes` (
   `code_edition_mode` varchar(32) NOT NULL,
   `actif` tinyint(3) unsigned NOT NULL,
   PRIMARY KEY  (`id_edition_mode`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COMMENT='Liste des modes d''√©dition possibles pour les documents' AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COMMENT='Liste des modes d''Èdition possibles pour les documents' AUTO_INCREMENT=6 ;
 
 --
 -- Contenu de la table `editions_modes`
@@ -4334,10 +4334,10 @@ CREATE TABLE IF NOT EXISTS `editions_modes` (
 
 INSERT INTO `editions_modes` (`id_edition_mode`, `lib_edition_mode`, `code_edition_mode`, `actif`) VALUES
 (1, 'Impression', 'IMPRESSION', 1),
-(2, 'Courrier √©lectronique', 'EMAIL', 1),
+(2, 'Courrier Èlectronique', 'EMAIL', 1),
 (3, 'Fax', 'FAX', 0),
 (4, 'Courrier', 'COURRIER', 0),
-(5, 'Courrier avec accus√© de r√©ception', 'COURRIER_AR', 0);
+(5, 'Courrier avec accusÈ de rÈception', 'COURRIER_AR', 0);
 
 -- --------------------------------------------------------
 
@@ -4360,11 +4360,11 @@ CREATE TABLE IF NOT EXISTS `exports_modeles` (
 --
 
 INSERT INTO `exports_modeles` (`id_export_modele`, `id_export_type`, `lib_modele`, `desc_modele`, `code_export_modele`, `extension`) VALUES
-(1, 5, 'Statistiques de vente : Chiffre d''affaire', 'Mod√®le d''impression standard des statistiques de vente', 'stat_standard', 'ods'),
-(2, 5, 'Statistiques de vente: Quantit√©s Command√©es', 'Mod√®le d''impression des statistiques de vente : Visualisation des quantit√©s command√©es.', 'stat_cmd', 'ods'),
-(3, 7, 'R√©sultats des commerciaux', 'Mod√®le de r√©sultats des commerciaux', 'resultats_commerciaux', 'ods'),
-(4, 7, 'R√©sultats des commerciaux par article', 'Mod√®le de r√©sultats commerciaux par article', 'resultats_commerciaux4', 'ods'),
-(100, 6, 'Etat de stocks', 'Mod√®le d''√©tat de stocks', 'etat_stocks', 'ods');
+(1, 5, 'Statistiques de vente : Chiffre d''affaire', 'ModËle d''impression standard des statistiques de vente', 'stat_standard', 'ods'),
+(2, 5, 'Statistiques de vente: QuantitÈs CommandÈes', 'ModËle d''impression des statistiques de vente : Visualisation des quantitÈs commandÈes.', 'stat_cmd', 'ods'),
+(3, 7, 'RÈsultats des commerciaux', 'ModËle de rÈsultats des commerciaux', 'resultats_commerciaux', 'ods'),
+(4, 7, 'RÈsultats des commerciaux par article', 'ModËle de rÈsultats commerciaux par article', 'resultats_commerciaux4', 'ods'),
+(100, 6, 'Etat de stocks', 'ModËle d''Ètat de stocks', 'etat_stocks', 'ods');
 
 -- --------------------------------------------------------
 
@@ -4416,7 +4416,7 @@ INSERT INTO `exports_type` (`id_export_type`, `lib_export_type`) VALUES
 (4, 'Contact'),
 (5, 'Stats'),
 (6, 'Stock'),
-(7, 'R√©sultats commerciaux');
+(7, 'RÈsultats commerciaux');
 
 -- --------------------------------------------------------
 
@@ -4444,11 +4444,11 @@ CREATE TABLE IF NOT EXISTS `factures_niveaux_relances` (
 --
 
 INSERT INTO `factures_niveaux_relances` (`id_niveau_relance`, `niveau_relance`, `id_client_categ`, `lib_niveau_relance`, `delai_before_next`, `id_edition_mode`, `id_courrier_joint`, `impression`) VALUES
-(1, 1, 1, 'Facture √©mise', 7, NULL, 0, 0),
-(2, 10, NULL, 'Facture irr√©couvrable', 0, NULL, 0, 0),
+(1, 1, 1, 'Facture Èmise', 7, NULL, 0, 0),
+(2, 10, NULL, 'Facture irrÈcouvrable', 0, NULL, 0, 0),
 (3, 11, NULL, 'Ne pas relancer', 0, NULL, 0, 0),
-(4, 12, NULL, '1√®re relance', 7, NULL, 0, 0),
-(5, 13, NULL, '2√®me relance', 14, NULL, 0, 0),
+(4, 12, NULL, '1Ëre relance', 7, NULL, 0, 0),
+(5, 13, NULL, '2Ëme relance', 14, NULL, 0, 0),
 (6, 14, NULL, 'Recouvrement contentieux', 0, NULL, 0, 0);
 
 -- --------------------------------------------------------
@@ -4461,7 +4461,7 @@ CREATE TABLE IF NOT EXISTS `factures_relances_modeles` (
   `id_relance_modele` smallint(5) NOT NULL auto_increment,
   `lib_relance_modele` varchar(64) NOT NULL,
   PRIMARY KEY  (`id_relance_modele`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COMMENT='Liste des libell√©s des mod√®les de relance' AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COMMENT='Liste des libellÈs des modËles de relance' AUTO_INCREMENT=2 ;
 
 --
 -- Contenu de la table `factures_relances_modeles`
@@ -4498,38 +4498,38 @@ CREATE TABLE IF NOT EXISTS `factures_relances_niveaux` (
 --
 
 INSERT INTO `factures_relances_niveaux` (`id_niveau_relance`, `id_relance_modele`, `niveau_relance`, `lib_niveau_relance`, `delai_before_next`, `id_edition_mode`, `impression`, `montant_mini`, `suite_avant_echeance`, `actif`) VALUES
-(1, NULL, 1, 'Non √©dit√©e', 0, NULL, 0, 0, 1, 1),
+(1, NULL, 1, 'Non ÈditÈe', 0, NULL, 0, 0, 1, 1),
 (2, NULL, 2, 'Envoi Initial', 15, NULL, 0, 0, 0, 1),
-(3, NULL, 3, '1√®re relance', 7, NULL, 1, 10, 0, 1),
-(4, NULL, 4, '2√®me relance', 8, 4, 1, 10, 0, 1),
-(5, NULL, 5, '3√®me relance', 10, 5, 1, 25, 0, 1),
-(6, NULL, 6, '4√®me relance', 10, 5, 1, 25, 0, 0),
-(7, NULL, 7, '5√®me relance', 10, 5, 1, 25, 0, 0),
-(8, NULL, 8, '6√®me relance', 10, 5, 1, 25, 0, 0),
-(9, NULL, 9, '7√®me relance', 10, 5, 1, 25, 0, 0),
-(10, NULL, 10, '8√®me relance', 10, 5, 1, 25, 0, 0),
-(11, NULL, 11, '9√®me relance', 10, 5, 1, 25, 0, 0),
-(12, NULL, 12, '10√®me relance', 10, 5, 1, 25, 0, 0),
-(13, NULL, 13, 'Contentieux - √† transmettre', 0, NULL, 0, NULL, 0, 1),
+(3, NULL, 3, '1Ëre relance', 7, NULL, 1, 10, 0, 1),
+(4, NULL, 4, '2Ëme relance', 8, 4, 1, 10, 0, 1),
+(5, NULL, 5, '3Ëme relance', 10, 5, 1, 25, 0, 1),
+(6, NULL, 6, '4Ëme relance', 10, 5, 1, 25, 0, 0),
+(7, NULL, 7, '5Ëme relance', 10, 5, 1, 25, 0, 0),
+(8, NULL, 8, '6Ëme relance', 10, 5, 1, 25, 0, 0),
+(9, NULL, 9, '7Ëme relance', 10, 5, 1, 25, 0, 0),
+(10, NULL, 10, '8Ëme relance', 10, 5, 1, 25, 0, 0),
+(11, NULL, 11, '9Ëme relance', 10, 5, 1, 25, 0, 0),
+(12, NULL, 12, '10Ëme relance', 10, 5, 1, 25, 0, 0),
+(13, NULL, 13, 'Contentieux - ‡ transmettre', 0, NULL, 0, NULL, 0, 1),
 (14, NULL, 14, 'Contentieux - en cours', 0, NULL, 0, NULL, 0, 1),
 (15, NULL, 15, 'Ne pas relancer', 0, NULL, 0, NULL, 0, 1),
-(16, NULL, 16, 'Irr√©couvrable', 0, NULL, 0, NULL, 0, 1),
-(17, 1, 1, 'Non √©dit√©e', 0, NULL, 0, 0, 1, 1),
+(16, NULL, 16, 'IrrÈcouvrable', 0, NULL, 0, NULL, 0, 1),
+(17, 1, 1, 'Non ÈditÈe', 0, NULL, 0, 0, 1, 1),
 (18, 1, 2, 'Envoi Initial', 15, NULL, 0, 0, 0, 1),
-(19, 1, 3, '1√®re relance', 7, NULL, 1, 10, 0, 1),
-(20, 1, 4, '2√®me relance', 8, 4, 1, 10, 0, 1),
-(21, 1, 5, '3√®me relance', 10, 5, 1, 25, 0, 1),
-(22, 1, 6, '4√®me relance', 10, 5, 1, 25, 0, 0),
-(23, 1, 7, '5√®me relance', 10, 5, 1, 25, 0, 0),
-(24, 1, 8, '6√®me relance', 10, 5, 1, 25, 0, 0),
-(25, 1, 9, '7√®me relance', 10, 5, 1, 25, 0, 0),
-(26, 1, 10, '8√®me relance', 10, 5, 1, 25, 0, 0),
-(27, 1, 11, '9√®me relance', 10, 5, 1, 25, 0, 0),
-(28, 1, 12, '10√®me relance', 10, 5, 1, 25, 0, 0),
-(29, 1, 13, 'Contentieux - √† transmettre', 0, NULL, 0, NULL, 0, 1),
+(19, 1, 3, '1Ëre relance', 7, NULL, 1, 10, 0, 1),
+(20, 1, 4, '2Ëme relance', 8, 4, 1, 10, 0, 1),
+(21, 1, 5, '3Ëme relance', 10, 5, 1, 25, 0, 1),
+(22, 1, 6, '4Ëme relance', 10, 5, 1, 25, 0, 0),
+(23, 1, 7, '5Ëme relance', 10, 5, 1, 25, 0, 0),
+(24, 1, 8, '6Ëme relance', 10, 5, 1, 25, 0, 0),
+(25, 1, 9, '7Ëme relance', 10, 5, 1, 25, 0, 0),
+(26, 1, 10, '8Ëme relance', 10, 5, 1, 25, 0, 0),
+(27, 1, 11, '9Ëme relance', 10, 5, 1, 25, 0, 0),
+(28, 1, 12, '10Ëme relance', 10, 5, 1, 25, 0, 0),
+(29, 1, 13, 'Contentieux - ‡ transmettre', 0, NULL, 0, NULL, 0, 1),
 (30, 1, 14, 'Contentieux - en cours', 0, NULL, 0, NULL, 0, 1),
 (31, 1, 15, 'Ne pas relancer', 0, NULL, 0, NULL, 0, 1),
-(32, 1, 16, 'Irr√©couvrable', 0, NULL, 0, NULL, 0, 1);
+(32, 1, 16, 'IrrÈcouvrable', 0, NULL, 0, NULL, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -4556,7 +4556,7 @@ INSERT INTO `fonctions` (`id_fonction`, `lib_fonction`, `desc_fonction`, `id_fon
 (1, 'Direction', '', NULL, 3),
 (2, 'Comptable', '', NULL, 3),
 (3, 'Commercial', '', NULL, 3),
-(4, 'Secr√©tariat', '', NULL, 3),
+(4, 'SecrÈtariat', '', NULL, 3),
 (5, 'Marketing', '', NULL, 3),
 (6, 'Logistique', '', NULL, 3),
 (7, 'Technique', '', NULL, 3);
@@ -4668,15 +4668,15 @@ CREATE TABLE IF NOT EXISTS `fournisseurs_categories` (
   `note` mediumtext NOT NULL,
   PRIMARY KEY  (`id_fournisseur_categ`),
   KEY `ref_acheteur` (`ref_acheteur`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COMMENT='Liste des cat√©gories de fournisseurs' AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COMMENT='Liste des catÈgories de fournisseurs' AUTO_INCREMENT=3 ;
 
 --
 -- Contenu de la table `fournisseurs_categories`
 --
 
 INSERT INTO `fournisseurs_categories` (`id_fournisseur_categ`, `lib_fournisseur_categ`, `ref_acheteur`, `defaut_numero_compte`, `note`) VALUES
-(1, 'Fournisseurs g√©n√©raux', NULL, '', ''),
-(2, 'Fournisseurs m√©tiers', NULL, '', '');
+(1, 'Fournisseurs gÈnÈraux', NULL, '', ''),
+(2, 'Fournisseurs mÈtiers', NULL, '', '');
 
 -- --------------------------------------------------------
 
@@ -4732,7 +4732,7 @@ CREATE TABLE IF NOT EXISTS `import_export_types` (
 --
 
 INSERT INTO `import_export_types` (`id_impex_type`, `lib_impex_type`) VALUES
-(1, 'Cat√©gories d''articles'),
+(1, 'CatÈgories d''articles'),
 (2, 'Articles'),
 (3, 'Annuaire');
 
@@ -4823,20 +4823,20 @@ CREATE TABLE IF NOT EXISTS `interfaces_themes` (
   PRIMARY KEY  (`id_theme`),
   KEY `actif` (`actif`),
   KEY `id_langage` (`id_langage`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COMMENT='Liste des th√®mes d''affichage' AUTO_INCREMENT=53 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COMMENT='Liste des thËmes d''affichage' AUTO_INCREMENT=53 ;
 
 --
 -- Contenu de la table `interfaces_themes`
 --
 
 INSERT INTO `interfaces_themes` (`id_theme`, `id_interface`, `lib_theme`, `code_theme`, `id_langage`, `desc_publique`, `desc_interne`, `actif`) VALUES
-(1, 1, 'Th√®me Visiteur Fran√ßais', 'visiteur_fr', 1, '', '', 1),
-(2, 2, 'Th√®me Administrateur Fran√ßais', 'admin_fr', 1, '', '', 1),
-(3, 3, 'Th√®me Collaborateur Fran√ßais', 'collab_fr', 1, '', '', 1),
-(4, 4, 'Th√®me Client Fran√ßais', 'client_fr', 1, '', '', 1),
-(5, 5, 'Th√®me Commercial Fran√ßais', 'commercial_fr', 1, '', '', 1),
-(51, 51, 'Th√®me Caisse Fran√ßais', 'caisse_fr', 1, '', '', 1),
-(52, 52, 'Th√®me Agenda Fran√ßais', 'agenda_fr', 1, '', '', 1);
+(1, 1, 'ThËme Visiteur FranÁais', 'visiteur_fr', 1, '', '', 1),
+(2, 2, 'ThËme Administrateur FranÁais', 'admin_fr', 1, '', '', 1),
+(3, 3, 'ThËme Collaborateur FranÁais', 'collab_fr', 1, '', '', 1),
+(4, 4, 'ThËme Client FranÁais', 'client_fr', 1, '', '', 1),
+(5, 5, 'ThËme Commercial FranÁais', 'commercial_fr', 1, '', '', 1),
+(51, 51, 'ThËme Caisse FranÁais', 'caisse_fr', 1, '', '', 1),
+(52, 52, 'ThËme Agenda FranÁais', 'agenda_fr', 1, '', '', 1);
 
 -- --------------------------------------------------------
 
@@ -4895,7 +4895,7 @@ CREATE TABLE IF NOT EXISTS `langages` (
 --
 
 INSERT INTO `langages` (`id_langage`, `lib_langage`, `code_langage`) VALUES
-(1, 'Fran√ßais', 'FR'),
+(1, 'FranÁais', 'FR'),
 (2, 'Anglais', 'EN'),
 (3, 'Allemand', 'DE'),
 (4, 'Espagnol', 'ES'),
@@ -5096,7 +5096,7 @@ CREATE TABLE IF NOT EXISTS `magasins` (
   KEY `id_tarif` (`id_tarif`),
   KEY `actif` (`actif`),
   KEY `id_mag_enseigne` (`id_mag_enseigne`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COMMENT='Liste des magasins de la soci√©t√©' AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COMMENT='Liste des magasins de la sociÈtÈ' AUTO_INCREMENT=2 ;
 
 --
 -- Contenu de la table `magasins`
@@ -5147,7 +5147,7 @@ CREATE TABLE IF NOT EXISTS `mail_templates` (
 --
 
 INSERT INTO `mail_templates` (`id_mail_template`, `lib_mail_template`, `header_img_template`, `header_mail_template`, `footer_mail_template`, `footer_img_template`, `mail_html_charset`, `mail_css_template`) VALUES
-(1, 'Modele_invitation_inscription', 'entete_mail_invitation_inscription.gif', 'Cr√©ation d''un compte utilisateur', '', '', 'iso-8859-1', 'mail_invitation_inscription.css');
+(1, 'Modele_invitation_inscription', 'entete_mail_invitation_inscription.gif', 'CrÈation d''un compte utilisateur', '', '', 'iso-8859-1', 'mail_invitation_inscription.css');
 
 -- --------------------------------------------------------
 
@@ -5161,7 +5161,7 @@ CREATE TABLE IF NOT EXISTS `mod_vehicules` (
   `marque` varchar(128) default NULL,
   `attribution` varchar(128) default NULL,
   PRIMARY KEY  (`id_vehicule`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Liste des v√©hicules' AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Liste des vÈhicules' AUTO_INCREMENT=1 ;
 
 --
 -- Contenu de la table `mod_vehicules`
@@ -5182,7 +5182,7 @@ CREATE TABLE IF NOT EXISTS `mod_vehicules_evenements` (
   `cout` double NOT NULL,
   PRIMARY KEY  (`id_evenement`),
   KEY `mod_vehicules_evenements_ibfk_1` (`id_vehicule`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Liste des √©venements concernant un v√©hicule' AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Liste des Èvenements concernant un vÈhicule' AUTO_INCREMENT=1 ;
 
 --
 -- Contenu de la table `mod_vehicules_evenements`
@@ -5288,13 +5288,13 @@ CREATE TABLE IF NOT EXISTS `newsletters` (
   `id_newsletter` smallint(5) unsigned NOT NULL auto_increment,
   `nom_newsletter` varchar(64) default NULL,
   `periodicite` smallint(5) unsigned default NULL COMMENT 'en jours',
-  `description_interne` mediumtext COMMENT 'Texte de pr√©sentation de la newsletter, non consultable par les abonn√©s',
-  `description_publique` mediumtext COMMENT 'Texte de pr√©sentation de la newsletter, public',
+  `description_interne` mediumtext COMMENT 'Texte de prÈsentation de la newsletter, non consultable par les abonnÈs',
+  `description_publique` mediumtext COMMENT 'Texte de prÈsentation de la newsletter, public',
   `id_mail_template` smallint(5) unsigned default NULL,
-  `archives_publiques` tinyint(1) unsigned default '0' COMMENT 'D√©finit si les inscrits peuvent consulter les archives',
-  `inscription_libre` tinyint(1) unsigned default '0' COMMENT 'L''inscription peut-elle etre r√©alis√©e librement depuis le site ?',
-  `nom_expediteur` varchar(64) default NULL COMMENT 'Nom de l''exp√©diteur',
-  `mail_expediteur` varchar(255) default NULL COMMENT 'Email de l''exp√©diteur',
+  `archives_publiques` tinyint(1) unsigned default '0' COMMENT 'DÈfinit si les inscrits peuvent consulter les archives',
+  `inscription_libre` tinyint(1) unsigned default '0' COMMENT 'L''inscription peut-elle etre rÈalisÈe librement depuis le site ?',
+  `nom_expediteur` varchar(64) default NULL COMMENT 'Nom de l''expÈditeur',
+  `mail_expediteur` varchar(255) default NULL COMMENT 'Email de l''expÈditeur',
   `mail_retour` varchar(255) default NULL COMMENT 'Email de retour',
   `mail_inscription_titre` varchar(255) default NULL COMMENT 'Titre du mail d''inscription pour les inscriptions manuelles',
   `mail_inscription_corps` mediumtext COMMENT 'Corps du mail d''inscription, devant inclure le lien de confirmation',
@@ -5381,7 +5381,7 @@ CREATE TABLE IF NOT EXISTS `newsletters_inscrits` (
   `id_newsletter` smallint(5) unsigned NOT NULL,
   `nom` varchar(128) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `inscrit` tinyint(3) unsigned NOT NULL COMMENT 'Oui=inscrit suppl√©mentaire ind√©pendamment des profils et crit√®res  Non=d√©sinscrit donc non destinataire sur',
+  `inscrit` tinyint(3) unsigned NOT NULL COMMENT 'Oui=inscrit supplÈmentaire indÈpendamment des profils et critËres  Non=dÈsinscrit donc non destinataire sur',
   KEY `id_newsletter` (`id_newsletter`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -5420,7 +5420,7 @@ CREATE TABLE IF NOT EXISTS `pays` (
   `pays` varchar(64) NOT NULL,
   `code_pays` varchar(2) NOT NULL,
   `defaut_id_langage` tinyint(3) unsigned NOT NULL,
-  `use_etat` tinyint(4) NOT NULL default '0' COMMENT 'D√©fini si les √©tats/cantons/provinces sont g√©r√©s pour ce pays',
+  `use_etat` tinyint(4) NOT NULL default '0' COMMENT 'DÈfini si les Ètats/cantons/provinces sont gÈrÈs pour ce pays',
   `affichage` tinyint(4) NOT NULL,
   PRIMARY KEY  (`id_pays`),
   UNIQUE KEY `pays` (`pays`)
@@ -5434,148 +5434,148 @@ INSERT INTO `pays` (`id_pays`, `pays`, `code_pays`, `defaut_id_langage`, `use_et
 (1, 'AFGHANISTAN', 'AF', 1, 0, 0),
 (2, 'AFRIQUE DU SUD', 'ZA', 1, 0, 0),
 (3, 'ALBANIE', 'AL', 1, 0, 0),
-(4, 'ALG√âRIE', 'DZ', 1, 0, 0),
+(4, 'ALG…RIE', 'DZ', 1, 0, 0),
 (5, 'ALLEMAGNE', 'DE', 1, 0, 0),
 (6, 'ANDORRE', 'AD', 1, 0, 1),
 (7, 'ANGOLA', 'AO', 1, 0, 0),
 (8, 'ANGUILLA', 'AI', 1, 0, 0),
 (9, 'ANTARTIQUE', 'AQ', 1, 0, 0),
 (10, 'ANTIGUA-ET-BARBUDA', 'AG', 1, 0, 0),
-(11, 'ANTILLES N√âERLANDAISES', 'AN', 1, 0, 0),
+(11, 'ANTILLES N…ERLANDAISES', 'AN', 1, 0, 0),
 (12, 'ARABIE SAOUDITE', 'SA', 1, 0, 0),
 (13, 'ARGENTINE', 'AR', 1, 0, 0),
-(14, 'ARM√âNIE', 'AM', 1, 0, 0),
+(14, 'ARM…NIE', 'AM', 1, 0, 0),
 (15, 'ARUBA', 'AW', 1, 0, 0),
 (16, 'AUSTRALIE', 'AU', 1, 0, 0),
 (17, 'AUTRICHE', 'AT', 1, 0, 0),
-(18, 'AZERBA√èDJAN', 'AZ', 1, 0, 0),
+(18, 'AZERBAœDJAN', 'AZ', 1, 0, 0),
 (19, 'BAHAMAS', 'BS', 1, 0, 0),
-(20, 'BAHRE√èN', 'BH', 1, 0, 0),
+(20, 'BAHREœN', 'BH', 1, 0, 0),
 (21, 'BANGLADESH', 'BD', 1, 0, 0),
 (22, 'BARBADE', 'BB', 1, 0, 0),
-(23, 'B√âLARUS', 'BY', 1, 0, 0),
+(23, 'B…LARUS', 'BY', 1, 0, 0),
 (24, 'BELGIQUE', 'BE', 1, 0, 1),
 (25, 'BELIZE', 'BZ', 1, 0, 0),
-(26, 'B√âNIN', 'BJ', 1, 0, 0),
+(26, 'B…NIN', 'BJ', 1, 0, 0),
 (27, 'BERMUDES', 'BM', 1, 0, 0),
 (28, 'BHOUTAN', 'BT', 1, 0, 0),
 (29, 'BOLIVIE', 'BO', 1, 0, 0),
-(30, 'BOSNIE-HERZ√âGOVINE', 'BA', 1, 0, 0),
+(30, 'BOSNIE-HERZ…GOVINE', 'BA', 1, 0, 0),
 (31, 'BOTSWANA', 'BW', 1, 0, 0),
-(32, 'BOUVET, √éLE', 'BV', 1, 0, 0),
-(33, 'BR√âSIL', 'BR', 1, 0, 0),
-(34, 'BRUN√âI DARUSSALAM', 'BN', 1, 0, 0),
+(32, 'BOUVET, ŒLE', 'BV', 1, 0, 0),
+(33, 'BR…SIL', 'BR', 1, 0, 0),
+(34, 'BRUN…I DARUSSALAM', 'BN', 1, 0, 0),
 (35, 'BULGARIE', 'BG', 1, 0, 0),
 (36, 'BURKINA FASO', 'BF', 1, 0, 0),
 (37, 'BURUNDI', 'BI', 1, 0, 0),
-(38, 'CA√èMANES, √éLES', 'KY', 1, 0, 0),
+(38, 'CAœMANES, ŒLES', 'KY', 1, 0, 0),
 (39, 'CAMBODGE', 'KH', 1, 0, 0),
 (40, 'CAMEROUN', 'CM', 1, 0, 0),
 (41, 'CANADA', 'CA', 1, 0, 0),
 (42, 'CAP-VERT', 'CV', 1, 0, 0),
-(43, 'CENTRAFRICAINE, R√âPUBLIQUE', 'CF', 1, 0, 0),
+(43, 'CENTRAFRICAINE, R…PUBLIQUE', 'CF', 1, 0, 0),
 (44, 'CHILI', 'CL', 1, 0, 0),
 (45, 'CHINE', 'CN', 1, 0, 0),
-(46, 'CHRISTMAS, √éLE', 'CX', 1, 0, 0),
+(46, 'CHRISTMAS, ŒLE', 'CX', 1, 0, 0),
 (47, 'CHYPRE', 'CY', 1, 0, 0),
-(48, 'COCOS (KEELING), √éLES DES', 'CC', 1, 0, 0),
+(48, 'COCOS (KEELING), ŒLES DES', 'CC', 1, 0, 0),
 (49, 'COLOMBIE', 'CO', 1, 0, 0),
 (50, 'COMORES', 'KM', 1, 0, 0),
 (51, 'CONGO', 'CG', 1, 0, 0),
-(52, 'CONGO, R√âPUBLIQUE D√âMOCRATIQUE DU', 'CD', 1, 0, 0),
-(53, 'COOK, √éLES', 'CK', 1, 0, 0),
-(54, 'COR√âE, R√âPUBLIQUE DE', 'KR', 1, 0, 0),
-(55, 'COR√âE, R√âPUBLIQUE POPULAIRE D√âMOCRATIQUE DE', 'KP', 1, 0, 0),
+(52, 'CONGO, R…PUBLIQUE D…MOCRATIQUE DU', 'CD', 1, 0, 0),
+(53, 'COOK, ŒLES', 'CK', 1, 0, 0),
+(54, 'COR…E, R…PUBLIQUE DE', 'KR', 1, 0, 0),
+(55, 'COR…E, R…PUBLIQUE POPULAIRE D…MOCRATIQUE DE', 'KP', 1, 0, 0),
 (56, 'COSTA RICA', 'CR', 1, 0, 0),
-(57, 'C√îTE D''IVOIRE', 'CI', 1, 0, 0),
+(57, 'C‘TE D''IVOIRE', 'CI', 1, 0, 0),
 (58, 'CROATIE', 'HR', 1, 0, 0),
 (59, 'CUBA', 'CU', 1, 0, 0),
 (60, 'DANEMARK', 'DK', 1, 0, 0),
 (61, 'DJIBOUTI', 'DJ', 1, 0, 0),
-(62, 'DOMINICAINE, R√âPUBLIQUE', 'DO', 1, 0, 0),
+(62, 'DOMINICAINE, R…PUBLIQUE', 'DO', 1, 0, 0),
 (63, 'DOMINIQUE', 'DM', 1, 0, 0),
-(64, '√âGYPTE', 'EG', 1, 0, 0),
+(64, '…GYPTE', 'EG', 1, 0, 0),
 (65, 'EL SALVADOR', 'SV', 1, 0, 0),
-(66, '√âMIRATS ARABES UNIS', 'AE', 1, 0, 0),
-(67, '√âQUATEUR', 'EC', 1, 0, 0),
-(68, '√âRYTR√âE', 'ER', 1, 0, 0),
+(66, '…MIRATS ARABES UNIS', 'AE', 1, 0, 0),
+(67, '…QUATEUR', 'EC', 1, 0, 0),
+(68, '…RYTR…E', 'ER', 1, 0, 0),
 (69, 'ESPAGNE', 'ES', 1, 0, 0),
 (70, 'ESTONIE', 'EE', 1, 0, 0),
-(71, '√âTATS UNIS', 'US', 1, 0, 0),
-(72, '√âTHIOPIE', 'ET', 1, 0, 0),
-(73, 'FALKLAND, √éLES (MALVINAS)', 'FK', 1, 0, 0),
-(74, 'F√âRO√â, √éLES', 'FO', 1, 0, 0),
+(71, '…TATS UNIS', 'US', 1, 0, 0),
+(72, '…THIOPIE', 'ET', 1, 0, 0),
+(73, 'FALKLAND, ŒLES (MALVINAS)', 'FK', 1, 0, 0),
+(74, 'F…RO…, ŒLES', 'FO', 1, 0, 0),
 (75, 'FIDJI', 'FJ', 1, 0, 0),
 (76, 'FINLANDE', 'FI', 1, 0, 0),
 (77, 'FRANCE', 'FR', 1, 0, 1),
 (79, 'GABON', 'GA', 1, 0, 0),
 (80, 'GAMBIE', 'GM', 1, 0, 0),
 (81, 'GEORGIE', 'GE', 1, 0, 0),
-(82, 'G√âORGIE DU SUD ET LES √éLES SANDWICH DU SUD', 'GS', 1, 0, 0),
+(82, 'G…ORGIE DU SUD ET LES ŒLES SANDWICH DU SUD', 'GS', 1, 0, 0),
 (83, 'GHANA', 'GH', 1, 0, 0),
 (84, 'GIBRALTAR', 'GI', 1, 0, 0),
-(85, 'GR√àCE', 'GR', 1, 0, 0),
+(85, 'GR»CE', 'GR', 1, 0, 0),
 (86, 'GRENADE', 'GD', 1, 0, 0),
 (87, 'GROENLAND', 'GL', 1, 0, 0),
 (88, 'GUADELOUPE', 'GP', 1, 0, 0),
 (89, 'GUAM', 'GU', 1, 0, 0),
 (90, 'GUATEMALA', 'GT', 1, 0, 0),
-(91, 'GUIN√âE', 'GN', 1, 0, 0),
-(92, 'GUIN√âE √âQUATORIALE', 'GQ', 1, 0, 0),
-(93, 'GUINE√â-BISSAU', 'GW', 1, 0, 0),
+(91, 'GUIN…E', 'GN', 1, 0, 0),
+(92, 'GUIN…E …QUATORIALE', 'GQ', 1, 0, 0),
+(93, 'GUINE…-BISSAU', 'GW', 1, 0, 0),
 (94, 'GUYANA', 'GY', 1, 0, 0),
-(95, 'GUYANE FRAN√áAISE', 'GF', 1, 0, 0),
-(96, 'HA√èTI', 'HT', 1, 0, 0),
-(97, 'HEARD ET √éLES MCDONALD, √éLE', 'HM', 1, 0, 0),
+(95, 'GUYANE FRAN«AISE', 'GF', 1, 0, 0),
+(96, 'HAœTI', 'HT', 1, 0, 0),
+(97, 'HEARD ET ŒLES MCDONALD, ŒLE', 'HM', 1, 0, 0),
 (98, 'HONDURAS', 'HN', 1, 0, 0),
 (99, 'HONG KONG', 'HK', 1, 0, 0),
 (100, 'HONGRIE', 'HU', 1, 0, 0),
-(101, '√éLES MINEURES √âLOIGN√âES DES ETATS-UNIS', 'UM', 1, 0, 0),
-(102, '√éLES VIERGES (BRITANNIQUES)', 'VG', 1, 0, 0),
-(103, '√éLES VIERGES (√â.-U.)', 'VI', 1, 0, 0),
+(101, 'ŒLES MINEURES …LOIGN…ES DES ETATS-UNIS', 'UM', 1, 0, 0),
+(102, 'ŒLES VIERGES (BRITANNIQUES)', 'VG', 1, 0, 0),
+(103, 'ŒLES VIERGES (….-U.)', 'VI', 1, 0, 0),
 (104, 'INDE', 'IN', 1, 0, 0),
-(105, 'INDON√âSIE', 'ID', 1, 0, 0),
-(106, 'IRAN (R√âPUBLIQUE ISLAMIQUE D'')', 'IR', 1, 0, 0),
+(105, 'INDON…SIE', 'ID', 1, 0, 0),
+(106, 'IRAN (R…PUBLIQUE ISLAMIQUE D'')', 'IR', 1, 0, 0),
 (107, 'IRAQ', 'IQ', 1, 0, 0),
 (108, 'IRLANDE', 'IE', 1, 0, 0),
 (109, 'ISLANDE', 'IS', 1, 0, 0),
-(110, 'ISRA√ãL', 'IL', 1, 0, 0),
+(110, 'ISRAÀL', 'IL', 1, 0, 0),
 (111, 'ITALIE', 'IT', 1, 0, 0),
-(112, 'JAMA√èQUE', 'JM', 1, 0, 0),
+(112, 'JAMAœQUE', 'JM', 1, 0, 0),
 (113, 'JAPON', 'JP', 1, 0, 0),
 (114, 'JORDANIE', 'JO', 1, 0, 0),
 (115, 'KAZAKSTAN', 'KZ', 1, 0, 0),
 (116, 'KENYA', 'KE', 1, 0, 0),
 (117, 'KIRGHIZISTAN', 'KG', 1, 0, 0),
 (118, 'KIRIBATI', 'KI', 1, 0, 0),
-(119, 'KOWE√èT', 'KW', 1, 0, 0),
-(120, 'LAO, R√âPUBLIQUE D√âMOCRATIQUE POPULAIRE', 'LA', 1, 0, 0),
+(119, 'KOWEœT', 'KW', 1, 0, 0),
+(120, 'LAO, R…PUBLIQUE D…MOCRATIQUE POPULAIRE', 'LA', 1, 0, 0),
 (121, 'LESOTHO', 'LS', 1, 0, 0),
 (122, 'LETTONIE', 'LV', 1, 0, 0),
 (123, 'LIBAN', 'LB', 1, 0, 0),
-(124, 'LIB√âRIA', 'LR', 1, 0, 0),
+(124, 'LIB…RIA', 'LR', 1, 0, 0),
 (125, 'LIBYENNE, JAMAHIRIYA ARABE', 'LY', 1, 0, 0),
 (126, 'LIECHTENSTEIN', 'LI', 1, 0, 0),
 (127, 'LITHUANIE', 'LT', 1, 0, 0),
 (128, 'LUXEMBOURG', 'LU', 1, 0, 1),
 (129, 'MACAO', 'MO', 1, 0, 0),
-(130, 'MAC√âDOINE, ANCIENNE R√âPUBLIQUE YOUGOSLAVE DE', 'MK', 1, 0, 0),
+(130, 'MAC…DOINE, ANCIENNE R…PUBLIQUE YOUGOSLAVE DE', 'MK', 1, 0, 0),
 (131, 'MADAGASCAR', 'MG', 1, 0, 0),
 (132, 'MALAISIE', 'MY', 1, 0, 0),
 (133, 'MALAWI', 'MW', 1, 0, 0),
 (134, 'MALDIVES', 'MV', 1, 0, 0),
 (135, 'MALI', 'ML', 1, 0, 0),
 (136, 'MALTE', 'MT', 1, 0, 0),
-(137, 'MARIANNES DU NORD, √éLES', 'MP', 1, 0, 0),
+(137, 'MARIANNES DU NORD, ŒLES', 'MP', 1, 0, 0),
 (138, 'MAROC', 'MA', 1, 0, 0),
-(139, 'MARSHALL, √éLES', 'MH', 1, 0, 0),
+(139, 'MARSHALL, ŒLES', 'MH', 1, 0, 0),
 (140, 'MARTINIQUE', 'MQ', 1, 0, 0),
 (141, 'MAURICE', 'MU', 1, 0, 0),
 (142, 'MAURITANIE', 'MR', 1, 0, 0),
 (143, 'MAYOTTE', 'YT', 1, 0, 0),
 (144, 'MEXIQUE', 'MX', 1, 0, 0),
-(145, 'MICRON√âSIE (√âTATS F√âD√âR√âS DE)', 'FM', 1, 0, 0),
-(146, 'MOLDOVA, R√âPUBLIQUE DE', 'MD', 1, 0, 0),
+(145, 'MICRON…SIE (…TATS F…D…R…S DE)', 'FM', 1, 0, 0),
+(146, 'MOLDOVA, R…PUBLIQUE DE', 'MD', 1, 0, 0),
 (147, 'MONACO', 'MC', 1, 0, 1),
 (148, 'MONGOLIE', 'MN', 1, 0, 0),
 (149, 'MONTSERRAT', 'MS', 1, 0, 0),
@@ -5583,89 +5583,89 @@ INSERT INTO `pays` (`id_pays`, `pays`, `code_pays`, `defaut_id_langage`, `use_et
 (151, 'MYANMAR', 'MM', 1, 0, 0),
 (152, 'NAMIBIE', 'NA', 1, 0, 0),
 (153, 'NAURU', 'NR', 1, 0, 0),
-(154, 'N√âPAL', 'NP', 1, 0, 0),
+(154, 'N…PAL', 'NP', 1, 0, 0),
 (155, 'NICARAGUA', 'NI', 1, 0, 0),
 (156, 'NIGER', 'NE', 1, 0, 0),
-(157, 'NIG√âRIA', 'NG', 1, 0, 0),
-(158, 'NIOU√â', 'NU', 1, 0, 0),
-(159, 'NORFOLK, √éLE', 'NF', 1, 0, 0),
-(160, 'NORV√àGE', 'NO', 1, 0, 0),
-(161, 'NOUVELLE CAL√âDONIE', 'NC', 1, 0, 0),
-(162, 'NOUVELLE Z√âLANDE', 'NZ', 1, 0, 0),
-(163, 'OC√âAN INDIEN, TERRITOIRE BRITANIQUE DE L''', 'IO', 1, 0, 0),
+(157, 'NIG…RIA', 'NG', 1, 0, 0),
+(158, 'NIOU…', 'NU', 1, 0, 0),
+(159, 'NORFOLK, ŒLE', 'NF', 1, 0, 0),
+(160, 'NORV»GE', 'NO', 1, 0, 0),
+(161, 'NOUVELLE CAL…DONIE', 'NC', 1, 0, 0),
+(162, 'NOUVELLE Z…LANDE', 'NZ', 1, 0, 0),
+(163, 'OC…AN INDIEN, TERRITOIRE BRITANIQUE DE L''', 'IO', 1, 0, 0),
 (164, 'OMAN', 'OM', 1, 0, 0),
 (165, 'OUGANDA', 'UG', 1, 0, 0),
-(166, 'OUZB√âKISTAN', 'UZ', 1, 0, 0),
+(166, 'OUZB…KISTAN', 'UZ', 1, 0, 0),
 (167, 'PAKISTAN', 'PK', 1, 0, 0),
 (168, 'PALAU', 'PW', 1, 0, 0),
-(169, 'PALESTINIEN OCCUP√â, TERRITOIRE', 'PS', 1, 0, 0),
+(169, 'PALESTINIEN OCCUP…, TERRITOIRE', 'PS', 1, 0, 0),
 (170, 'PANAMA', 'PA', 1, 0, 0),
-(171, 'PAPOUASIE NOUVELLE GUIN√âE', 'PG', 1, 0, 0),
+(171, 'PAPOUASIE NOUVELLE GUIN…E', 'PG', 1, 0, 0),
 (172, 'PARAGUAY', 'PY', 1, 0, 0),
 (173, 'PAYS-BAS', 'NL', 1, 0, 0),
-(174, 'P√âROU', 'PE', 1, 0, 0),
+(174, 'P…ROU', 'PE', 1, 0, 0),
 (175, 'PHILIPPINES', 'PH', 1, 0, 0),
-(176, 'PITCA√èRN', 'PN', 1, 0, 0),
+(176, 'PITCAœRN', 'PN', 1, 0, 0),
 (177, 'POLOGNE', 'PL', 1, 0, 0),
-(178, 'POLYN√âSIE FRAN√áAISE', 'PF', 1, 0, 0),
+(178, 'POLYN…SIE FRAN«AISE', 'PF', 1, 0, 0),
 (179, 'PORTO RICO', 'PR', 1, 0, 0),
 (180, 'PORTUGAL', 'PT', 1, 0, 0),
 (181, 'QATAR', 'QA', 1, 0, 0),
-(182, 'R√âUNION', 'RE', 1, 0, 0),
+(182, 'R…UNION', 'RE', 1, 0, 0),
 (183, 'ROUMANIE', 'RO', 1, 0, 0),
 (184, 'ROYAUME UNI', 'GB', 1, 0, 0),
-(185, 'RUSSIE, F√âD√âRATION DE', 'RU', 1, 0, 0),
+(185, 'RUSSIE, F…D…RATION DE', 'RU', 1, 0, 0),
 (186, 'RWANDA', 'RW', 1, 0, 0),
 (187, 'SAHARA OCCIDENTAL', 'EH', 1, 0, 0),
-(188, 'SAINTE-H√âL√àNE', 'SH', 1, 0, 0),
+(188, 'SAINTE-H…L»NE', 'SH', 1, 0, 0),
 (189, 'SAINTE-LUCIE', 'LC', 1, 0, 0),
 (190, 'SAINT-KITTS-ET-NEVIS', 'KN', 1, 0, 0),
 (191, 'SAINT-MARIN', 'SM', 1, 0, 0),
 (192, 'SAINT-PIERRE-ET-MIQUELON', 'PM', 1, 0, 0),
 (193, 'SAINT-VINCENT-ET-LES-GRENADINES', 'VC', 1, 0, 0),
-(194, 'SALOMON, √éLES', 'SB', 1, 0, 0),
+(194, 'SALOMON, ŒLES', 'SB', 1, 0, 0),
 (195, 'SAMOA', 'WS', 1, 0, 0),
-(196, 'SAMOA AM√âRICAINES', 'AS', 1, 0, 0),
-(197, 'SAO TOM√â-ET-PRINCIPE', 'ST', 1, 0, 0),
-(198, 'S√âN√âGAL', 'SN', 1, 0, 0),
+(196, 'SAMOA AM…RICAINES', 'AS', 1, 0, 0),
+(197, 'SAO TOM…-ET-PRINCIPE', 'ST', 1, 0, 0),
+(198, 'S…N…GAL', 'SN', 1, 0, 0),
 (199, 'SEYCHELLES', 'SC', 1, 0, 0),
-(200, 'SIERRA L√âONE', 'SL', 1, 0, 0),
+(200, 'SIERRA L…ONE', 'SL', 1, 0, 0),
 (201, 'SINGAPOUR', 'SG', 1, 0, 0),
 (202, 'SLOVAQUIE', 'SK', 1, 0, 0),
-(203, 'SLOV√âNIE', 'SI', 1, 0, 0),
+(203, 'SLOV…NIE', 'SI', 1, 0, 0),
 (204, 'SOMALIE', 'SO', 1, 0, 0),
 (205, 'SOUDAN', 'SD', 1, 0, 0),
 (206, 'SRI LANKA', 'LK', 1, 0, 0),
-(207, 'SU√àDE', 'SE', 1, 0, 0),
+(207, 'SU»DE', 'SE', 1, 0, 0),
 (208, 'SUISSE', 'CH', 1, 0, 1),
 (209, 'SURINAME', 'SR', 1, 0, 0),
-(210, 'SVALBARD ET √éLES JAN MAYEN', 'SJ', 1, 0, 0),
+(210, 'SVALBARD ET ŒLES JAN MAYEN', 'SJ', 1, 0, 0),
 (211, 'SWAZILAND', 'SZ', 1, 0, 0),
-(212, 'SYRIENNE, R√âPUBLIQUE ARABE', 'SY', 1, 0, 0),
+(212, 'SYRIENNE, R…PUBLIQUE ARABE', 'SY', 1, 0, 0),
 (213, 'TADJIKISTAN', 'TJ', 1, 0, 0),
-(214, 'TA√èWAN, PROVINCE DE CHINE', 'TW', 1, 0, 0),
-(215, 'TANZANIE, R√âPUBLIQUE-UNIE DE ', 'TZ', 1, 0, 0),
+(214, 'TAœWAN, PROVINCE DE CHINE', 'TW', 1, 0, 0),
+(215, 'TANZANIE, R…PUBLIQUE-UNIE DE ', 'TZ', 1, 0, 0),
 (216, 'TCHAD', 'TD', 1, 0, 0),
-(217, 'TCH√àQUE, R√âPUBLIQUE', 'CZ', 1, 0, 0),
-(218, 'TERRES AUSTRALES FRAN√áAISES', 'TF', 1, 0, 0),
-(219, 'THA√èLANDE', 'TH', 1, 0, 0),
+(217, 'TCH»QUE, R…PUBLIQUE', 'CZ', 1, 0, 0),
+(218, 'TERRES AUSTRALES FRAN«AISES', 'TF', 1, 0, 0),
+(219, 'THAœLANDE', 'TH', 1, 0, 0),
 (220, 'TIMOR ORIENTAL', 'TP', 1, 0, 0),
 (221, 'TOGO', 'TG', 1, 0, 0),
-(222, 'TOK√âLAOU', 'TK', 1, 0, 0),
+(222, 'TOK…LAOU', 'TK', 1, 0, 0),
 (223, 'TONGA', 'TO', 1, 0, 0),
-(224, 'TRINIT√â-ET-TOBAGO', 'TT', 1, 0, 0),
+(224, 'TRINIT…-ET-TOBAGO', 'TT', 1, 0, 0),
 (225, 'TUNISIE', 'TN', 1, 0, 0),
-(226, 'TURKM√âNISTAN', 'TM', 1, 0, 0),
-(227, 'TURKS ET CA√èQUES, √éLES', 'TC', 1, 0, 0),
+(226, 'TURKM…NISTAN', 'TM', 1, 0, 0),
+(227, 'TURKS ET CAœQUES, ŒLES', 'TC', 1, 0, 0),
 (228, 'TURQUIE', 'TR', 1, 0, 0),
 (229, 'TUVALU', 'TV', 1, 0, 0),
 (230, 'UKRAINE', 'UA', 1, 0, 0),
 (231, 'URUGUAY', 'UY', 1, 0, 0),
 (232, 'VANUATU', 'VU', 1, 0, 0),
-(233, 'VATICAN, √âTAT DE LA CIT√â DU (SAINT-SI√àGE)', 'VA', 1, 0, 0),
+(233, 'VATICAN, …TAT DE LA CIT… DU (SAINT-SI»GE)', 'VA', 1, 0, 0),
 (234, 'VENEZUELA', 'VE', 1, 0, 0),
 (235, 'VIET NAM', 'VN', 1, 0, 0),
-(236, 'WALLIS ET FUTUNA, √éLES', 'WF', 1, 0, 0),
+(236, 'WALLIS ET FUTUNA, ŒLES', 'WF', 1, 0, 0),
 (237, 'YEMEN', 'YE', 1, 0, 0),
 (238, 'YOUGOSLAVIE', 'YU', 1, 0, 0),
 (239, 'ZAMBIE', 'ZM', 1, 0, 0),
@@ -5711,32 +5711,32 @@ CREATE TABLE IF NOT EXISTS `pdf_modeles` (
 --
 
 INSERT INTO `pdf_modeles` (`id_pdf_modele`, `id_pdf_type`, `lib_modele`, `desc_modele`, `code_pdf_modele`) VALUES
-(1, 1, 'Document Standard LMB', 'Mod√®le d''impression standard d''un document commercial', 'doc_standard'),
-(2, 1, 'Facture Client LMB', 'Facture standard au mod√®le LMB', 'doc_fac_lmb'),
-(4, 1, 'Bon de Livraison Client LMB', 'Bon de Livraison standard au mod√®le LMB', 'doc_blc_lmb'),
-(5, 1, 'Bon de Commande Client LMB', 'Bon de Commande standard au mod√®le LMB', 'doc_cdc_lmb'),
-(6, 1, 'Devis Client LMB', 'Devis standard au mod√®le LMB', 'doc_dev_lmb'),
-(7, 1, 'Transfert de Marchandises LMB', 'Mod√®le d''impression standard d''un Transfert de Marchandises', 'doc_trm_lmb'),
-(8, 1, 'Bon de Fabrication LMB', 'Mod√®le d''impression standard d''un Bon de Fabrication', 'doc_fab_lmb'),
-(9, 1, 'Facture Client avec BVR Suisse', 'Mod√®le d''impression d''une facture client avec BVR Suisse', 'doc_fac_lmb_bvr'),
-(10, 1, 'Devis Client LMB avec Exon√©ration de TVA', 'Mod√®le d''impression d''un Devis client avec mentions l√©gales pour les entreprises √©xon√©r√©es de TVA et Auto-Entrepreneurs.', 'doc_dev_lmb_ae'),
-(11, 1, 'Commande Client LMB avec Exon√©ration de TVA', 'Mod√®le d''impression d''un Commande client avec mentions l√©gales pour les entreprises √©xon√©r√©es de TVA et Auto-Entrepreneurs.', 'doc_cdc_lmb_ae'),
-(12, 1, 'Bon de Livraison Client LMB avec Exon√©ration de TVA', 'Mod√®le d''impression d''un Bon de Livraison client avec mentions l√©gales pour les entreprises √©xon√©r√©es de TVA et Auto-Entrepreneurs.', 'doc_blc_lmb_ae'),
-(13, 1, 'Facture Client LMB avec Exon√©ration de TVA', 'Mod√®le d''impression d''une Facture client avec mentions l√©gales pour les entreprises √©xon√©r√©es de TVA et Auto-Entrepreneurs.', 'doc_fac_lmb_ae'),
-(14, 3, 'Fiche Article standard', 'Mod√®le d''impression standard d''une fiche article', 'art_standard'),
-(15, 4, 'Fiche Contact standard', 'Mod√®le d''impression standard d''une fiche contact', 'ann_standard'),
-(16, 5, 'Statistiques de vente : Chiffre d''affaire', 'Mod√®le d''impression standard des statistiques de vente', 'stat_standard'),
-(19, 1, 'Bon de Livraison Client LMB', 'Mod√®le d''impression standard d''un Bon de Livraison Client', 'doc_blc_standard'),
-(20, 1, 'Devis Client LMB', 'Mod√®le d''impression standard d''un Devis Client', 'doc_dev_standard'),
-(21, 1, 'Facture Client LMB', 'Mod√®le d''impression standard d''une facture Client', 'doc_fac_standard'),
-(22, 1, 'Bon de Commande Client LMB', 'Mod√®le d''impression standard d''un Bon de Commande Client', 'doc_cdc_standard'),
-(23, 5, 'Statistiques de vente: Quantit√©s Command√©es', 'Mod√®le d''impression des statistiques de vente : Visualisation des quantit√©s command√©es.', 'stat_cmd'),
-(24, 2, 'Courrier Standard LMB', 'Mod√®le d''impression standard d''un courrier.', 'cou_standard'),
-(25, 1, 'Ticket de caisse', 'Mod√®le d''impression standard d''un ticket de caisse', 'doc_tic_standard'),
+(1, 1, 'Document Standard LMB', 'ModËle d''impression standard d''un document commercial', 'doc_standard'),
+(2, 1, 'Facture Client LMB', 'Facture standard au modËle LMB', 'doc_fac_lmb'),
+(4, 1, 'Bon de Livraison Client LMB', 'Bon de Livraison standard au modËle LMB', 'doc_blc_lmb'),
+(5, 1, 'Bon de Commande Client LMB', 'Bon de Commande standard au modËle LMB', 'doc_cdc_lmb'),
+(6, 1, 'Devis Client LMB', 'Devis standard au modËle LMB', 'doc_dev_lmb'),
+(7, 1, 'Transfert de Marchandises LMB', 'ModËle d''impression standard d''un Transfert de Marchandises', 'doc_trm_lmb'),
+(8, 1, 'Bon de Fabrication LMB', 'ModËle d''impression standard d''un Bon de Fabrication', 'doc_fab_lmb'),
+(9, 1, 'Facture Client avec BVR Suisse', 'ModËle d''impression d''une facture client avec BVR Suisse', 'doc_fac_lmb_bvr'),
+(10, 1, 'Devis Client LMB avec ExonÈration de TVA', 'ModËle d''impression d''un Devis client avec mentions lÈgales pour les entreprises ÈxonÈrÈes de TVA et Auto-Entrepreneurs.', 'doc_dev_lmb_ae'),
+(11, 1, 'Commande Client LMB avec ExonÈration de TVA', 'ModËle d''impression d''un Commande client avec mentions lÈgales pour les entreprises ÈxonÈrÈes de TVA et Auto-Entrepreneurs.', 'doc_cdc_lmb_ae'),
+(12, 1, 'Bon de Livraison Client LMB avec ExonÈration de TVA', 'ModËle d''impression d''un Bon de Livraison client avec mentions lÈgales pour les entreprises ÈxonÈrÈes de TVA et Auto-Entrepreneurs.', 'doc_blc_lmb_ae'),
+(13, 1, 'Facture Client LMB avec ExonÈration de TVA', 'ModËle d''impression d''une Facture client avec mentions lÈgales pour les entreprises ÈxonÈrÈes de TVA et Auto-Entrepreneurs.', 'doc_fac_lmb_ae'),
+(14, 3, 'Fiche Article standard', 'ModËle d''impression standard d''une fiche article', 'art_standard'),
+(15, 4, 'Fiche Contact standard', 'ModËle d''impression standard d''une fiche contact', 'ann_standard'),
+(16, 5, 'Statistiques de vente : Chiffre d''affaire', 'ModËle d''impression standard des statistiques de vente', 'stat_standard'),
+(19, 1, 'Bon de Livraison Client LMB', 'ModËle d''impression standard d''un Bon de Livraison Client', 'doc_blc_standard'),
+(20, 1, 'Devis Client LMB', 'ModËle d''impression standard d''un Devis Client', 'doc_dev_standard'),
+(21, 1, 'Facture Client LMB', 'ModËle d''impression standard d''une facture Client', 'doc_fac_standard'),
+(22, 1, 'Bon de Commande Client LMB', 'ModËle d''impression standard d''un Bon de Commande Client', 'doc_cdc_standard'),
+(23, 5, 'Statistiques de vente: QuantitÈs CommandÈes', 'ModËle d''impression des statistiques de vente : Visualisation des quantitÈs commandÈes.', 'stat_cmd'),
+(24, 2, 'Courrier Standard LMB', 'ModËle d''impression standard d''un courrier.', 'cou_standard'),
+(25, 1, 'Ticket de caisse', 'ModËle d''impression standard d''un ticket de caisse', 'doc_tic_standard'),
 (26, 6, 'etat de stock', '', 'stock_etat'),
 (27, 6, 'etat de stock lmb', '', 'stock_standard'),
-(28, 7, 'R√©sultats des commerciaux', 'Mod√®le de r√©sultats des commerciaux', 'resultats_commerciaux'),
-(29, 8, 'Commande Client', 'Mod√®le de Commande Client', 'commande_client');
+(28, 7, 'RÈsultats des commerciaux', 'ModËle de rÈsultats des commerciaux', 'resultats_commerciaux'),
+(29, 8, 'Commande Client', 'ModËle de Commande Client', 'commande_client');
 
 -- --------------------------------------------------------
 
@@ -5772,7 +5772,7 @@ CREATE TABLE IF NOT EXISTS `pdf_types` (
   `id_pdf_type` tinyint(3) unsigned NOT NULL auto_increment,
   `lib_pdf_type` varchar(64) NOT NULL,
   PRIMARY KEY  (`id_pdf_type`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COMMENT='Types de PDF √† g√©n√©rer' AUTO_INCREMENT=9 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COMMENT='Types de PDF ‡ gÈnÈrer' AUTO_INCREMENT=9 ;
 
 --
 -- Contenu de la table `pdf_types`
@@ -5785,7 +5785,7 @@ INSERT INTO `pdf_types` (`id_pdf_type`, `lib_pdf_type`) VALUES
 (4, 'Contact'),
 (5, 'Stats'),
 (6, 'Stock'),
-(7, 'R√©sultats des commerciaux'),
+(7, 'RÈsultats des commerciaux'),
 (8, 'Commande Client');
 
 -- --------------------------------------------------------
@@ -5814,28 +5814,28 @@ CREATE TABLE IF NOT EXISTS `permissions` (
 --
 
 INSERT INTO `permissions` (`id_permission`, `id_profil`, `lib_permission`, `desc_permission`, `values`, `id_permission_parent`, `ordre`) VALUES
-(1, 2, 'Acc√®s √† l''interface Administrateur', '', 'CAC(0,1)', NULL, 50),
-(3, 3, 'Acc√®s √† l''interface Collaborateur', '', 'CAC(0,1)', NULL, 50),
-(4, 4, 'Acc√®s √† l''interface Client', '', 'CAC(0,1)', NULL, 50),
-(5, 3, 'Voir le menu Comptabilit√©', '', 'CAC(0,1)', 101, 1),
+(1, 2, 'AccËs ‡ l''interface Administrateur', '', 'CAC(0,1)', NULL, 50),
+(3, 3, 'AccËs ‡ l''interface Collaborateur', '', 'CAC(0,1)', NULL, 50),
+(4, 4, 'AccËs ‡ l''interface Client', '', 'CAC(0,1)', NULL, 50),
+(5, 3, 'Voir le menu ComptabilitÈ', '', 'CAC(0,1)', 101, 1),
 (6, 3, 'Voir / Modifier les tarifs', '', 'CAC(0,1)', 103, 3),
 (7, 3, 'Gestion des Collaborateurs', '', 'CAC(0,1)', 15, 2),
 (8, 3, 'Gestion des Administrateurs', '', 'CAC(0,1)', 15, 1),
 (9, 3, 'Gestion des Caisses', '', 'SELECT_MULTIPLE([ALL,Toutes];{SELECT id_compte_caisse,lib_caisse FROM comptes_caisses WHERE actif=1})', 101, 2),
 (10, 3, 'Gestion des Comptes Bancaires', '', 'SELECT_MULTIPLE([ALL,Tous];{SELECT id_compte_bancaire,lib_compte FROM comptes_bancaires  WHERE actif=1 AND ref_contact=''C-000000-00001''})', 101, 4),
-(11, 3, 'Acc√®s √† Situation des Clients', '', 'CAC(0,1)', 101, 6),
-(12, 3, 'Acc√®s √† Situation des Fournisseurs', '', 'CAC(0,1)', 101, 7),
-(13, 3, 'Param√©trage comptabilit√© automatique et acc√®s aux journaux ', '', 'CAC(0,1)', 101, 5),
+(11, 3, 'AccËs ‡ Situation des Clients', '', 'CAC(0,1)', 101, 6),
+(12, 3, 'AccËs ‡ Situation des Fournisseurs', '', 'CAC(0,1)', 101, 7),
+(13, 3, 'ParamÈtrage comptabilitÈ automatique et accËs aux journaux ', '', 'CAC(0,1)', 101, 5),
 (14, 3, 'Envoi d''un E-Mailing (Newsletters)', '', 'CAC(0,1)', 16, 50),
 (15, 3, 'Gestion du Personnel ', '', 'CONT()', 3, 5),
 (16, 3, 'Marketing / Communication', '', 'CONT()', 3, 7),
-(17, 3, 'Attribuer une vente √† un commercial', '', 'CAC(0,1)', 100, 7),
+(17, 3, 'Attribuer une vente ‡ un commercial', '', 'CAC(0,1)', 100, 7),
 (18, 3, 'Voir les statistiques des ventes', '', 'CAC(0,1)', 100, 8),
 (19, 3, 'Valider les inscriptions externes', '', 'CAC(0,1)', 102, 1),
 (20, 3, 'Export de l''annuaire', '', 'CAC(0,1)', 102, 6),
-(21, 3, 'Cr√©er un inventaire', '', 'CAC(0,1)', 104, 2),
+(21, 3, 'CrÈer un inventaire', '', 'CAC(0,1)', 104, 2),
 (22, 3, 'Visualisation des fiches Contact', '', 'SELECT_MULTIPLE([ALL,Tous];[SP,Sans profils];{SELECT id_profil,lib_profil FROM profils})', 102, 2),
-(23, 7, 'Acc√®s √† l''interface Commercial', '', '0,1', NULL, 50),
+(23, 7, 'AccËs ‡ l''interface Commercial', '', '0,1', NULL, 50),
 (24, 3, 'Voir le menu des Ventes', '', 'CAC(0,1)', 100, 1),
 (25, 3, 'Voir les documents des Ventes', '', 'SELECT_MULTIPLE([ALL,Tous];{SELECT id_type_doc,lib_type_doc FROM documents_types  WHERE actif=1 && id_type_groupe=1})', 100, 2),
 (26, 3, 'Modifier les documents des Ventes', '', 'SELECT_MULTIPLE([ALL,Tous];{SELECT id_type_doc,lib_type_doc FROM documents_types  WHERE actif=1 && id_type_groupe=1})', 100, 3),
@@ -5846,17 +5846,17 @@ INSERT INTO `permissions` (`id_permission`, `id_profil`, `lib_permission`, `desc
 (31, 3, 'Voir les documents des Stocks', '', 'SELECT_MULTIPLE([ALL,Tous];{SELECT id_type_doc,lib_type_doc FROM documents_types  WHERE actif=1 && id_type_groupe=3})', 104, 4),
 (32, 3, 'Modifier les documents des Stocks', '', 'SELECT_MULTIPLE([ALL,Tous];{SELECT id_type_doc,lib_type_doc FROM documents_types  WHERE actif=1 && id_type_groupe=3})', 104, 5),
 (33, 3, 'Gestion des TPE', '', 'SELECT_MULTIPLE([ALL,Tous];{SELECT id_compte_tpe,lib_tpe FROM comptes_tpes  WHERE actif=1})', 101, 3),
-(34, 3, 'Acc√®s √† Situation des Commerciaux', '', 'CAC(0,1)', 101, 8),
+(34, 3, 'AccËs ‡ Situation des Commerciaux', '', 'CAC(0,1)', 101, 8),
 (35, 3, 'Valider un Inventaire', '', 'CAC(0,1)', 104, 3),
 (36, 3, 'Modifier les fiches Contact', '', 'SELECT_MULTIPLE([ALL,Tous];[SP,Sans profils];{SELECT id_profil,lib_profil FROM profils})', 102, 50),
 (37, 3, 'Gestion des TPV', '', 'SELECT_MULTIPLE([ALL,Tous];{SELECT id_compte_tpv,lib_tpv FROM comptes_tpv  WHERE actif=1})', 101, 3),
-(38, 3, 'Cr√©er des fiches Articles', '', 'CAC(0,1)', 103, 1),
+(38, 3, 'CrÈer des fiches Articles', '', 'CAC(0,1)', 103, 1),
 (39, 3, 'Voir les adresses', '', 'SELECT_MULTIPLE([ALL,Toutes];{SELECT id_adresse_type, adresse_type FROM adresses_types WHERE adresse_type <>""})', 102, 60),
-(40, 3, 'Voir les coordonn√©es', '', 'SELECT_MULTIPLE([ALL,Toutes];{SELECT id_coord_type, coord_type FROM coordonnees_types WHERE coord_type <>""})', 102, 61),
+(40, 3, 'Voir les coordonnÈes', '', 'SELECT_MULTIPLE([ALL,Toutes];{SELECT id_coord_type, coord_type FROM coordonnees_types WHERE coord_type <>""})', 102, 61),
 (41, 3, 'Voir les sites', '', 'SELECT_MULTIPLE([ALL,Toutes];{SELECT id_web_type, web_type FROM sites_web_types WHERE web_type <>""})', 102, 61),
-(42, 3, 'Permissions sur l''Agenda', '', 'TABLE_SELECT([Voir la dispo,Voir les d√©tails,Modifier];{SELECT ref_agenda, lib_agenda FROM agendas})', 105, 1),
-(43, 3, 'Permissions sur les types d''√©venements', '', 'TABLE_SELECT([Voir la dispo,Voir les d√©tails,Modifier];{SELECT id_type_event, lib_type_event FROM agendas_events_types})', 105, 2),
-(44, 3, 'Modifier les Mod√®les de contenu', '', 'CAC(0,1)', 100, 50),
+(42, 3, 'Permissions sur l''Agenda', '', 'TABLE_SELECT([Voir la dispo,Voir les dÈtails,Modifier];{SELECT ref_agenda, lib_agenda FROM agendas})', 105, 1),
+(43, 3, 'Permissions sur les types d''Èvenements', '', 'TABLE_SELECT([Voir la dispo,Voir les dÈtails,Modifier];{SELECT id_type_event, lib_type_event FROM agendas_events_types})', 105, 2),
+(44, 3, 'Modifier les ModËles de contenu', '', 'CAC(0,1)', 100, 50),
 (100, 3, 'Gestion Commerciale', '', 'CONT()', 3, 1),
 (101, 3, 'Gestion Comptable', '', 'CONT()', 3, 2),
 (102, 3, 'Gestion de l''Annuaire', '', 'CONT()', 3, 3),
@@ -5949,11 +5949,11 @@ CREATE TABLE IF NOT EXISTS `pieces_types` (
 INSERT INTO `pieces_types` (`id_piece_type`, `lib_piece_type`, `abrev_piece_type`, `systeme`, `actif`) VALUES
 (1, 'Contrat', '', 1, 1),
 (2, 'Document commercial original', '', 1, 1),
-(3, 'Relev√© d''Identit√© Bancaire', '', 1, 1),
+(3, 'RelevÈ d''IdentitÈ Bancaire', '', 1, 1),
 (4, 'Documentation commerciale', '', 1, 1),
-(5, 'Autorisation de pr√©l√®vement', '', 1, 1),
-(6, 'Signature num√©ris√©e', '', 1, 1),
-(7, 'Tampon num√©rique', '', 1, 1),
+(5, 'Autorisation de prÈlËvement', '', 1, 1),
+(6, 'Signature numÈrisÈe', '', 1, 1),
+(7, 'Tampon numÈrique', '', 1, 1),
 (8, 'Bulletin de paie', '', 1, 1);
 
 -- --------------------------------------------------------
@@ -5980,302 +5980,302 @@ INSERT INTO `plan_comptable` (`numero_compte`, `lib_compte`, `favori`) VALUES
 ('5', 'Comptes financiers', 0),
 ('6', 'Comptes de charges', 0),
 ('7', 'Comptes de produits', 0),
-('8', 'Comptes sp√©ciaux', 0),
-('10', 'Capital et R√©serves', 0),
+('8', 'Comptes spÈciaux', 0),
+('10', 'Capital et RÈserves', 0),
 ('101', 'Capital', 0),
-('1011', 'Capital souscrit - non appel√©', 0),
-('1012', 'Capital souscrit - appel√©, non vers√©', 0),
-('1013', 'Capital souscrit - appel√©, vers√©', 0),
+('1011', 'Capital souscrit - non appelÈ', 0),
+('1012', 'Capital souscrit - appelÈ, non versÈ', 0),
+('1013', 'Capital souscrit - appelÈ, versÈ', 0),
 ('10131', 'Capital non amorti', 0),
 ('10132', 'Capital amorti', 0),
-('1018', 'Capital souscrit soumis √† des r√©glementations particuli√®res', 0),
-('104', 'Primes li√©es au capital social', 0),
-('1041', 'Primes d''√©mission', 0),
+('1018', 'Capital souscrit soumis ‡ des rÈglementations particuliËres', 0),
+('104', 'Primes liÈes au capital social', 0),
+('1041', 'Primes d''Èmission', 0),
 ('1042', 'Primes de fusion', 0),
 ('1043', 'Primes d''apport', 0),
 ('1044', 'Primes de conversion d''obligations en actions', 0),
 ('1045', 'Bons de souscription d''actions', 0),
-('105', 'Ecarts de r√©√©valuation', 0),
-('1051', 'R√©serve sp√©ciale de r√©√©valuation', 0),
-('1052', 'Ecart de r√©√©valuation libre', 0),
-('1053', 'R√©serve de r√©√©valuation', 0),
-('1055', 'Ecarts de r√©√©avaluation (autres op√©rations l√©gales)', 0),
-('1057', 'Autres √©carts de r√©√©valuation en France', 0),
-('1058', 'Autres √©carts de r√©√©valuation √† l''Etranger', 0),
-('106', 'R√©serves', 0),
-('1061', 'R√©serve l√©gale', 0),
-('10611', 'R√©serve l√©gale proprement dite', 0),
-('10612', 'Plus-values nettes √† long terme', 0),
-('1062', 'R√©serves indisponibles', 0),
-('1063', 'R√©serves statutaires ou contractuelles', 0),
-('1064', 'R√©serves r√©glement√©es', 0),
-('10641', 'Plus-values nettes √† long terme', 0),
-('10643', 'R√©serves cons√©cutives √† l''octroi de subventions d''investissement', 0),
-('10648', 'Autres r√©serves r√©glement√©es', 0),
-('1068', 'Autres r√©serves', 0),
-('10681', 'R√©serve de propre assureur', 0),
-('10688', 'R√©serves diverses', 0),
-('107', 'Ecart d''√©quivalence', 0),
+('105', 'Ecarts de rÈÈvaluation', 0),
+('1051', 'RÈserve spÈciale de rÈÈvaluation', 0),
+('1052', 'Ecart de rÈÈvaluation libre', 0),
+('1053', 'RÈserve de rÈÈvaluation', 0),
+('1055', 'Ecarts de rÈÈavaluation (autres opÈrations lÈgales)', 0),
+('1057', 'Autres Ècarts de rÈÈvaluation en France', 0),
+('1058', 'Autres Ècarts de rÈÈvaluation ‡ l''Etranger', 0),
+('106', 'RÈserves', 0),
+('1061', 'RÈserve lÈgale', 0),
+('10611', 'RÈserve lÈgale proprement dite', 0),
+('10612', 'Plus-values nettes ‡ long terme', 0),
+('1062', 'RÈserves indisponibles', 0),
+('1063', 'RÈserves statutaires ou contractuelles', 0),
+('1064', 'RÈserves rÈglementÈes', 0),
+('10641', 'Plus-values nettes ‡ long terme', 0),
+('10643', 'RÈserves consÈcutives ‡ l''octroi de subventions d''investissement', 0),
+('10648', 'Autres rÈserves rÈglementÈes', 0),
+('1068', 'Autres rÈserves', 0),
+('10681', 'RÈserve de propre assureur', 0),
+('10688', 'RÈserves diverses', 0),
+('107', 'Ecart d''Èquivalence', 0),
 ('108', 'Compte de l''exploitant', 0),
-('109', 'Actionnaires : Capital souscrit - non appel√©', 0),
-('11', 'Report a nouveau (solde cr√©diteur ou d√©biteur)', 0),
-('110', 'Report √† nouveau (solde cr√©diteur)', 0),
-('119', 'Report √† nouveau (solde d√©biteur)', 0),
-('12', 'R√©sultat de l''exercice (b√©n√©fice ou perte)', 0),
-('120', 'R√©sultat de l''exercice (b√©n√©fice)', 0),
-('129', 'R√©sultat de l''exercice (perte)', 0),
+('109', 'Actionnaires : Capital souscrit - non appelÈ', 0),
+('11', 'Report a nouveau (solde crÈditeur ou dÈbiteur)', 0),
+('110', 'Report ‡ nouveau (solde crÈditeur)', 0),
+('119', 'Report ‡ nouveau (solde dÈbiteur)', 0),
+('12', 'RÈsultat de l''exercice (bÈnÈfice ou perte)', 0),
+('120', 'RÈsultat de l''exercice (bÈnÈfice)', 0),
+('129', 'RÈsultat de l''exercice (perte)', 0),
 ('13', 'Subventions d''investissement', 0),
-('131', 'Subventions d''√©quipement', 0),
+('131', 'Subventions d''Èquipement', 0),
 ('1311', 'Etat', 0),
-('1312', 'R√©gions', 0),
-('1313', 'D√©partements', 0),
+('1312', 'RÈgions', 0),
+('1313', 'DÈpartements', 0),
 ('1314', 'Communes', 0),
-('1315', 'Collectivit√©s publiques', 0),
+('1315', 'CollectivitÈs publiques', 0),
 ('1316', 'Entreprises publiques', 0),
-('1317', 'Entreprises et organismes priv√©s', 0),
+('1317', 'Entreprises et organismes privÈs', 0),
 ('1318', 'Autres', 0),
-('138', 'Autres subventions d''investissement (m√™me ventilation que celle du compte 131)', 0),
-('139', 'Subventions d''investissement inscrites au compte de r√©sultat', 0),
-('1391', 'Subventions d''√©quipement', 0),
+('138', 'Autres subventions d''investissement (mÍme ventilation que celle du compte 131)', 0),
+('139', 'Subventions d''investissement inscrites au compte de rÈsultat', 0),
+('1391', 'Subventions d''Èquipement', 0),
 ('13911', 'Etat', 0),
-('13912', 'R√©gions', 0),
-('13913', 'D√©partements', 0),
+('13912', 'RÈgions', 0),
+('13913', 'DÈpartements', 0),
 ('13914', 'Communes', 0),
-('13915', 'Collectivit√©s publiques', 0),
+('13915', 'CollectivitÈs publiques', 0),
 ('13916', 'Entreprises publiques', 0),
-('13917', 'Entreprises et organismes priv√©s', 0),
+('13917', 'Entreprises et organismes privÈs', 0),
 ('13918', 'Autres', 0),
-('1398', 'Autres subventions d''investissement (m√™me ventilation que celle du compte 1391)', 0),
-('14', 'Provisions r√©glement√©es', 0),
-('142', 'Provisions r√©glement√©es relatives aux immobilisations', 0),
-('1423', 'Provisions pour reconstitution des gisements miniers et p√©troliers', 0),
-('1424', 'Provisions pour investissement (participation des salari√©s)', 0),
-('143', 'Provisions r√©glement√©es relatives aux stocks', 0),
+('1398', 'Autres subventions d''investissement (mÍme ventilation que celle du compte 1391)', 0),
+('14', 'Provisions rÈglementÈes', 0),
+('142', 'Provisions rÈglementÈes relatives aux immobilisations', 0),
+('1423', 'Provisions pour reconstitution des gisements miniers et pÈtroliers', 0),
+('1424', 'Provisions pour investissement (participation des salariÈs)', 0),
+('143', 'Provisions rÈglementÈes relatives aux stocks', 0),
 ('1431', 'Hausse des prix', 0),
 ('1432', 'Fluctuation des cours', 0),
-('144', 'Provisions r√©glement√©es relatives aux autres √©l√©ments de l''actif', 0),
-('145', 'Amortissements d√©rogatoires', 0),
-('146', 'Provision sp√©ciale de r√©√©valuation', 0),
-('147', 'Plus-values r√©investies', 0),
-('148', 'Autres provisions r√©glement√©es', 0),
+('144', 'Provisions rÈglementÈes relatives aux autres ÈlÈments de l''actif', 0),
+('145', 'Amortissements dÈrogatoires', 0),
+('146', 'Provision spÈciale de rÈÈvaluation', 0),
+('147', 'Plus-values rÈinvesties', 0),
+('148', 'Autres provisions rÈglementÈes', 0),
 ('15', 'Provisions pour risques et charges', 0),
 ('151', 'Provisions pour risques', 0),
 ('1511', 'Provisions pour litiges', 0),
-('1512', 'Provisions pour garanties donn√©es aux clients', 0),
-('1513', 'Provisions pour pertes sur march√©s √† terme', 0),
-('1514', 'Provisions pour amendes et p√©nalit√©s', 0),
+('1512', 'Provisions pour garanties donnÈes aux clients', 0),
+('1513', 'Provisions pour pertes sur marchÈs ‡ terme', 0),
+('1514', 'Provisions pour amendes et pÈnalitÈs', 0),
 ('1515', 'Provisions pour pertes de change', 0),
 ('1518', 'Autres provisions pour risques', 0),
 ('153', 'Provisions pour pensions et obligations similaires', 0),
-('155', 'Provisions pour imp√¥ts', 0),
+('155', 'Provisions pour impÙts', 0),
 ('156', 'Provisions pour renouvellement des immobilisations (entreprises concessionnaires)', 0),
-('157', 'Provisions pour charges √† r√©partir sur plusieurs exercices', 0),
-('1572', 'Provisions pour grosses r√©parations', 0),
+('157', 'Provisions pour charges ‡ rÈpartir sur plusieurs exercices', 0),
+('1572', 'Provisions pour grosses rÈparations', 0),
 ('158', 'Autres provisions pour charges', 0),
-('1582', 'Provisions pour charges sociales et fiscales sur cong√©s √† payer', 0),
-('16', 'Emprunts et dettes assimil√©es', 0),
+('1582', 'Provisions pour charges sociales et fiscales sur congÈs ‡ payer', 0),
+('16', 'Emprunts et dettes assimilÈes', 0),
 ('161', 'Emprunts obligataires convertibles', 0),
 ('163', 'Autres emprunts obligataires', 0),
-('164', 'Emprunts aupr√®s des √©tablissements de cr√©dit', 0),
-('165', 'D√©p√¥ts et cautionnements re√ßus', 0),
-('1651', 'D√©p√¥ts', 0),
+('164', 'Emprunts auprËs des Ètablissements de crÈdit', 0),
+('165', 'DÈpÙts et cautionnements reÁus', 0),
+('1651', 'DÈpÙts', 0),
 ('1655', 'Cautionnements', 0),
-('166', 'Participation des salari√©s aux r√©sultats', 0),
-('1661', 'Comptes bloqu√©s', 0),
+('166', 'Participation des salariÈs aux rÈsultats', 0),
+('1661', 'Comptes bloquÈs', 0),
 ('1662', 'Fonds de participation', 0),
-('167', 'Emprunts et dettes assortis de conditions particuli√®res', 0),
+('167', 'Emprunts et dettes assortis de conditions particuliËres', 0),
 ('1671', 'Emissions de titres participatifs', 0),
-('1674', 'Avances conditionn√©es de l''Etat', 0),
+('1674', 'Avances conditionnÈes de l''Etat', 0),
 ('1675', 'Emprunts participatifs', 0),
-('168', 'Autres emprunts et dettes assimil√©es', 0),
+('168', 'Autres emprunts et dettes assimilÈes', 0),
 ('1681', 'Autres emprunts', 0),
-('1685', 'Rentes viag√®res capitalis√©es', 0),
+('1685', 'Rentes viagËres capitalisÈes', 0),
 ('1687', 'Autres dettes', 0),
-('1688', 'Int√©r√™ts courus', 0),
+('1688', 'IntÈrÍts courus', 0),
 ('16881', 'Sur emprunts obligataires convertibles', 0),
 ('16883', 'Sur autres emprunts obligataires', 0),
-('16884', 'Sur emprunts aupr√®s des √©tablissements de cr√©dit', 0),
-('16885', 'Sur d√©p√¥ts et cautionnements re√ßus', 0),
-('16886', 'Sur participation des salari√©s aux r√©sultats', 0),
-('16887', 'Sur emprunts et dettes assortis de conditions particuli√®res', 0),
-('16888', 'Sur autres emprunts et dettes assimil√©es', 0),
+('16884', 'Sur emprunts auprËs des Ètablissements de crÈdit', 0),
+('16885', 'Sur dÈpÙts et cautionnements reÁus', 0),
+('16886', 'Sur participation des salariÈs aux rÈsultats', 0),
+('16887', 'Sur emprunts et dettes assortis de conditions particuliËres', 0),
+('16888', 'Sur autres emprunts et dettes assimilÈes', 0),
 ('169', 'Primes de remboursement des obligations', 0),
-('17', 'Dettes rattach√©es √† des participations', 0),
-('171', 'Dettes rattach√©es √† des participations (groupe)', 0),
-('174', 'Dettes rattach√©es √† des participations (hors groupe)', 0),
-('178', 'Dettes rattach√©es √† des soci√©t√©s en participation', 0),
+('17', 'Dettes rattachÈes ‡ des participations', 0),
+('171', 'Dettes rattachÈes ‡ des participations (groupe)', 0),
+('174', 'Dettes rattachÈes ‡ des participations (hors groupe)', 0),
+('178', 'Dettes rattachÈes ‡ des sociÈtÈs en participation', 0),
 ('1781', 'Principal', 0),
-('1788', 'Int√©r√™ts courus', 0),
-('18', 'Comptes de liaison des √©tablissements et soci√©t√©s en participation', 0),
-('181', 'Comptes de liaison des √©tablissements', 0),
-('186', 'Biens et prestations de services √©chang√©s entre √©tablissements (charges)', 0),
-('187', 'Biens et prestations de services √©chang√©s entre √©tablissements (produits)', 0),
-('188', 'Comptes de liaison des soci√©t√©s en participation', 0),
+('1788', 'IntÈrÍts courus', 0),
+('18', 'Comptes de liaison des Ètablissements et sociÈtÈs en participation', 0),
+('181', 'Comptes de liaison des Ètablissements', 0),
+('186', 'Biens et prestations de services ÈchangÈs entre Ètablissements (charges)', 0),
+('187', 'Biens et prestations de services ÈchangÈs entre Ètablissements (produits)', 0),
+('188', 'Comptes de liaison des sociÈtÈs en participation', 0),
 ('20', 'Immobilisations incorporelles', 0),
-('201', 'Frais d''√©tablissement', 0),
+('201', 'Frais d''Ètablissement', 0),
 ('2011', 'Frais de constitution', 0),
-('2012', 'Frais de premier √©tablissement', 0),
+('2012', 'Frais de premier Ètablissement', 0),
 ('20121', 'Frais de prospection', 0),
-('20122', 'Frais de publicit√©', 0),
-('2013', 'Frais d''augmentation de capital et d''op√©rations diverses (fusions, scissions, transformations)', 0),
-('203', 'Frais de recherche et de d√©veloppement', 0),
-('205', 'Concessions et droits similaires, brevets, licences, marques, proc√©d√©s, logiciels,droits et valeurs similaires', 0),
+('20122', 'Frais de publicitÈ', 0),
+('2013', 'Frais d''augmentation de capital et d''opÈrations diverses (fusions, scissions, transformations)', 0),
+('203', 'Frais de recherche et de dÈveloppement', 0),
+('205', 'Concessions et droits similaires, brevets, licences, marques, procÈdÈs, logiciels,droits et valeurs similaires', 0),
 ('206', 'Droit au bail', 0),
 ('207', 'Fonds commercial', 0),
 ('208', 'Autres immobilisations incorporelles', 0),
 ('21', 'Immobilisations corporelles', 0),
 ('211', 'Terrains', 0),
 ('2111', 'Terrains nus', 0),
-('2112', 'Terrains am√©nag√©s', 0),
+('2112', 'Terrains amÈnagÈs', 0),
 ('2113', 'Sous-sols et sur-sols', 0),
 ('2114', 'Terrains de gisement', 0),
-('21141', 'Carri√®res', 0),
-('2115', 'Terrains b√¢tis', 0),
+('21141', 'CarriËres', 0),
+('2115', 'Terrains b‚tis', 0),
 ('21151', 'Ensembles immobiliers industriels (A, B...)', 0),
 ('21155', 'Ensembles immobiliers administratifs et commerciaux (A, B...)', 0),
 ('21158', 'Autres ensembles immobiliers', 0),
-('211581', 'affect√©s aux op√©rations professionnelles (A, B...)', 0),
-('211588', 'affect√©s aux op√©rations non professionnelles (A, B...)', 0),
-('2116', 'Compte d''ordre sur immobilisations (art. 6 du d√©cret n¬∞ 78-737 du11 juillet 1978)', 0),
-('212', 'Agencements et am√©nagements de terrains (m√™me ventilation que celle du compte 211)', 0),
+('211581', 'affectÈs aux opÈrations professionnelles (A, B...)', 0),
+('211588', 'affectÈs aux opÈrations non professionnelles (A, B...)', 0),
+('2116', 'Compte d''ordre sur immobilisations (art. 6 du dÈcret n∞ 78-737 du11 juillet 1978)', 0),
+('212', 'Agencements et amÈnagements de terrains (mÍme ventilation que celle du compte 211)', 0),
 ('213', 'Constructions', 0),
-('2131', 'B√¢timents', 0),
+('2131', 'B‚timents', 0),
 ('21311', 'Ensembles immobiliers industriels (A, B...)', 0),
 ('21315', 'Ensembles immobiliers administratifs et commerciaux (A, B...)', 0),
 ('21318', 'Autres ensembles immobiliers', 0),
-('213181', 'affect√©s aux op√©rations professionnelles (A, B...)', 0),
-('213188', 'affect√©s aux op√©rations non professionnelles (A, B...)', 0),
-('2135', 'Installations g√©n√©rales - agencements - am√©nagements des constructions (m√™me ventilation que celle du compte 2131)', 0),
+('213181', 'affectÈs aux opÈrations professionnelles (A, B...)', 0),
+('213188', 'affectÈs aux opÈrations non professionnelles (A, B...)', 0),
+('2135', 'Installations gÈnÈrales - agencements - amÈnagements des constructions (mÍme ventilation que celle du compte 2131)', 0),
 ('2138', 'Ouvrages d''infrastructure', 0),
 ('21381', 'Voies de terre', 0),
 ('21382', 'Voies de fer', 0),
 ('21383', 'Voies d''eau', 0),
 ('21384', 'Barrages', 0),
-('21385', 'Pistes d''a√©rodromes', 0),
-('214', 'Constructions sur sol d''autrui (m√™me ventilation que celle du compte 213)', 0),
-('215', 'Installations techniques, mat√©riels et outillage industriels', 0),
-('2151', 'Installations complexes sp√©cialis√©es', 0),
+('21385', 'Pistes d''aÈrodromes', 0),
+('214', 'Constructions sur sol d''autrui (mÍme ventilation que celle du compte 213)', 0),
+('215', 'Installations techniques, matÈriels et outillage industriels', 0),
+('2151', 'Installations complexes spÈcialisÈes', 0),
 ('21511', 'sur sol propre', 0),
 ('21514', 'sur sol d''autrui', 0),
-('2153', 'Installations √† caract√®re sp√©cifique', 0),
+('2153', 'Installations ‡ caractËre spÈcifique', 0),
 ('21531', 'sur sol propre', 0),
 ('21534', 'sur sol d''autrui', 0),
-('2154', 'Mat√©riel industriel', 0),
+('2154', 'MatÈriel industriel', 0),
 ('2155', 'Outillage industriel', 0),
-('2157', 'Agencements et am√©nagements du mat√©riel et outillage industriels', 0),
+('2157', 'Agencements et amÈnagements du matÈriel et outillage industriels', 0),
 ('218', 'Autres immobilisations corporelles', 0),
-('2181', 'Installations g√©n√©rales, agencements, am√©nagements divers', 0),
-('2182', 'Mat√©riel de transport', 0),
-('2183', 'Mat√©riel de bureau et mat√©riel informatique', 0),
+('2181', 'Installations gÈnÈrales, agencements, amÈnagements divers', 0),
+('2182', 'MatÈriel de transport', 0),
+('2183', 'MatÈriel de bureau et matÈriel informatique', 0),
 ('2184', 'Mobilier', 0),
 ('2185', 'Cheptel', 0),
-('2186', 'Emballages r√©cup√©rables', 0),
+('2186', 'Emballages rÈcupÈrables', 0),
 ('22', 'Immobilisations mises en concession', 0),
 ('23', 'Immobilisations en cours', 0),
 ('231', 'Immobilisations corporelles en cours', 0),
 ('2312', 'Terrains', 0),
 ('2313', 'Constructions', 0),
-('2315', 'Installations techniques, mat√©riel et outillage industriels', 0),
+('2315', 'Installations techniques, matÈriel et outillage industriels', 0),
 ('2318', 'Autres immobilisations corporelles', 0),
 ('232', 'Immobilisations incorporelles en cours', 0),
-('237', 'Avances et acomptes vers√©s sur immobilisations incorporelles', 0),
-('238', 'Avances et acomptes vers√©s sur commandes d''immobilisations corporelles', 0),
+('237', 'Avances et acomptes versÈs sur immobilisations incorporelles', 0),
+('238', 'Avances et acomptes versÈs sur commandes d''immobilisations corporelles', 0),
 ('2382', 'Terrains', 0),
 ('2383', 'Constructions', 0),
-('2385', 'Installations techniques, mat√©riel et outillage industriels', 0),
+('2385', 'Installations techniques, matÈriel et outillage industriels', 0),
 ('2388', 'Autres immobilisations corporelles', 0),
-('25', 'Parts dans des entreprises li√©es et cr√©ances sur des entreprises li√©es', 0),
-('26', 'Participations et cr√©ances rattach√©es √† des participations', 0),
+('25', 'Parts dans des entreprises liÈes et crÈances sur des entreprises liÈes', 0),
+('26', 'Participations et crÈances rattachÈes ‡ des participations', 0),
 ('261', 'Titres de participation', 0),
 ('2611', 'Actions', 0),
 ('2618', 'Autres titres', 0),
 ('266', 'Autres formes de participation', 0),
-('267', 'Cr√©ances rattach√©es √† des participations', 0),
-('2671', 'Cr√©ances rattach√©es √† des participations (groupe)', 0),
-('2674', 'Cr√©ances rattach√©es √† des participations (hors groupe)', 0),
-('2675', 'Versements repr√©sentatifs d''apports non capitalis√©s (appel de fonds)', 0),
+('267', 'CrÈances rattachÈes ‡ des participations', 0),
+('2671', 'CrÈances rattachÈes ‡ des participations (groupe)', 0),
+('2674', 'CrÈances rattachÈes ‡ des participations (hors groupe)', 0),
+('2675', 'Versements reprÈsentatifs d''apports non capitalisÈs (appel de fonds)', 0),
 ('2676', 'Avances consolidables', 0),
-('2677', 'Autres cr√©ances rattach√©es √† des participations', 0),
-('2678', 'Int√©r√™ts courus', 0),
-('268', 'Cr√©ances rattach√©es √† des soci√©t√©s en participation', 0),
+('2677', 'Autres crÈances rattachÈes ‡ des participations', 0),
+('2678', 'IntÈrÍts courus', 0),
+('268', 'CrÈances rattachÈes ‡ des sociÈtÈs en participation', 0),
 ('2681', 'Principal', 0),
-('2688', 'Int√©r√™ts courus', 0),
-('269', 'Versements restant √† effectuer sur titres de participation non lib√©r√©s', 0),
-('27', 'Autres immobilisations financi√®res', 0),
-('271', 'Titres immobilis√©s autres que les titres immobilis√©s de l''activit√© de portefeuille (droit de propri√©t√©)', 0),
+('2688', 'IntÈrÍts courus', 0),
+('269', 'Versements restant ‡ effectuer sur titres de participation non libÈrÈs', 0),
+('27', 'Autres immobilisations financiËres', 0),
+('271', 'Titres immobilisÈs autres que les titres immobilisÈs de l''activitÈ de portefeuille (droit de propriÈtÈ)', 0),
 ('2711', 'Actions', 0),
 ('2718', 'Autres titres', 0),
-('272', 'Titres immobilis√©s (droit de cr√©ance)', 0),
+('272', 'Titres immobilisÈs (droit de crÈance)', 0),
 ('2721', 'Obligations', 0),
 ('2722', 'Bons', 0),
-('273', 'Titres immobilis√©s de l''activit√© de portefeuille', 0),
-('274', 'Pr√™ts', 0),
-('2741', 'Pr√™ts participatifs', 0),
-('2742', 'Pr√™ts aux associ√©s', 0),
-('2743', 'Pr√™ts au personnel', 0),
-('2748', 'Autres pr√™ts', 0),
-('275', 'D√©p√¥ts et cautionnements vers√©s', 0),
-('2751', 'D√©p√¥ts', 0),
+('273', 'Titres immobilisÈs de l''activitÈ de portefeuille', 0),
+('274', 'PrÍts', 0),
+('2741', 'PrÍts participatifs', 0),
+('2742', 'PrÍts aux associÈs', 0),
+('2743', 'PrÍts au personnel', 0),
+('2748', 'Autres prÍts', 0),
+('275', 'DÈpÙts et cautionnements versÈs', 0),
+('2751', 'DÈpÙts', 0),
 ('2755', 'Cautionnements', 0),
-('276', 'Autres cr√©ances immobilis√©es', 0),
-('2761', 'Cr√©ances diverses', 0),
-('2768', 'Int√©r√™ts courus', 0),
-('27682', 'Sur titres immobilis√©s (droit de cr√©ance)', 0),
-('27684', 'Sur pr√™ts', 0),
-('27685', 'Sur d√©p√¥ts et cautionnements', 0),
-('27688', 'Sur cr√©ances diverses', 0),
+('276', 'Autres crÈances immobilisÈes', 0),
+('2761', 'CrÈances diverses', 0),
+('2768', 'IntÈrÍts courus', 0),
+('27682', 'Sur titres immobilisÈs (droit de crÈance)', 0),
+('27684', 'Sur prÍts', 0),
+('27685', 'Sur dÈpÙts et cautionnements', 0),
+('27688', 'Sur crÈances diverses', 0),
 ('277', '(Actions propres ou parts propres)', 0),
 ('2771', 'Actions propres ou parts propres', 0),
 ('2772', 'Actions propres ou parts propres en voie d''annulation', 0),
-('279', 'Versements restant √† effectuer sur titres immobilis√©s non lib√©r√©s', 0),
+('279', 'Versements restant ‡ effectuer sur titres immobilisÈs non libÈrÈs', 0),
 ('28', 'Amortissements des immobilisations', 0),
 ('280', 'Amortissements des immobilisations incorporelles', 0),
-('2801', 'Frais d''√©tablissement (m√™me ventilation que celle du compte 201)', 0),
-('2803', 'Frais de recherche et de d√©veloppement', 0),
+('2801', 'Frais d''Ètablissement (mÍme ventilation que celle du compte 201)', 0),
+('2803', 'Frais de recherche et de dÈveloppement', 0),
 ('2805', 'Concessions et droits similaires, brevets, licences, logiciels, droits et valeurs similaires', 0),
 ('2807', 'Fonds commercial', 0),
 ('2808', 'Autres immobilisations incorporelles', 0),
 ('281', 'Amortissements des immobilisations corporelles', 0),
 ('2811', 'Terrains de gisement', 0),
-('2812', 'Agencements, am√©nagements de terrains (m√™me ventilation que celle du compte 212)', 0),
-('2813', 'Constructions (m√™me ventilation que celle du compte 213)', 0),
-('2814', 'Constructions sur sol d''autrui (m√™me ventilation que celle du compte 214)', 0),
-('2815', 'Installations, mat√©riel et outillage industriels (m√™me ventilation que celle du compte 215)', 0),
-('2818', 'Autres immobilisations corporelles (m√™me ventilation que celle du compte 218)', 0),
-('28183', 'Autres immobilisations corporelles : Mat√©riel de bureau et mat√©riel informatique', 0),
+('2812', 'Agencements, amÈnagements de terrains (mÍme ventilation que celle du compte 212)', 0),
+('2813', 'Constructions (mÍme ventilation que celle du compte 213)', 0),
+('2814', 'Constructions sur sol d''autrui (mÍme ventilation que celle du compte 214)', 0),
+('2815', 'Installations, matÈriel et outillage industriels (mÍme ventilation que celle du compte 215)', 0),
+('2818', 'Autres immobilisations corporelles (mÍme ventilation que celle du compte 218)', 0),
+('28183', 'Autres immobilisations corporelles : MatÈriel de bureau et matÈriel informatique', 0),
 ('282', 'Amortissements des immobilisations mises en concession', 0),
-('29', 'Provisions pour d√©pr√©ciation des immobilisations', 0),
-('290', 'Provisions pour d√©pr√©ciation des immobilisations incorporelles', 0),
-('2905', 'Marques, proc√©d√©s, droits et valeurs similaires', 0),
+('29', 'Provisions pour dÈprÈciation des immobilisations', 0),
+('290', 'Provisions pour dÈprÈciation des immobilisations incorporelles', 0),
+('2905', 'Marques, procÈdÈs, droits et valeurs similaires', 0),
 ('2906', 'Droit au bail', 0),
 ('2907', 'Fonds commercial', 0),
 ('2908', 'Autres immobilisations incorporelles', 0),
-('291', 'Provisions pour d√©pr√©ciation des immobilisations corporelles (m√™me ventilation que celle du compte 21)', 0),
+('291', 'Provisions pour dÈprÈciation des immobilisations corporelles (mÍme ventilation que celle du compte 21)', 0),
 ('2911', 'Terrains (autres que terrains de gisement)', 0),
-('292', 'Provisions pour d√©pr√©ciation des immobilisations mises en concession', 0),
-('293', 'Provisions pour d√©pr√©ciation des immobilisations en cours', 0),
+('292', 'Provisions pour dÈprÈciation des immobilisations mises en concession', 0),
+('293', 'Provisions pour dÈprÈciation des immobilisations en cours', 0),
 ('2931', 'Immobilisations corporelles en cours', 0),
 ('2932', 'Immobilisations incorporelles en cours', 0),
-('296', 'Provisions pour d√©pr√©ciation des participations et cr√©ances rattach√©es √† des participations', 0),
+('296', 'Provisions pour dÈprÈciation des participations et crÈances rattachÈes ‡ des participations', 0),
 ('2961', 'Titres de participation', 0),
 ('2966', 'Autres formes de participation', 0),
-('2967', 'Cr√©ances rattach√©es √† des participations (m√™me ventilation que celle du compte 267)', 0),
-('2968', 'Cr√©ances rattach√©es √† des soci√©t√©s en participation (m√™me ventilation que celle du compte 268)', 0),
-('297', 'Provisions pour d√©pr√©ciation des autres immobilisations financi√®res', 0),
-('2971', 'Titres immobilis√©s autres que les titres immobilis√©s de l''activit√© de portefeuille (droit de propri√©t√© - m√™me ventilation que celle du compte 271)', 0),
-('2972', 'Titres immobilis√©s (droit de cr√©ance - m√™me ventilation que celle du compte 272)', 0),
-('2973', 'Titres immobilis√©s de l''activit√© de portefeuille', 0),
-('2974', 'Pr√™ts (m√™me ventilation que celle du compte 274)', 0),
-('2975', 'D√©p√¥ts et cautionnements vers√©s (m√™me ventilation que celle du compte 275)', 0),
-('2976', 'Autres cr√©ances immobilis√©es (m√™me ventilation que celle du compte 276)', 0),
-('31', 'Matieres premi√®res (et fournitures)', 0),
-('311', 'Mati√®res (ou groupe) A', 0),
-('312', 'Mati√®res (ou groupe) B', 0),
+('2967', 'CrÈances rattachÈes ‡ des participations (mÍme ventilation que celle du compte 267)', 0),
+('2968', 'CrÈances rattachÈes ‡ des sociÈtÈs en participation (mÍme ventilation que celle du compte 268)', 0),
+('297', 'Provisions pour dÈprÈciation des autres immobilisations financiËres', 0),
+('2971', 'Titres immobilisÈs autres que les titres immobilisÈs de l''activitÈ de portefeuille (droit de propriÈtÈ - mÍme ventilation que celle du compte 271)', 0),
+('2972', 'Titres immobilisÈs (droit de crÈance - mÍme ventilation que celle du compte 272)', 0),
+('2973', 'Titres immobilisÈs de l''activitÈ de portefeuille', 0),
+('2974', 'PrÍts (mÍme ventilation que celle du compte 274)', 0),
+('2975', 'DÈpÙts et cautionnements versÈs (mÍme ventilation que celle du compte 275)', 0),
+('2976', 'Autres crÈances immobilisÈes (mÍme ventilation que celle du compte 276)', 0),
+('31', 'Matieres premiËres (et fournitures)', 0),
+('311', 'MatiËres (ou groupe) A', 0),
+('312', 'MatiËres (ou groupe) B', 0),
 ('317', 'Fournitures A, B, C, ...', 0),
 ('32', 'Autres approvisionnements', 0),
-('321', 'Mati√®res consommables', 0),
-('3211', 'Mati√®res (ou groupe) C', 0),
-('3212', 'Mati√®res (ou groupe) D', 0),
+('321', 'MatiËres consommables', 0),
+('3211', 'MatiËres (ou groupe) C', 0),
+('3212', 'MatiËres (ou groupe) D', 0),
 ('322', 'Fournitures consommables', 0),
 ('3221', 'Combustibles', 0),
 ('3222', 'Produits d''entretien', 0),
@@ -6284,8 +6284,8 @@ INSERT INTO `plan_comptable` (`numero_compte`, `lib_compte`, `favori`) VALUES
 ('3225', 'Fournitures de bureau', 0),
 ('326', 'Emballages', 0),
 ('3261', 'Emballages perdus', 0),
-('3265', 'Emballages r√©cup√©rables non identifiables', 0),
-('3267', 'Emballages √† usage mixte', 0),
+('3265', 'Emballages rÈcupÈrables non identifiables', 0),
+('3267', 'Emballages ‡ usage mixte', 0),
 ('33', 'En-cours de production de biens', 0),
 ('331', 'Produits en cours', 0),
 ('3311', 'Produits en cours P 1', 0),
@@ -6301,268 +6301,268 @@ INSERT INTO `plan_comptable` (`numero_compte`, `lib_compte`, `favori`) VALUES
 ('3451', 'Prestations de services S 1', 0),
 ('3452', 'Prestations de services S 2', 0),
 ('35', 'Stocks de produits', 0),
-('351', 'Produits interm√©diaires', 0),
-('3511', 'Produits interm√©diaires (ou groupe) A', 0),
-('3512', 'Produits interm√©diaires (ou groupe) B', 0),
+('351', 'Produits intermÈdiaires', 0),
+('3511', 'Produits intermÈdiaires (ou groupe) A', 0),
+('3512', 'Produits intermÈdiaires (ou groupe) B', 0),
 ('355', 'Produits finis', 0),
 ('3551', 'Produits finis (ou groupe) A', 0),
 ('3552', 'Produits finis (ou groupe) B', 0),
-('358', 'Produits r√©siduels (ou mati√®res de r√©cup√©ration)', 0),
-('3581', 'D√©chets', 0),
+('358', 'Produits rÈsiduels (ou matiËres de rÈcupÈration)', 0),
+('3581', 'DÈchets', 0),
 ('3585', 'Rebuts', 0),
-('3586', 'Mati√®res de r√©cup√©ration', 0),
-('36', '(compte √† ouvrir, le cas √©ch√©ant, sous l''intitul√© stocks provenant d''immobilisations)', 0),
+('3586', 'MatiËres de rÈcupÈration', 0),
+('36', '(compte ‡ ouvrir, le cas ÈchÈant, sous l''intitulÈ stocks provenant d''immobilisations)', 0),
 ('37', 'Stocks de marchandises', 0),
 ('371', 'Marchandises (ou groupe) A', 0),
 ('372', 'Marchandises (ou groupe) B', 0),
-('38', '(lorsque l''entit√© tient un inventaire permanent en comptabilit√© g√©n√©rale, le compte 38 peut √™tre utilis√© pour comptabiliser les stocks en voie d''acheminement, mis en d√©p√¥t ou donn√©s en consignation)', 0),
-('39', 'Provisions pour d√©pr√©ciation des stocks et en-cours', 0),
-('391', 'Provisions pour d√©pr√©ciation des mati√®res premi√®res (et fournitures)', 0),
-('3911', 'Mati√®res (ou groupe) A', 0),
-('3912', 'Mati√®res (ou groupe) B', 0),
+('38', '(lorsque l''entitÈ tient un inventaire permanent en comptabilitÈ gÈnÈrale, le compte 38 peut Ítre utilisÈ pour comptabiliser les stocks en voie d''acheminement, mis en dÈpÙt ou donnÈs en consignation)', 0),
+('39', 'Provisions pour dÈprÈciation des stocks et en-cours', 0),
+('391', 'Provisions pour dÈprÈciation des matiËres premiËres (et fournitures)', 0),
+('3911', 'MatiËres (ou groupe) A', 0),
+('3912', 'MatiËres (ou groupe) B', 0),
 ('3917', 'Fournitures A, B, C, ...', 0),
-('392', 'Provisions pour d√©pr√©ciation des autres approvisionnements', 0),
-('3921', 'Mati√®res consommables (m√™me ventilation que celle du compte 321)', 0),
-('3922', 'Fournitures consommables (m√™me ventilation que celle ducompte 322)', 0),
-('3926', 'Emballages (m√™me ventilation que celle du compte 326)', 0),
-('393', 'Provisions pour d√©pr√©ciation des en-cours de production de biens', 0),
-('3931', 'Produits en cours (m√™me ventilation que celle du compte 331)', 0),
-('3935', 'Travaux en cours (m√™me ventilation que celle du compte 335)', 0),
-('394', 'Provisions pour d√©pr√©ciation des en-cours de production de services', 0),
-('3941', 'Etudes en cours (m√™me ventilation que celle du compte 341)', 0),
-('3945', 'Prestations de services en cours (m√™me ventilation que celle du compte 345)', 0),
-('395', 'Provisions pour d√©pr√©ciation des stocks de produits', 0),
-('3951', 'Produits interm√©diaires (m√™me ventilation que celle du compte 351)', 0),
-('3955', 'Produits finis (m√™me ventilation que celle du compte 355)', 0),
-('397', 'Provisions pour d√©pr√©ciation des stocks de marchandises', 0),
+('392', 'Provisions pour dÈprÈciation des autres approvisionnements', 0),
+('3921', 'MatiËres consommables (mÍme ventilation que celle du compte 321)', 0),
+('3922', 'Fournitures consommables (mÍme ventilation que celle ducompte 322)', 0),
+('3926', 'Emballages (mÍme ventilation que celle du compte 326)', 0),
+('393', 'Provisions pour dÈprÈciation des en-cours de production de biens', 0),
+('3931', 'Produits en cours (mÍme ventilation que celle du compte 331)', 0),
+('3935', 'Travaux en cours (mÍme ventilation que celle du compte 335)', 0),
+('394', 'Provisions pour dÈprÈciation des en-cours de production de services', 0),
+('3941', 'Etudes en cours (mÍme ventilation que celle du compte 341)', 0),
+('3945', 'Prestations de services en cours (mÍme ventilation que celle du compte 345)', 0),
+('395', 'Provisions pour dÈprÈciation des stocks de produits', 0),
+('3951', 'Produits intermÈdiaires (mÍme ventilation que celle du compte 351)', 0),
+('3955', 'Produits finis (mÍme ventilation que celle du compte 355)', 0),
+('397', 'Provisions pour dÈprÈciation des stocks de marchandises', 0),
 ('3971', 'Marchandise (ou groupe) A', 0),
 ('3972', 'Marchandise (ou groupe) B', 0),
 ('40', 'Fournisseurs et comptes rattaches', 0),
 ('401', 'Fournisseurs', 0),
 ('4011', 'Fournisseurs - Achats de biens et prestations de services', 0),
 ('4017', 'Fournisseurs - Retenues de garantie', 0),
-('403', 'Fournisseurs - Effets √† payer', 0),
+('403', 'Fournisseurs - Effets ‡ payer', 0),
 ('404', 'Fournisseurs d''immobilisations', 0),
 ('4041', 'Fournisseurs - Achats d''immobilisations', 0),
 ('4047', 'Fournisseurs d''immobilisations - Retenues de garantie', 0),
-('405', 'Fournisseurs d''immobilisations - Effets √† payer', 0),
+('405', 'Fournisseurs d''immobilisations - Effets ‡ payer', 0),
 ('408', 'Fournisseurs - Factures non parvenues', 0),
 ('4081', 'Fournisseurs', 0),
 ('4084', 'Fournisseurs d''immobilisations', 0),
-('4088', 'Fournisseurs - Int√©r√™ts courus', 0),
-('409', 'Fournisseurs d√©biteurs', 0),
-('4091', 'Fournisseurs - Avances et acomptes vers√©s sur commandes', 0),
-('4096', 'Fournisseurs - Cr√©ances pour emballages et mat√©riel √† rendre', 0),
+('4088', 'Fournisseurs - IntÈrÍts courus', 0),
+('409', 'Fournisseurs dÈbiteurs', 0),
+('4091', 'Fournisseurs - Avances et acomptes versÈs sur commandes', 0),
+('4096', 'Fournisseurs - CrÈances pour emballages et matÈriel ‡ rendre', 0),
 ('4097', 'Fournisseurs - Autres avoirs', 0),
 ('40971', 'Fournisseurs d''exploitation', 0),
 ('40974', 'Fournisseurs d''immobilisations', 0),
-('4098', 'Rabais, remises, ristournes √† obtenir et autres avoirs non encore re√ßus', 0),
-('41', 'Clients et comptes rattach√©s', 0),
+('4098', 'Rabais, remises, ristournes ‡ obtenir et autres avoirs non encore reÁus', 0),
+('41', 'Clients et comptes rattachÈs', 0),
 ('411', 'Clients', 0),
 ('4111', 'Clients - Ventes de biens ou de prestations de services', 0),
 ('4117', 'Clients - Retenues de garantie', 0),
-('413', 'Clients - Effets √† recevoir', 0),
+('413', 'Clients - Effets ‡ recevoir', 0),
 ('416', 'Clients douteux ou litigieux', 0),
-('417', '''Cr√©ances'' sur travaux non encore facturables', 0),
-('418', 'Clients - Produits non encore factur√©s', 0),
-('4181', 'Clients - Factures √† √©tablir', 0),
-('4188', 'Clients - Int√©r√™ts courus', 0),
-('419', 'Clients cr√©diteurs', 0),
-('4191', 'Clients - Avances et acomptes re√ßus sur commandes', 0),
-('4196', 'Clients - Dettes sur emballages et mat√©riels consign√©s', 0),
+('417', '''CrÈances'' sur travaux non encore facturables', 0),
+('418', 'Clients - Produits non encore facturÈs', 0),
+('4181', 'Clients - Factures ‡ Ètablir', 0),
+('4188', 'Clients - IntÈrÍts courus', 0),
+('419', 'Clients crÈditeurs', 0),
+('4191', 'Clients - Avances et acomptes reÁus sur commandes', 0),
+('4196', 'Clients - Dettes sur emballages et matÈriels consignÈs', 0),
 ('4197', 'Clients - Autres avoirs', 0),
-('4198', 'Rabais, remises, ristournes √† accorder et autres avoirs √† √©tablir', 0),
-('42', 'Personnel et comptes rattach√©s', 0),
-('421', 'Personnel - R√©mun√©rations dues', 0),
-('422', 'Comit√©s d''entreprises, d''√©tablissement,...', 0),
-('424', 'Participation des salari√©s aux r√©sultats', 0),
-('4246', 'R√©serve sp√©ciale (art. L. 442-2 du Code du travail)', 0),
+('4198', 'Rabais, remises, ristournes ‡ accorder et autres avoirs ‡ Ètablir', 0),
+('42', 'Personnel et comptes rattachÈs', 0),
+('421', 'Personnel - RÈmunÈrations dues', 0),
+('422', 'ComitÈs d''entreprises, d''Ètablissement,...', 0),
+('424', 'Participation des salariÈs aux rÈsultats', 0),
+('4246', 'RÈserve spÈciale (art. L. 442-2 du Code du travail)', 0),
 ('4248', 'Comptes courants', 0),
 ('425', 'Personnel - Avances et acomptes', 0),
-('426', 'Personnel - D√©p√¥ts', 0),
+('426', 'Personnel - DÈpÙts', 0),
 ('427', 'Personnel - Oppositions', 0),
-('428', 'Personnel - Charges √† payer et produits √† recevoir', 0),
-('4282', 'Dettes provisionn√©es pour cong√©s √† payer', 0),
-('4284', 'Dettes provisionn√©es pour participation des salari√©s aux r√©sultats', 0),
-('4286', 'Autres charges √† payer', 0),
-('4287', 'Produits √† recevoir', 0),
-('43', 'S√©curit√© sociale et autres organismes sociaux', 0),
-('431', 'S√©curit√© sociale - URSSAF', 0),
+('428', 'Personnel - Charges ‡ payer et produits ‡ recevoir', 0),
+('4282', 'Dettes provisionnÈes pour congÈs ‡ payer', 0),
+('4284', 'Dettes provisionnÈes pour participation des salariÈs aux rÈsultats', 0),
+('4286', 'Autres charges ‡ payer', 0),
+('4287', 'Produits ‡ recevoir', 0),
+('43', 'SÈcuritÈ sociale et autres organismes sociaux', 0),
+('431', 'SÈcuritÈ sociale - URSSAF', 0),
 ('437', 'Autres organismes sociaux', 0),
 ('4372', 'Mutuelle', 0),
-('4373', 'Caisses de retraite et de pr√©voyance', 0),
-('4374', 'Assurance ch√¥mage - ASSEDIC', 0),
-('438', 'Organismes sociaux - Charges √† payer et produits √† recevoir', 0),
-('4382', 'Charges sociales sur cong√©s √† payer', 0),
-('4386', 'Autres charges √† payer', 0),
-('4387', 'Produits √† recevoir', 0),
-('44', 'Etat et autres collectivit√©s publiques', 0),
-('441', '√©tat - Subventions √† recevoir', 0),
+('4373', 'Caisses de retraite et de prÈvoyance', 0),
+('4374', 'Assurance chÙmage - ASSEDIC', 0),
+('438', 'Organismes sociaux - Charges ‡ payer et produits ‡ recevoir', 0),
+('4382', 'Charges sociales sur congÈs ‡ payer', 0),
+('4386', 'Autres charges ‡ payer', 0),
+('4387', 'Produits ‡ recevoir', 0),
+('44', 'Etat et autres collectivitÈs publiques', 0),
+('441', 'Ètat - Subventions ‡ recevoir', 0),
 ('4411', 'Subventions d''investissement', 0),
 ('4417', 'Subventions d''exploitation', 0),
-('4418', 'Subventions d''√©quilibre', 0),
+('4418', 'Subventions d''Èquilibre', 0),
 ('4419', 'Avances sur subventions', 0),
-('442', 'Etat - Imp√¥ts et taxes recouvrables sur des tiers', 0),
+('442', 'Etat - ImpÙts et taxes recouvrables sur des tiers', 0),
 ('4424', 'Obligataires', 0),
-('4425', 'Associ√©s', 0),
-('443', 'Op√©rations particuli√®res avec l''Etat les collectivit√©s publiques, les organismes internationaux', 0),
-('4431', 'Cr√©ances sur l''Etat r√©sultant de la suppression de la r√®gle du d√©calage d''un mois en mati√®re de T.V.A.', 0),
-('4438', 'Int√©r√™ts courus sur cr√©ances figurant au 4431', 0),
-('444', 'Etat - Imp√¥ts sur les b√©n√©fices', 0),
+('4425', 'AssociÈs', 0),
+('443', 'OpÈrations particuliËres avec l''Etat les collectivitÈs publiques, les organismes internationaux', 0),
+('4431', 'CrÈances sur l''Etat rÈsultant de la suppression de la rËgle du dÈcalage d''un mois en matiËre de T.V.A.', 0),
+('4438', 'IntÈrÍts courus sur crÈances figurant au 4431', 0),
+('444', 'Etat - ImpÙts sur les bÈnÈfices', 0),
 ('445', 'Etat - Taxes sur le chiffre d''affaires', 0),
 ('4452', 'T.V.A. due intracommunautaire', 0),
-('4455', 'Taxes sur le chiffre d''affaires √† d√©caisser', 0),
-('44551', 'T.V.A. √† d√©caisser', 0),
-('44558', 'Taxes assimil√©es √† la T.V.A.', 0),
-('4456', 'Taxes sur le chiffre d''affaires d√©ductibles', 0),
+('4455', 'Taxes sur le chiffre d''affaires ‡ dÈcaisser', 0),
+('44551', 'T.V.A. ‡ dÈcaisser', 0),
+('44558', 'Taxes assimilÈes ‡ la T.V.A.', 0),
+('4456', 'Taxes sur le chiffre d''affaires dÈductibles', 0),
 ('44562', 'T.V.A. sur immobilisations', 0),
-('44563', 'T.V.A. transf√©r√©e par d''autres entreprises', 0),
+('44563', 'T.V.A. transfÈrÈe par d''autres entreprises', 0),
 ('44566', 'T.V.A. sur autres biens et services', 0),
-('44567', 'Cr√©dit de T.V.A. √† reporter', 0),
-('44568', 'Taxes assimil√©es √† la T.V.A.', 0),
-('4457', 'Taxes sur le chiffre d''affaires collect√©es par l''entreprise', 0),
-('44571', 'T.V.A. collect√©e', 0),
-('44572', 'T.V.A. √† collecter', 0),
-('44578', 'Taxes assimil√©es √† la T.V.A.', 0),
-('4458', 'Taxes sur le chiffre d''affaires √† r√©gulariser ou en attente', 0),
-('44581', 'Acomptes - R√©gime simplifi√© d''imposition', 0),
-('44582', 'Acomptes - R√©gime de forfait', 0),
-('44583', 'Remboursement de taxes sur le chiffre d''affaires demand√©', 0),
-('44584', 'T.V.A. r√©cup√©r√©e d''avance', 0),
-('44585', 'R√©gularisation : T.V.A. r√©cup√©r√©e √† tord', 0),
+('44567', 'CrÈdit de T.V.A. ‡ reporter', 0),
+('44568', 'Taxes assimilÈes ‡ la T.V.A.', 0),
+('4457', 'Taxes sur le chiffre d''affaires collectÈes par l''entreprise', 0),
+('44571', 'T.V.A. collectÈe', 0),
+('44572', 'T.V.A. ‡ collecter', 0),
+('44578', 'Taxes assimilÈes ‡ la T.V.A.', 0),
+('4458', 'Taxes sur le chiffre d''affaires ‡ rÈgulariser ou en attente', 0),
+('44581', 'Acomptes - RÈgime simplifiÈ d''imposition', 0),
+('44582', 'Acomptes - RÈgime de forfait', 0),
+('44583', 'Remboursement de taxes sur le chiffre d''affaires demandÈ', 0),
+('44584', 'T.V.A. rÈcupÈrÈe d''avance', 0),
+('44585', 'RÈgularisation : T.V.A. rÈcupÈrÈe ‡ tord', 0),
 ('44586', 'Taxes sur le chiffre d''affaires sur factures non parvenues', 0),
-('44587', 'Taxes sur le chiffres d''affaires sur factures √† √©tablir', 0),
-('446', 'Obligations cautionn√©es', 0),
-('447', 'Autres imp√¥ts, taxes et versements assimil√©s', 0),
-('448', 'Etat - Charges √† payer et produits √† recevoir', 0),
-('4482', 'Charges fiscales sur cong√©s √† payer', 0),
-('4486', 'Charges √† payer', 0),
-('4487', 'Produits √† recevoir', 0),
-('45', 'Groupe et Associ√©s', 0),
+('44587', 'Taxes sur le chiffres d''affaires sur factures ‡ Ètablir', 0),
+('446', 'Obligations cautionnÈes', 0),
+('447', 'Autres impÙts, taxes et versements assimilÈs', 0),
+('448', 'Etat - Charges ‡ payer et produits ‡ recevoir', 0),
+('4482', 'Charges fiscales sur congÈs ‡ payer', 0),
+('4486', 'Charges ‡ payer', 0),
+('4487', 'Produits ‡ recevoir', 0),
+('45', 'Groupe et AssociÈs', 0),
 ('451', 'Groupe', 0),
-('455', 'Associ√©s - Comptes courants', 0),
+('455', 'AssociÈs - Comptes courants', 0),
 ('4551', 'Principal', 0),
-('4558', 'Int√©r√™ts courus', 0),
-('456', 'Associ√©s - Op√©rations sur le capital', 0),
-('4561', 'Associ√©s - Comptes d''apport en soci√©t√©', 0),
+('4558', 'IntÈrÍts courus', 0),
+('456', 'AssociÈs - OpÈrations sur le capital', 0),
+('4561', 'AssociÈs - Comptes d''apport en sociÈtÈ', 0),
 ('45611', 'Apports en nature', 0),
-('45615', 'Apports en num√©raire', 0),
-('4562', 'Apporteurs - Capital appel√©, non vers√©', 0),
-('45621', 'Actionnaires - Capital souscrit et appel√©, non vers√©', 0),
-('45625', 'Associ√©s - Capital appel√©, non vers√©', 0),
-('4563', 'Associ√©s - Versements re√ßus sur augmentation de capital', 0),
-('4564', 'Associ√©s - Versements anticip√©s', 0),
-('4566', 'Actionnaires d√©faillants', 0),
-('4567', 'Associ√©s - Capital √† rembourser', 0),
-('457', 'Associ√©s - Dividendes √† payer', 0),
-('458', 'Associ√©s - Op√©rations faites en commun et en G.I.E.', 0),
-('4581', 'Op√©rations courantes', 0),
-('4588', 'Int√©r√™ts courus', 0),
-('46', 'D√©biteurs divers et cr√©diteurs divers', 0),
-('462', 'Cr√©ances sur cessions d''immobilisations', 0),
-('464', 'Dettes sur acquisitions de valeurs mobili√®res de placement', 0),
-('465', 'Cr√©ances sur cessions de valeurs mobili√®res de placement', 0),
-('467', 'Autres comptes d√©biteurs ou cr√©diteurs', 0),
+('45615', 'Apports en numÈraire', 0),
+('4562', 'Apporteurs - Capital appelÈ, non versÈ', 0),
+('45621', 'Actionnaires - Capital souscrit et appelÈ, non versÈ', 0),
+('45625', 'AssociÈs - Capital appelÈ, non versÈ', 0),
+('4563', 'AssociÈs - Versements reÁus sur augmentation de capital', 0),
+('4564', 'AssociÈs - Versements anticipÈs', 0),
+('4566', 'Actionnaires dÈfaillants', 0),
+('4567', 'AssociÈs - Capital ‡ rembourser', 0),
+('457', 'AssociÈs - Dividendes ‡ payer', 0),
+('458', 'AssociÈs - OpÈrations faites en commun et en G.I.E.', 0),
+('4581', 'OpÈrations courantes', 0),
+('4588', 'IntÈrÍts courus', 0),
+('46', 'DÈbiteurs divers et crÈditeurs divers', 0),
+('462', 'CrÈances sur cessions d''immobilisations', 0),
+('464', 'Dettes sur acquisitions de valeurs mobiliËres de placement', 0),
+('465', 'CrÈances sur cessions de valeurs mobiliËres de placement', 0),
+('467', 'Autres comptes dÈbiteurs ou crÈditeurs', 0),
 ('4671', 'Cartes bleues', 0),
-('4675', 'Autres cr√©diteurs', 0),
-('468', 'Divers - Charges √† payer et produits √† recevoir', 0),
-('4686', 'Charges √† payer', 0),
-('4687', 'Produits √† recevoir', 0),
+('4675', 'Autres crÈditeurs', 0),
+('468', 'Divers - Charges ‡ payer et produits ‡ recevoir', 0),
+('4686', 'Charges ‡ payer', 0),
+('4687', 'Produits ‡ recevoir', 0),
 ('47', 'Comptes transitoires ou d''attente', 0),
 ('471', 'Comptes d''attente', 0),
 ('472', 'Comptes d''attente', 0),
 ('473', 'Comptes d''attente', 0),
 ('474', 'Comptes d''attente', 0),
 ('475', 'Comptes d''attente', 0),
-('476', 'Diff√©rence de conversion - Actif', 0),
-('4761', 'Diminution des cr√©ances', 0),
+('476', 'DiffÈrence de conversion - Actif', 0),
+('4761', 'Diminution des crÈances', 0),
 ('4762', 'Augmentation des dettes', 0),
-('4768', 'Diff√©rences compens√©es par couverture de change', 0),
-('477', 'Diff√©rences de conversion - Passif', 0),
-('4771', 'Augmentation des cr√©ances', 0),
+('4768', 'DiffÈrences compensÈes par couverture de change', 0),
+('477', 'DiffÈrences de conversion - Passif', 0),
+('4771', 'Augmentation des crÈances', 0),
 ('4772', 'Diminution des dettes', 0),
-('4778', 'Diff√©rences compens√©es par couverture de change', 0),
+('4778', 'DiffÈrences compensÈes par couverture de change', 0),
 ('478', 'Autres comptes transitoires', 0),
-('48', 'Comptes de r√©gularisation', 0),
-('481', 'Charges √† r√©partir sur plusieurs exercices', 0),
-('4811', 'Charges diff√©r√©es', 0),
+('48', 'Comptes de rÈgularisation', 0),
+('481', 'Charges ‡ rÈpartir sur plusieurs exercices', 0),
+('4811', 'Charges diffÈrÈes', 0),
 ('4812', 'Frais d''acquisition des immobilisations', 0),
-('4816', 'Frais d''√©mission des emprunts', 0),
-('4818', 'Charges √† √©taler', 0),
-('486', 'Charges constat√©es d''avance', 0),
-('487', 'Produits constat√©s d''avance', 0),
-('488', 'Comptes de r√©partition p√©riodique des charges et des produits', 0),
+('4816', 'Frais d''Èmission des emprunts', 0),
+('4818', 'Charges ‡ Ètaler', 0),
+('486', 'Charges constatÈes d''avance', 0),
+('487', 'Produits constatÈs d''avance', 0),
+('488', 'Comptes de rÈpartition pÈriodique des charges et des produits', 0),
 ('4886', 'Charges', 0),
 ('4887', 'Produits', 0),
-('49', 'Provisions pour d√©pr√©ciation des comptes de tiers', 0),
-('491', 'Provisions pour d√©pr√©ciation des comptes de clients', 0),
-('495', 'Provisions pour d√©pr√©ciation des comptes du groupe et des associ√©s', 0),
+('49', 'Provisions pour dÈprÈciation des comptes de tiers', 0),
+('491', 'Provisions pour dÈprÈciation des comptes de clients', 0),
+('495', 'Provisions pour dÈprÈciation des comptes du groupe et des associÈs', 0),
 ('4951', 'Comptes du groupe', 0),
-('4955', 'Comptes courants des associ√©s', 0),
-('4958', 'Op√©rations faites en commun et en G.I.E.', 0),
-('496', 'Provisions pour d√©pr√©ciation des comptes de d√©biteurs divers', 0),
-('4962', 'Cr√©ances sur cessions d''immobilisations', 0),
-('4965', 'Cr√©ances sur cessions de valeurs mobili√®res de placement', 0),
-('4967', 'Autres comptes d√©biteurs', 0),
-('50', 'Valeurs mobili√®res de placement', 0),
-('501', 'Parts dans des entreprises li√©es', 0),
+('4955', 'Comptes courants des associÈs', 0),
+('4958', 'OpÈrations faites en commun et en G.I.E.', 0),
+('496', 'Provisions pour dÈprÈciation des comptes de dÈbiteurs divers', 0),
+('4962', 'CrÈances sur cessions d''immobilisations', 0),
+('4965', 'CrÈances sur cessions de valeurs mobiliËres de placement', 0),
+('4967', 'Autres comptes dÈbiteurs', 0),
+('50', 'Valeurs mobiliËres de placement', 0),
+('501', 'Parts dans des entreprises liÈes', 0),
 ('502', 'Actions propres', 0),
 ('503', 'Actions', 0),
-('5031', 'Titres cot√©s', 0),
-('5035', 'Titres non cot√©s', 0),
-('504', 'Autres titres conf√©rant un droit de propri√©t√©', 0),
-('505', 'Obligations et bons √©mis par la soci√©t√© et rachet√©s par elle', 0),
+('5031', 'Titres cotÈs', 0),
+('5035', 'Titres non cotÈs', 0),
+('504', 'Autres titres confÈrant un droit de propriÈtÈ', 0),
+('505', 'Obligations et bons Èmis par la sociÈtÈ et rachetÈs par elle', 0),
 ('506', 'Obligations', 0),
-('5061', 'Titres cot√©s', 0),
-('5065', 'Titres non cot√©s', 0),
-('507', 'Bons du Tr√©sor et bons de caisse √† court terme', 0),
-('508', 'Autres valeurs mobili√®res de placement et autres cr√©ances assimil√©es', 0),
-('5081', 'Autres valeurs mobili√®res', 0),
+('5061', 'Titres cotÈs', 0),
+('5065', 'Titres non cotÈs', 0),
+('507', 'Bons du TrÈsor et bons de caisse ‡ court terme', 0),
+('508', 'Autres valeurs mobiliËres de placement et autres crÈances assimilÈes', 0),
+('5081', 'Autres valeurs mobiliËres', 0),
 ('5082', 'Bons de souscription', 0),
-('5088', 'Int√©r√™ts courus sur obligations, bons et valeurs assimil√©s', 0),
-('509', 'Versements restant √† effectuer sur valeurs mobili√®res de placement non lib√©r√©es', 0),
-('51', 'Banques, √©tablissements financiers et assimil√©s', 0),
-('511', 'Valeurs √† l''encaissement', 0),
-('5111', 'Coupons √©chus √† l''encaissement', 0),
-('5112', 'Ch√®ques √† encaisser', 0),
-('5113', 'Effets √† l''encaissement', 0),
-('5114', 'Effets √† l''escompte', 0),
+('5088', 'IntÈrÍts courus sur obligations, bons et valeurs assimilÈs', 0),
+('509', 'Versements restant ‡ effectuer sur valeurs mobiliËres de placement non libÈrÈes', 0),
+('51', 'Banques, Ètablissements financiers et assimilÈs', 0),
+('511', 'Valeurs ‡ l''encaissement', 0),
+('5111', 'Coupons Èchus ‡ l''encaissement', 0),
+('5112', 'ChËques ‡ encaisser', 0),
+('5113', 'Effets ‡ l''encaissement', 0),
+('5114', 'Effets ‡ l''escompte', 0),
 ('512', 'Banques', 0),
 ('5121', 'Compte en euros', 0),
 ('5124', 'Comptes en devises', 0),
-('514', 'Ch√®ques postaux', 0),
-('515', '''Caisses'' du Tr√©sor et des √©tablissements publics', 0),
-('516', 'Soci√©t√©s de bourse', 0),
+('514', 'ChËques postaux', 0),
+('515', '''Caisses'' du TrÈsor et des Ètablissements publics', 0),
+('516', 'SociÈtÈs de bourse', 0),
 ('517', 'Autres organismes financiers', 0),
-('518', 'Int√©r√™ts courus', 0),
+('518', 'IntÈrÍts courus', 0),
 ('519', 'Concours bancaires courants', 0),
-('5191', 'Cr√©dit de mobilisation de cr√©ances commerciales (CMCC)', 0),
-('5193', 'Mobilisation de cr√©ances n√©es √† l''√©tranger', 0),
-('5198', 'Int√©r√™ts courus sur concours bancaires courants', 0),
-('52', 'Instruments de tr√©sorerie', 0),
+('5191', 'CrÈdit de mobilisation de crÈances commerciales (CMCC)', 0),
+('5193', 'Mobilisation de crÈances nÈes ‡ l''Ètranger', 0),
+('5198', 'IntÈrÍts courus sur concours bancaires courants', 0),
+('52', 'Instruments de trÈsorerie', 0),
 ('53', 'Caisse', 0),
-('531', 'Caisse si√®ge social', 0),
+('531', 'Caisse siËge social', 0),
 ('5311', 'Caisse en euros', 0),
 ('5314', 'Caisse en devises', 0),
 ('532', 'Caisse succursale (ou usine) A', 0),
 ('533', 'Caisse succursale (ou usine) B', 0),
-('54', 'R√©gies d''avance et accr√©ditifs', 0),
+('54', 'RÈgies d''avance et accrÈditifs', 0),
 ('58', 'Virements internes', 0),
-('59', 'Provisions pour d√©pr√©ciation des comptes financiers', 0),
-('590', 'Provisions pour d√©pr√©ciation des valeurs mobili√®res de placement', 0),
+('59', 'Provisions pour dÈprÈciation des comptes financiers', 0),
+('590', 'Provisions pour dÈprÈciation des valeurs mobiliËres de placement', 0),
 ('5903', 'Actions', 0),
-('5904', 'Autres titres conf√©rant un droit de propri√©t√©', 0),
+('5904', 'Autres titres confÈrant un droit de propriÈtÈ', 0),
 ('5906', 'Obligations', 0),
-('5908', 'Autres valeurs mobili√®res de placement et cr√©ances assimil√©es', 0),
+('5908', 'Autres valeurs mobiliËres de placement et crÈances assimilÈes', 0),
 ('60', 'Achats (sauf 603)', 0),
-('601', 'Achats stock√©s - Mati√®res premi√®res (et fournitures)', 0),
-('6011', 'Mati√®res (ou groupe) A', 0),
-('6012', 'Mati√®res (ou groupe) B', 0),
+('601', 'Achats stockÈs - MatiËres premiËres (et fournitures)', 0),
+('6011', 'MatiËres (ou groupe) A', 0),
+('6012', 'MatiËres (ou groupe) B', 0),
 ('6017', 'Fournitures A, B, C, ...', 0),
-('602', 'Achats stock√©s - Autres approvisionnements', 0),
-('6021', 'Mati√®res consommables', 0),
-('60211', 'Mati√®res (ou groupe) C', 0),
-('60212', 'Mati√®res (ou groupe) D', 0),
+('602', 'Achats stockÈs - Autres approvisionnements', 0),
+('6021', 'MatiËres consommables', 0),
+('60211', 'MatiËres (ou groupe) C', 0),
+('60212', 'MatiËres (ou groupe) D', 0),
 ('6022', 'Fournitures consommables', 0),
 ('60221', 'Combustibles', 0),
 ('60222', 'Produits d''entretien', 0),
@@ -6571,42 +6571,42 @@ INSERT INTO `plan_comptable` (`numero_compte`, `lib_compte`, `favori`) VALUES
 ('60225', 'Fourniture de bureau', 0),
 ('6026', 'Emballages', 0),
 ('60261', 'Emballages perdus', 0),
-('60265', 'Emballages r√©cup√©rables non identifiables', 0),
-('60267', 'Emballages √† usage mixte', 0),
-('604', 'Achats d''√©tudes et prestations de services', 0),
-('605', 'Achats de mat√©riel, √©quipements et travaux', 0),
-('606', 'Achats non stock√©s de mati√®re et fournitures', 0),
-('6061', 'Fournitures non stockables (eau, √©nergie, ...)', 0),
-('6063', 'Fournitures d''entretien et de petit √©quipement', 0),
+('60265', 'Emballages rÈcupÈrables non identifiables', 0),
+('60267', 'Emballages ‡ usage mixte', 0),
+('604', 'Achats d''Ètudes et prestations de services', 0),
+('605', 'Achats de matÈriel, Èquipements et travaux', 0),
+('606', 'Achats non stockÈs de matiËre et fournitures', 0),
+('6061', 'Fournitures non stockables (eau, Ènergie, ...)', 0),
+('6063', 'Fournitures d''entretien et de petit Èquipement', 0),
 ('6064', 'Fournitures administratives', 0),
-('6068', 'Autres mati√®res et fournitures', 0),
+('6068', 'Autres matiËres et fournitures', 0),
 ('607', 'Achats de marchandises', 0),
 ('6071', 'Marchandise (ou groupe) A', 0),
 ('6072', 'Marchandise (ou groupe) B', 0),
-('608', '(Compte r√©serv√©, le cas √©ch√©ant, √† la r√©capitulation des frais accessoires incorpor√©s aux achats)', 0),
+('608', '(Compte rÈservÈ, le cas ÈchÈant, ‡ la rÈcapitulation des frais accessoires incorporÈs aux achats)', 0),
 ('609', 'Rabais, remises et ristournes obtenus sur achats', 0),
-('6091', 'de mati√®res premi√®res (et fournitures)', 0),
-('6092', 'd''autres approvisionnements stock√©s', 0),
-('6094', 'd''√©tudes et prestations de services', 0),
-('6095', 'de mat√©riel, √©quipements et travaux', 0),
-('6096', 'd''approvisionnements non stock√©s', 0),
+('6091', 'de matiËres premiËres (et fournitures)', 0),
+('6092', 'd''autres approvisionnements stockÈs', 0),
+('6094', 'd''Ètudes et prestations de services', 0),
+('6095', 'de matÈriel, Èquipements et travaux', 0),
+('6096', 'd''approvisionnements non stockÈs', 0),
 ('6097', 'de marchandises', 0),
-('6098', 'Rabais, remises et ristournes non affect√©s', 0),
+('6098', 'Rabais, remises et ristournes non affectÈs', 0),
 ('603', 'variations des stocks (approvisionnements et marchandises)', 0),
-('6031', 'Variation des stocks de mati√®res premi√®res (et fournitures)', 0),
+('6031', 'Variation des stocks de matiËres premiËres (et fournitures)', 0),
 ('6032', 'Variation des stocks des autres approvisionnements', 0),
 ('6037', 'Variation des stocks de marchandises', 0),
-('61', 'Services ext√©rieurs', 0),
-('611', 'Sous-traitance g√©n√©rale', 0),
-('612', 'Redevances de cr√©dit-bail', 0),
-('6122', 'Cr√©dit-bail mobilier', 0),
-('6125', 'Cr√©dit-bail immobilier', 0),
+('61', 'Services extÈrieurs', 0),
+('611', 'Sous-traitance gÈnÈrale', 0),
+('612', 'Redevances de crÈdit-bail', 0),
+('6122', 'CrÈdit-bail mobilier', 0),
+('6125', 'CrÈdit-bail immobilier', 0),
 ('613', 'Locations', 0),
-('6132', 'Locations immobili√®res', 0),
-('6135', 'Locations mobili√®res', 0),
+('6132', 'Locations immobiliËres', 0),
+('6135', 'Locations mobiliËres', 0),
 ('6136', 'Malis sur emballages', 0),
-('614', 'Charges locatives et de copropri√©t√©', 0),
-('615', 'Entretien et r√©parations', 0),
+('614', 'Charges locatives et de copropriÈtÈ', 0),
+('615', 'Entretien et rÈparations', 0),
 ('6152', 'sur biens immobiliers', 0),
 ('6155', 'sur biens mobiliers', 0),
 ('6156', 'Maintenance', 0),
@@ -6618,103 +6618,103 @@ INSERT INTO `plan_comptable` (`numero_compte`, `lib_compte`, `favori`) VALUES
 ('61637', 'sur ventes', 0),
 ('61638', 'sur autres biens', 0),
 ('6164', 'Risques d''exploitation', 0),
-('6165', 'Insolvabilit√© clients', 0),
+('6165', 'InsolvabilitÈ clients', 0),
 ('617', 'Etudes et recherches', 0),
 ('618', 'Divers', 0),
-('6181', 'Documentation g√©n√©rale', 0),
+('6181', 'Documentation gÈnÈrale', 0),
 ('6183', 'Documentation technique', 0),
-('6185', 'Frais de colloques, s√©minaires, conf√©rences', 0),
-('619', 'Rabais, remises et ristournes obtenus sur services ext√©rieurs', 0),
-('62', 'Autres services ext√©rieurs', 0),
-('621', 'Personnel ext√©rieur √† l''entreprise', 0),
-('6211', 'Personnel int√©rimaire', 0),
-('6214', 'Personnel d√©tach√© ou pr√™t√© √† l''entreprise', 0),
-('622', 'R√©mun√©rations d''interm√©diaires et honoraires', 0),
+('6185', 'Frais de colloques, sÈminaires, confÈrences', 0),
+('619', 'Rabais, remises et ristournes obtenus sur services extÈrieurs', 0),
+('62', 'Autres services extÈrieurs', 0),
+('621', 'Personnel extÈrieur ‡ l''entreprise', 0),
+('6211', 'Personnel intÈrimaire', 0),
+('6214', 'Personnel dÈtachÈ ou prÍtÈ ‡ l''entreprise', 0),
+('622', 'RÈmunÈrations d''intermÈdiaires et honoraires', 0),
 ('6221', 'Commissions et courtages sur achats', 0),
 ('6222', 'Commissions et courtages sur ventes', 0),
-('6224', 'R√©mun√©rations des transitaires', 0),
-('6225', 'R√©mun√©rations d''affacturage', 0),
+('6224', 'RÈmunÈrations des transitaires', 0),
+('6225', 'RÈmunÈrations d''affacturage', 0),
 ('6226', 'Honoraires', 0),
 ('62261', 'Honoraires : Commissaire aux comptes', 0),
 ('62262', 'Honoraires : autres', 0),
 ('6227', 'Frais d''actes et de contentieux', 0),
 ('6228', 'Divers', 0),
-('623', 'Publicit√©, publications, relations publiques', 0),
+('623', 'PublicitÈ, publications, relations publiques', 0),
 ('6231', 'Annonces et insertions', 0),
 ('6232', 'Echantillons', 0),
 ('6233', 'Foires et expositions', 0),
-('6234', 'Cadeaux √† la client√®le', 0),
+('6234', 'Cadeaux ‡ la clientËle', 0),
 ('6235', 'Primes', 0),
-('6236', 'Catalogues et imprim√©s', 0),
+('6236', 'Catalogues et imprimÈs', 0),
 ('6237', 'Publications', 0),
 ('6238', 'Divers (pourboires, dont courant, ...)', 0),
 ('624', 'Transports de biens et transports collectifs du personnel', 0),
 ('6241', 'Transports sur achats', 0),
 ('6242', 'Transports sur ventes', 0),
-('6243', 'Transports entre √©tablissements ou chantiers', 0),
+('6243', 'Transports entre Ètablissements ou chantiers', 0),
 ('6244', 'Transports administratifs', 0),
 ('6247', 'Transports collectifs du personnel', 0),
 ('6248', 'Divers', 0),
-('625', 'D√©placements, missions et r√©ceptions', 0),
-('6251', 'Voyages et d√©placements', 0),
-('6255', 'Frais de d√©m√©nagement', 0),
+('625', 'DÈplacements, missions et rÈceptions', 0),
+('6251', 'Voyages et dÈplacements', 0),
+('6255', 'Frais de dÈmÈnagement', 0),
 ('6256', 'Missions', 0),
-('6257', 'R√©ceptions', 0),
-('626', 'Frais postaux et de t√©l√©communications', 0),
-('6261', 'Frais de t√©l√©communications', 0),
-('6262', 'Frais d''acc√®s Internet', 0),
+('6257', 'RÈceptions', 0),
+('626', 'Frais postaux et de tÈlÈcommunications', 0),
+('6261', 'Frais de tÈlÈcommunications', 0),
+('6262', 'Frais d''accËs Internet', 0),
 ('6266', 'Frais postaux', 0),
-('627', 'Services bancaires et assimil√©s', 0),
+('627', 'Services bancaires et assimilÈs', 0),
 ('6271', 'Frais sur titres (achat, vente, garde)', 0),
-('6272', 'Commissions et frais sur √©mission d''emprunts', 0),
+('6272', 'Commissions et frais sur Èmission d''emprunts', 0),
 ('6275', 'Frais sur effets', 0),
 ('6276', 'Location de coffres', 0),
 ('6278', 'Autres frais et commissions sur prestations de services', 0),
 ('628', 'Divers', 0),
 ('6281', 'Concours divers (cotisations, ...)', 0),
 ('6284', 'Frais de recrutement de personnel', 0),
-('629', 'Rabais, remises et ristournes obtenus sur autres services ext√©rieurs', 0),
-('63', 'Imp√¥ts, taxes et versements assimil√©s', 0),
-('631', 'Imp√¥ts, taxes et versements assimil√©s sur r√©mun√©rations (administrations des imp√¥ts)', 0),
+('629', 'Rabais, remises et ristournes obtenus sur autres services extÈrieurs', 0),
+('63', 'ImpÙts, taxes et versements assimilÈs', 0),
+('631', 'ImpÙts, taxes et versements assimilÈs sur rÈmunÈrations (administrations des impÙts)', 0),
 ('6311', 'Taxe sur les salaires', 0),
 ('6312', 'Taxe d''apprentissage', 0),
-('6313', 'Participation des employeurs √† la formation professionnelle continue', 0),
-('6314', 'Cotisation pour d√©faut d''investissement obligatoire dans la construction', 0),
+('6313', 'Participation des employeurs ‡ la formation professionnelle continue', 0),
+('6314', 'Cotisation pour dÈfaut d''investissement obligatoire dans la construction', 0),
 ('6318', 'Autres', 0),
-('633', 'Imp√¥ts, taxes et versements assimil√©s sur r√©mun√©rations (autres organismes)', 0),
+('633', 'ImpÙts, taxes et versements assimilÈs sur rÈmunÈrations (autres organismes)', 0),
 ('6331', 'Versement de transport', 0),
 ('6332', 'Allocations logement', 0),
-('6333', 'Participation des employeurs √† la formation professionnelle continue', 0),
-('6334', 'Participation des employeurs √† l''effort de construction', 0),
-('6335', 'Versements lib√©ratoires ouvrant droit √† l''exon√©ration de la taxe d''apprentissage', 0),
+('6333', 'Participation des employeurs ‡ la formation professionnelle continue', 0),
+('6334', 'Participation des employeurs ‡ l''effort de construction', 0),
+('6335', 'Versements libÈratoires ouvrant droit ‡ l''exonÈration de la taxe d''apprentissage', 0),
 ('6338', 'Autres', 0),
-('635', 'Autres imp√¥ts, taxes et versements assimil√©s (administrations des imp√¥ts)', 0),
-('6351', 'Imp√¥ts directs (sauf imp√¥ts sur les b√©n√©fices)', 0),
+('635', 'Autres impÙts, taxes et versements assimilÈs (administrations des impÙts)', 0),
+('6351', 'ImpÙts directs (sauf impÙts sur les bÈnÈfices)', 0),
 ('63511', 'Taxe professionnelle', 0),
-('63512', 'Taxes fonci√®res', 0),
-('63513', 'Autres imp√¥ts locaux', 0),
-('63514', 'Taxe sur les v√©hicules des soci√©t√©s', 0),
-('6352', 'Taxe sur le chiffre d''affaires non r√©cup√©rables', 0),
-('6353', 'Imp√¥ts indirects', 0),
+('63512', 'Taxes fonciËres', 0),
+('63513', 'Autres impÙts locaux', 0),
+('63514', 'Taxe sur les vÈhicules des sociÈtÈs', 0),
+('6352', 'Taxe sur le chiffre d''affaires non rÈcupÈrables', 0),
+('6353', 'ImpÙts indirects', 0),
 ('6354', 'Droits d''enregistrement et de timbre', 0),
 ('63541', 'Droits de mutation', 0),
 ('6358', 'Autres droits', 0),
-('637', 'Autres imp√¥ts, taxes et versements assimil√©s (autres organismes)', 0),
-('6371', 'Contribution sociale de solidarit√© √† la charge des soci√©t√©s', 0),
-('6372', 'Taxes per√ßues par les organismes publics internationaux', 0),
-('6374', 'Imp√¥ts et taxes exigibles √† l''Etranger', 0),
+('637', 'Autres impÙts, taxes et versements assimilÈs (autres organismes)', 0),
+('6371', 'Contribution sociale de solidaritÈ ‡ la charge des sociÈtÈs', 0),
+('6372', 'Taxes perÁues par les organismes publics internationaux', 0),
+('6374', 'ImpÙts et taxes exigibles ‡ l''Etranger', 0),
 ('6378', 'Taxes diverses', 0),
 ('64', 'Charges de personnel', 0),
-('641', 'R√©mun√©rations du personnel', 0),
+('641', 'RÈmunÈrations du personnel', 0),
 ('6411', 'Salaires, appointements', 0),
-('6412', 'Cong√©s pay√©s', 0),
+('6412', 'CongÈs payÈs', 0),
 ('6413', 'Primes et gratifications', 0),
-('6414', 'Indemnit√©s et avantages divers', 0),
-('6415', 'Suppl√©ment familial', 0),
-('6420', 'R√©mun√©ration du dirigeant', 0),
-('644', 'R√©mun√©ration du travail de l''exploitant', 0),
-('645', 'Charges de s√©curit√© sociale et de pr√©voyance', 0),
-('6451', 'Cotisations √† l''URSSAF', 0),
+('6414', 'IndemnitÈs et avantages divers', 0),
+('6415', 'SupplÈment familial', 0),
+('6420', 'RÈmunÈration du dirigeant', 0),
+('644', 'RÈmunÈration du travail de l''exploitant', 0),
+('645', 'Charges de sÈcuritÈ sociale et de prÈvoyance', 0),
+('6451', 'Cotisations ‡ l''URSSAF', 0),
 ('6452', 'Cotisations aux mutuelles', 0),
 ('6453', 'Cotisations aux caisses de retraites', 0),
 ('6454', 'Cotisations aux ASSEDIC', 0),
@@ -6722,137 +6722,137 @@ INSERT INTO `plan_comptable` (`numero_compte`, `lib_compte`, `favori`) VALUES
 ('646', 'Cotisations sociales personnelles de l''exploitant', 0),
 ('647', 'Autres charges sociales', 0),
 ('6471', 'Prestations directes', 0),
-('6472', 'Versements aux comit√©s d''entreprise et d''√©tablissement', 0),
-('6473', 'Versements aux comit√©s d''hygi√®ne et de s√©curit√©', 0),
+('6472', 'Versements aux comitÈs d''entreprise et d''Ètablissement', 0),
+('6473', 'Versements aux comitÈs d''hygiËne et de sÈcuritÈ', 0),
 ('6474', 'Versements aux autres oeuvres sociales', 0),
-('6475', 'M√©decine du travail, pharmacie', 0),
+('6475', 'MÈdecine du travail, pharmacie', 0),
 ('648', 'Autres charges de personnel', 0),
 ('6481', 'Autres charges de personnel : Eurest Restauration collective', 0),
 ('65', 'Autres charges de gestion courante', 0),
-('651', 'Redevances pour concessions, brevets, licences, marques, proc√©d√©s, logiciels, droits et valeurs similaires', 0),
-('6511', 'Redevances pour concessions, brevets, licences, marques, proc√©d√©s, logiciels', 0),
+('651', 'Redevances pour concessions, brevets, licences, marques, procÈdÈs, logiciels, droits et valeurs similaires', 0),
+('6511', 'Redevances pour concessions, brevets, licences, marques, procÈdÈs, logiciels', 0),
 ('6516', 'Droits d''auteur et de reproduction', 0),
 ('6518', 'Autres droits et valeurs similaires', 0),
-('653', 'Jetons de pr√©sence', 0),
-('654', 'Pertes sur cr√©ances irr√©couvrables', 0),
-('6541', 'Cr√©ances de l''exercice', 0),
-('6544', 'Cr√©ances des exercices ant√©rieurs', 0),
-('655', 'Quotes-parts de r√©sultat sur op√©rations faites en commun', 0),
-('6551', 'Quote-part de b√©n√©fice transf√©r√©e (comptabilit√© du g√©rant)', 0),
-('6555', 'Quote-part de perte support√©e (comptabilit√© des associ√©s non g√©rants)', 0),
+('653', 'Jetons de prÈsence', 0),
+('654', 'Pertes sur crÈances irrÈcouvrables', 0),
+('6541', 'CrÈances de l''exercice', 0),
+('6544', 'CrÈances des exercices antÈrieurs', 0),
+('655', 'Quotes-parts de rÈsultat sur opÈrations faites en commun', 0),
+('6551', 'Quote-part de bÈnÈfice transfÈrÈe (comptabilitÈ du gÈrant)', 0),
+('6555', 'Quote-part de perte supportÈe (comptabilitÈ des associÈs non gÈrants)', 0),
 ('658', 'Charges diverses de gestion courante', 0),
-('66', 'Charges financi√®res', 0),
-('661', 'Charges d''int√©r√™ts', 0),
-('6611', 'Int√©r√™ts des emprunts et dettes', 0),
-('66116', 'des emprunts et dettes assimil√©es', 0),
-('66117', 'des dettes rattach√©es √† des participations', 0),
-('6615', 'Int√©r√™ts des comptes courants et des d√©p√¥ts cr√©diteurs', 0),
-('6616', 'Int√©r√™ts bancaires et sur op√©rations de financement (escompte,...)', 0),
-('6617', 'Int√©r√™ts des obligations cautionn√©es', 0),
-('6618', 'Int√©r√™ts des autres dettes', 0),
+('66', 'Charges financiËres', 0),
+('661', 'Charges d''intÈrÍts', 0),
+('6611', 'IntÈrÍts des emprunts et dettes', 0),
+('66116', 'des emprunts et dettes assimilÈes', 0),
+('66117', 'des dettes rattachÈes ‡ des participations', 0),
+('6615', 'IntÈrÍts des comptes courants et des dÈpÙts crÈditeurs', 0),
+('6616', 'IntÈrÍts bancaires et sur opÈrations de financement (escompte,...)', 0),
+('6617', 'IntÈrÍts des obligations cautionnÈes', 0),
+('6618', 'IntÈrÍts des autres dettes', 0),
 ('66181', 'des dettes commerciales', 0),
 ('66188', 'des dettes diverses', 0),
-('664', 'Pertes sur cr√©ances li√©es √† des participations', 0),
-('665', 'Escomptes accord√©s', 0),
+('664', 'Pertes sur crÈances liÈes ‡ des participations', 0),
+('665', 'Escomptes accordÈs', 0),
 ('666', 'Pertes de change', 0),
-('667', 'Charges nettes sur cessions de valeurs mobili√®res de placement', 0),
-('668', 'Autres charges financi√®res', 0),
+('667', 'Charges nettes sur cessions de valeurs mobiliËres de placement', 0),
+('668', 'Autres charges financiËres', 0),
 ('67', 'Charges exceptionnelles', 0),
-('671', 'Charges exceptionnelles sur op√©rations de gestion', 0),
-('6711', 'P√©nalit√©s sur march√©s (et d√©dits pay√©s sur achats et ventes)', 0),
-('6712', 'P√©nalit√©s, amendes fiscales et p√©nales', 0),
-('6713', 'Dons, lib√©ralit√©s', 0),
-('6714', 'Cr√©ances devenues irr√©couvrables dans l''exercice', 0),
-('6715', 'Subventions accord√©es', 0),
-('6717', 'Rappel d''imp√¥ts (autres qu''imp√¥ts sur les b√©n√©fices)', 0),
-('6718', 'Autres charges exceptionnelles sur op√©rations de gestion', 0),
-('672', '(Compte √† la disposition des entit√©s pour enregistrer, en cours d''exercice, les charges sur exercices ant√©rieurs)', 0),
-('675', 'Valeurs comptables des √©l√©ments d''actif c√©d√©s', 0),
+('671', 'Charges exceptionnelles sur opÈrations de gestion', 0),
+('6711', 'PÈnalitÈs sur marchÈs (et dÈdits payÈs sur achats et ventes)', 0),
+('6712', 'PÈnalitÈs, amendes fiscales et pÈnales', 0),
+('6713', 'Dons, libÈralitÈs', 0),
+('6714', 'CrÈances devenues irrÈcouvrables dans l''exercice', 0),
+('6715', 'Subventions accordÈes', 0),
+('6717', 'Rappel d''impÙts (autres qu''impÙts sur les bÈnÈfices)', 0),
+('6718', 'Autres charges exceptionnelles sur opÈrations de gestion', 0),
+('672', '(Compte ‡ la disposition des entitÈs pour enregistrer, en cours d''exercice, les charges sur exercices antÈrieurs)', 0),
+('675', 'Valeurs comptables des ÈlÈments d''actif cÈdÈs', 0),
 ('6751', 'Immobilisations incorporelles', 0),
 ('6752', 'Immobilisations corporelles', 0),
-('6756', 'Immobilisations financi√®res', 0),
-('6758', 'Autres √©l√©ments d''actif', 0),
+('6756', 'Immobilisations financiËres', 0),
+('6758', 'Autres ÈlÈments d''actif', 0),
 ('678', 'Autres charges exceptionnelles', 0),
 ('6781', 'Malis provenant de clauses d''indexation', 0),
 ('6782', 'Lots', 0),
-('6783', 'Malis provenant du rachat par l''entreprise d''actions et obligations √©mises par elle-m√™me', 0),
+('6783', 'Malis provenant du rachat par l''entreprise d''actions et obligations Èmises par elle-mÍme', 0),
 ('6788', 'Charges exceptionnelles diverses', 0),
 ('68', 'Dotations aux amortissements et aux provisions', 0),
 ('681', 'Dotations aux amortissements et aux provisions - Charges d''exploitation', 0),
 ('6811', 'Dotations aux amortissements sur immobilisations incorporelles et corporelles', 0),
 ('68111', 'Immobilisations incorporelles', 0),
 ('68112', 'Immobilisations corporelles', 0),
-('6812', 'Dotations aux amortissements des charges d''exploitation √† r√©partir', 0),
+('6812', 'Dotations aux amortissements des charges d''exploitation ‡ rÈpartir', 0),
 ('6815', 'Dotations aux provisions pour risques et charges d''exploitation', 0),
-('6816', 'Dotations aux provisions pour d√©pr√©ciation des immobilisations incorporelles et corporelles', 0),
+('6816', 'Dotations aux provisions pour dÈprÈciation des immobilisations incorporelles et corporelles', 0),
 ('68161', 'Immobilisations incorporelles', 0),
 ('68162', 'Immobilisations corporelles', 0),
-('6817', 'Dotations aux provisions pour d√©pr√©ciation des actifs circulants', 0),
+('6817', 'Dotations aux provisions pour dÈprÈciation des actifs circulants', 0),
 ('68173', 'Stocks et en-cours', 0),
-('68174', 'Cr√©ances', 0),
-('686', 'Dotations aux amortissements et aux provisions - Charges financi√®res', 0),
+('68174', 'CrÈances', 0),
+('686', 'Dotations aux amortissements et aux provisions - Charges financiËres', 0),
 ('6861', 'Dotations aux amortissements des primes de remboursement des obligations', 0),
 ('6865', 'Dotations aux provisions pour risques et charges financiers', 0),
-('6866', 'Dotations aux provisions pour d√©pr√©ciation des √©l√©ments financiers', 0),
-('68662', 'Immobilisations financi√®res', 0),
-('68665', 'Valeurs mobili√®res de placement', 0),
+('6866', 'Dotations aux provisions pour dÈprÈciation des ÈlÈments financiers', 0),
+('68662', 'Immobilisations financiËres', 0),
+('68665', 'Valeurs mobiliËres de placement', 0),
 ('6868', 'Autres dotations', 0),
 ('687', 'Dotations aux amortissements et aux provisions - Charges exceptionnelles', 0),
 ('6871', 'Dotations aux amortissements exceptionnels des immobilisations', 0),
-('6872', 'Dotations aux provisions r√©glement√©es (immobilisations)', 0),
-('68725', 'Amortissements d√©rogatoires', 0),
-('6873', 'Dotations aux provisions r√©glement√©es (stocks)', 0),
-('6874', 'Dotations aux autres provisions r√©glement√©es', 0),
+('6872', 'Dotations aux provisions rÈglementÈes (immobilisations)', 0),
+('68725', 'Amortissements dÈrogatoires', 0),
+('6873', 'Dotations aux provisions rÈglementÈes (stocks)', 0),
+('6874', 'Dotations aux autres provisions rÈglementÈes', 0),
 ('6875', 'Dotations aux provisions pour risques et charges exceptionnels', 0),
-('6876', 'Dotations aux provisions pour d√©pr√©ciations exceptionnelles', 0),
-('69', 'Participation des salaries - imp√¥ts sur les benefices et assimil√©s', 0),
-('691', 'Participation des salari√©s aux r√©sultats', 0),
-('695', 'Imp√¥ts sur les b√©n√©fices', 0),
-('6951', 'Imp√¥ts dus en France', 0),
-('6952', 'Contribution additionnelle √† l''imp√¥t sur les b√©n√©fices', 0),
-('6954', 'Imp√¥ts dus √† l''√©tranger', 0),
-('696', 'Suppl√©ments d''imp√¥t sur les soci√©t√©s li√©s aux distributions', 0),
-('697', 'Imposition forfaitaire annuelle des soci√©t√©s', 0),
-('698', 'Int√©gration fiscale', 0),
-('6981', 'Int√©gration fiscale - Charges', 0),
-('6989', 'Int√©gration fiscale - Produits', 0),
-('699', 'Produits - Reports en arri√®re des d√©ficits', 0),
+('6876', 'Dotations aux provisions pour dÈprÈciations exceptionnelles', 0),
+('69', 'Participation des salaries - impÙts sur les benefices et assimilÈs', 0),
+('691', 'Participation des salariÈs aux rÈsultats', 0),
+('695', 'ImpÙts sur les bÈnÈfices', 0),
+('6951', 'ImpÙts dus en France', 0),
+('6952', 'Contribution additionnelle ‡ l''impÙt sur les bÈnÈfices', 0),
+('6954', 'ImpÙts dus ‡ l''Ètranger', 0),
+('696', 'SupplÈments d''impÙt sur les sociÈtÈs liÈs aux distributions', 0),
+('697', 'Imposition forfaitaire annuelle des sociÈtÈs', 0),
+('698', 'IntÈgration fiscale', 0),
+('6981', 'IntÈgration fiscale - Charges', 0),
+('6989', 'IntÈgration fiscale - Produits', 0),
+('699', 'Produits - Reports en arriËre des dÈficits', 0),
 ('70', 'Vente de produits fabriques, prestations de services, marchandises', 0),
 ('701', 'Ventes de produits finis', 0),
 ('7011', 'Produits finis (ou groupe) A', 0),
 ('7012', 'Produits finis (ou groupe) B', 0),
-('702', 'Ventes de produits interm√©diaires', 0),
-('703', 'Ventes de produits r√©siduels', 0),
+('702', 'Ventes de produits intermÈdiaires', 0),
+('703', 'Ventes de produits rÈsiduels', 0),
 ('704', 'Travaux', 0),
-('7041', 'Travaux de cat√©gorie (ou activit√©) A', 0),
-('7042', 'Travaux de cat√©gorie (ou activit√©) B', 0),
+('7041', 'Travaux de catÈgorie (ou activitÈ) A', 0),
+('7042', 'Travaux de catÈgorie (ou activitÈ) B', 0),
 ('705', 'Etudes', 0),
-('7051', 'D√©veloppement de logiciels', 0),
+('7051', 'DÈveloppement de logiciels', 0),
 ('7052', 'Traduction et localisation', 0),
 ('706', 'Prestations de services', 0),
-('7061', 'R√©gie de personnel', 0),
+('7061', 'RÈgie de personnel', 0),
 ('7062', 'Formation professionnelle', 0),
 ('707', 'Ventes de marchandises', 0),
 ('7071', 'Marchandises (ou groupe) A', 0),
 ('7072', 'Marchandises (ou groupe) B', 0),
-('708', 'Produits des activit√©s annexes', 0),
-('7081', 'Produits des services exploit√©s dans l''int√©r√™t du personnel', 0),
+('708', 'Produits des activitÈs annexes', 0),
+('7081', 'Produits des services exploitÈs dans l''intÈrÍt du personnel', 0),
 ('7082', 'Commissions et courtages', 0),
 ('7083', 'Locations diverses', 0),
-('7084', 'Mise √† disposition de personnel factur√©e', 0),
-('7085', 'Ports et frais accessoires factur√©s', 0),
-('7086', 'Bonis sur reprises d''emballages consign√©s', 0),
+('7084', 'Mise ‡ disposition de personnel facturÈe', 0),
+('7085', 'Ports et frais accessoires facturÈs', 0),
+('7086', 'Bonis sur reprises d''emballages consignÈs', 0),
 ('7087', 'Bonifications obtenues des clients et primes sur ventes', 0),
-('7088', 'Autres produits d''activit√©s annexes (cessions d''approvisionnements,...)', 0),
-('709', 'Rabais, remises et ristournes accord√©s par l''entreprise', 0),
+('7088', 'Autres produits d''activitÈs annexes (cessions d''approvisionnements,...)', 0),
+('709', 'Rabais, remises et ristournes accordÈs par l''entreprise', 0),
 ('7091', 'sur ventes de produits finis', 0),
-('7092', 'sur ventes de produits interm√©diaires', 0),
+('7092', 'sur ventes de produits intermÈdiaires', 0),
 ('7094', 'sur travaux', 0),
-('7095', 'sur √©tudes', 0),
+('7095', 'sur Ètudes', 0),
 ('7096', 'sur prestations de services', 0),
 ('7097', 'sur ventes de marchandises', 0),
-('7098', 'sur produits des activit√©s annexes', 0),
-('71', 'Production stock√©e (ou d√©stockage)', 0),
+('7098', 'sur produits des activitÈs annexes', 0),
+('71', 'Production stockÈe (ou dÈstockage)', 0),
 ('713', 'Variation des stocks (en-cours de production, produits)', 0),
 ('7133', 'Variation des en-cours de production de biens', 0),
 ('71331', 'Produits en cours', 0),
@@ -6861,117 +6861,117 @@ INSERT INTO `plan_comptable` (`numero_compte`, `lib_compte`, `favori`) VALUES
 ('71341', 'Etudes en cours', 0),
 ('71345', 'Prestations de services en cours', 0),
 ('7135', 'Variation des stocks de produits', 0),
-('71351', 'Produits interm√©diaires', 0),
+('71351', 'Produits intermÈdiaires', 0),
 ('71355', 'Produits finis', 0),
-('71358', 'Produits r√©siduels', 0),
-('72', 'Production immobilis√©e', 0),
+('71358', 'Produits rÈsiduels', 0),
+('72', 'Production immobilisÈe', 0),
 ('721', 'Immobilisations incorporelles', 0),
 ('722', 'Immobilisations corporelles', 0),
-('73', 'Produits nets partiels sur op√©rations √† long terme', 0),
-('731', 'Produits nets partiels sur op√©rations en cours (√† subdiviser par op√©ration)', 0),
-('739', 'Produits nets partiels sur op√©rations termin√©es', 0),
+('73', 'Produits nets partiels sur opÈrations ‡ long terme', 0),
+('731', 'Produits nets partiels sur opÈrations en cours (‡ subdiviser par opÈration)', 0),
+('739', 'Produits nets partiels sur opÈrations terminÈes', 0),
 ('74', 'Subventions d''exploitation', 0),
 ('741', 'Etat et CEE - Subventions d''exploitation', 0),
 ('7411', 'CEE - Subventions d''exploitation', 0),
 ('75', 'Autres produits de gestion courante', 0),
-('751', 'Redevances pour concessions, brevets, licences, marques, proc√©d√©s, logiciels, droits et valeurs similaires', 0),
-('7511', 'Redevances pour concessions, brevets, licences, marques, proc√©d√©s, logiciels', 0),
+('751', 'Redevances pour concessions, brevets, licences, marques, procÈdÈs, logiciels, droits et valeurs similaires', 0),
+('7511', 'Redevances pour concessions, brevets, licences, marques, procÈdÈs, logiciels', 0),
 ('7516', 'Droits d''auteur et de reproduction', 0),
 ('7518', 'Autres droits et valeurs similaires', 0),
-('752', 'Revenus des immeubles non affect√©s √† des activit√©s professionnelles', 0),
-('753', 'Jetons de pr√©sence et r√©mun√©rations d''administrateurs, g√©rants,...', 0),
-('754', 'Ristournes per√ßues des coop√©ratives (provenant des exc√©dents)', 0),
-('755', 'Quotes-parts de r√©sultat sur op√©rations faites en commun', 0),
-('7551', 'Quote-part de perte transf√©r√©e (comptabilit√© du g√©rant)', 0),
-('7555', 'Quote-part de b√©n√©fice attribu√©e (comptabilit√© des associ√©s non-g√©rants)', 0),
+('752', 'Revenus des immeubles non affectÈs ‡ des activitÈs professionnelles', 0),
+('753', 'Jetons de prÈsence et rÈmunÈrations d''administrateurs, gÈrants,...', 0),
+('754', 'Ristournes perÁues des coopÈratives (provenant des excÈdents)', 0),
+('755', 'Quotes-parts de rÈsultat sur opÈrations faites en commun', 0),
+('7551', 'Quote-part de perte transfÈrÈe (comptabilitÈ du gÈrant)', 0),
+('7555', 'Quote-part de bÈnÈfice attribuÈe (comptabilitÈ des associÈs non-gÈrants)', 0),
 ('758', 'Produits divers de gestion courante', 0),
 ('76', 'Produits financiers', 0),
 ('761', 'Produits de participations', 0),
 ('7611', 'Revenus des titres de participation', 0),
 ('7616', 'Revenus sur autres formes de participation', 0),
-('7617', 'Revenus des cr√©ances rattach√©es √† des participations', 0),
-('762', 'Produits des autres immobilisations financi√®res', 0),
-('7621', 'Revenus des titres immobilis√©s', 0),
-('7626', 'Revenus des pr√™ts', 0),
-('7627', 'Revenus des cr√©ances immobilis√©es', 0),
-('763', 'Revenus des autres cr√©ances', 0),
-('7631', 'Revenus des cr√©ances commerciales', 0),
-('7638', 'Revenus des cr√©ances diverses', 0),
-('764', 'Revenus des valeurs mobili√®res de placement', 0),
+('7617', 'Revenus des crÈances rattachÈes ‡ des participations', 0),
+('762', 'Produits des autres immobilisations financiËres', 0),
+('7621', 'Revenus des titres immobilisÈs', 0),
+('7626', 'Revenus des prÍts', 0),
+('7627', 'Revenus des crÈances immobilisÈes', 0),
+('763', 'Revenus des autres crÈances', 0),
+('7631', 'Revenus des crÈances commerciales', 0),
+('7638', 'Revenus des crÈances diverses', 0),
+('764', 'Revenus des valeurs mobiliËres de placement', 0),
 ('765', 'Escomptes obtenus', 0),
 ('766', 'Gains de change', 0),
-('767', 'Produits nets sur cessions de valeurs mobili√®res de placement', 0),
+('767', 'Produits nets sur cessions de valeurs mobiliËres de placement', 0),
 ('768', 'Autres produits financiers', 0),
 ('77', 'Produits exceptionnels', 0),
-('771', 'Produits exceptionnels sur op√©rations de gestion', 0),
-('7711', 'D√©dits et p√©nalit√©s per√ßus sur achats et sur ventes', 0),
-('7713', 'Lib√©ralit√©s re√ßues', 0),
-('7714', 'Rentr√©es sur cr√©ances amorties', 0),
-('7715', 'Subventions d''√©quilibre', 0),
-('7717', 'D√©gr√®vements d''imp√¥ts autres qu''imp√¥ts sur les b√©n√©fices', 0),
-('7718', 'Autres produits exceptionnels sur op√©rations de gestion', 0),
-('772', '(Compte √† la disposition des entit√©s pour enregistrer, en cours d''exercice, les produits sur exercices ant√©rieurs)', 0),
-('775', 'Produits des cessions d''√©l√©ments d''actif', 0),
+('771', 'Produits exceptionnels sur opÈrations de gestion', 0),
+('7711', 'DÈdits et pÈnalitÈs perÁus sur achats et sur ventes', 0),
+('7713', 'LibÈralitÈs reÁues', 0),
+('7714', 'RentrÈes sur crÈances amorties', 0),
+('7715', 'Subventions d''Èquilibre', 0),
+('7717', 'DÈgrËvements d''impÙts autres qu''impÙts sur les bÈnÈfices', 0),
+('7718', 'Autres produits exceptionnels sur opÈrations de gestion', 0),
+('772', '(Compte ‡ la disposition des entitÈs pour enregistrer, en cours d''exercice, les produits sur exercices antÈrieurs)', 0),
+('775', 'Produits des cessions d''ÈlÈments d''actif', 0),
 ('7751', 'Immobilisations incorporelles', 0),
 ('7752', 'Immobilisations corporelles', 0),
-('7756', 'Immobilisations financi√®res', 0),
-('7758', 'Autres √©l√©ments d''actif', 0),
-('777', 'Quote-part des subventions d''investissement vir√©e au r√©sultat de l''exercice', 0),
+('7756', 'Immobilisations financiËres', 0),
+('7758', 'Autres ÈlÈments d''actif', 0),
+('777', 'Quote-part des subventions d''investissement virÈe au rÈsultat de l''exercice', 0),
 ('778', 'Autres produits exceptionnels', 0),
 ('7781', 'Bonis provenant de clauses d''indexation', 0),
 ('7782', 'Lots', 0),
-('7783', 'Bonis provenant du rachat par l''entreprise d''actions et d''obligations √©mises par elle-m√™me', 0),
+('7783', 'Bonis provenant du rachat par l''entreprise d''actions et d''obligations Èmises par elle-mÍme', 0),
 ('7788', 'Produits exceptionnels divers', 0),
 ('78', 'Reprises sur amortissements et provisions', 0),
-('781', 'Reprises sur amortissements et provisions (√† inscrire dans les produits d''exploitation)', 0),
+('781', 'Reprises sur amortissements et provisions (‡ inscrire dans les produits d''exploitation)', 0),
 ('7811', 'Reprises sur amortissements des immobilisations incorporelles et corporelles', 0),
 ('78111', 'Immobilisations incorporelles', 0),
 ('78112', 'Immobilisations corporelles', 0),
 ('7815', 'Reprises sur provisions pour risques et charges d''exploitation', 0),
-('7816', 'Reprises sur provisions pour d√©pr√©ciation des immobilisations incorporelles etcorporelles', 0),
+('7816', 'Reprises sur provisions pour dÈprÈciation des immobilisations incorporelles etcorporelles', 0),
 ('78161', 'Immobilisations incorporelles', 0),
 ('78162', 'Immobilisations corporelles', 0),
-('7817', 'Reprises sur provisions pour d√©pr√©ciation des actifs circulants', 0),
+('7817', 'Reprises sur provisions pour dÈprÈciation des actifs circulants', 0),
 ('78173', 'Stocks et en-cours', 0),
-('78174', 'Cr√©ances', 0),
-('786', 'Reprises sur provisions pour risques (√† inscrire dans les produits financiers)', 0),
+('78174', 'CrÈances', 0),
+('786', 'Reprises sur provisions pour risques (‡ inscrire dans les produits financiers)', 0),
 ('7865', 'Reprises sur provisions pour risques et charges financiers', 0),
-('7866', 'Reprises sur provisions pour d√©pr√©ciation des √©l√©ments financiers', 0),
-('78662', 'Immobilisations financi√®res', 0),
-('78665', 'Valeurs mobili√®res de placements', 0),
-('787', 'Reprises sur provisions (√† inscrire dans les produits exceptionnels)', 0),
-('7872', 'Reprises sur provisions r√©glement√©es (immobilisations)', 0),
-('78725', 'Amortissements d√©rogatoires', 0),
-('78726', 'Provision sp√©ciale de r√©√©valuation', 0),
-('78727', 'Plus-values r√©investies', 0),
-('7873', 'Reprises sur provisions r√©glement√©es (stocks)', 0),
-('7874', 'Reprises sur autres provisions r√©glement√©es', 0),
+('7866', 'Reprises sur provisions pour dÈprÈciation des ÈlÈments financiers', 0),
+('78662', 'Immobilisations financiËres', 0),
+('78665', 'Valeurs mobiliËres de placements', 0),
+('787', 'Reprises sur provisions (‡ inscrire dans les produits exceptionnels)', 0),
+('7872', 'Reprises sur provisions rÈglementÈes (immobilisations)', 0),
+('78725', 'Amortissements dÈrogatoires', 0),
+('78726', 'Provision spÈciale de rÈÈvaluation', 0),
+('78727', 'Plus-values rÈinvesties', 0),
+('7873', 'Reprises sur provisions rÈglementÈes (stocks)', 0),
+('7874', 'Reprises sur autres provisions rÈglementÈes', 0),
 ('7875', 'Reprises sur provisions pour risques et charges exceptionnels', 0),
-('7876', 'Reprises sur provisions pour d√©pr√©ciations exceptionnelles', 0),
+('7876', 'Reprises sur provisions pour dÈprÈciations exceptionnelles', 0),
 ('79', 'Transferts de charges', 0);
 INSERT INTO `plan_comptable` (`numero_compte`, `lib_compte`, `favori`) VALUES
 ('791', 'Transferts de charges d''exploitation', 0),
-('796', 'Transferts de charges financi√®res', 0),
+('796', 'Transferts de charges financiËres', 0),
 ('797', 'Transferts de charges exceptionnelles', 0),
-('80', 'Engagements donn√©s par l''entit√©', 0),
-('801', 'Engagements donn√©s par l''entit√©', 0),
+('80', 'Engagements donnÈs par l''entitÈ', 0),
+('801', 'Engagements donnÈs par l''entitÈ', 0),
 ('8011', 'Avals, cautions, garanties', 0),
-('8014', 'Effets circulant sous l''endos de l''entit√©', 0),
-('8016', 'Redevances cr√©dit-bail restant √† courir', 0),
-('80161', 'Cr√©dit-bail mobilier', 0),
-('80165', 'Cr√©dit-bail immobilier', 0),
-('8018', 'Autres engagements donn√©s', 0),
-('802', 'Engagements re√ßus par l''entit√©', 0),
+('8014', 'Effets circulant sous l''endos de l''entitÈ', 0),
+('8016', 'Redevances crÈdit-bail restant ‡ courir', 0),
+('80161', 'CrÈdit-bail mobilier', 0),
+('80165', 'CrÈdit-bail immobilier', 0),
+('8018', 'Autres engagements donnÈs', 0),
+('802', 'Engagements reÁus par l''entitÈ', 0),
 ('8021', 'Avals, cautions, garanties', 0),
-('8024', 'Cr√©ances escompt√©es non √©chues', 0),
-('8026', 'Engagements re√ßus pour utilisation en cr√©dit-bail', 0),
-('80261', 'Cr√©dit-bail mobilier', 0),
-('80265', 'Cr√©dit-bail immobilier', 0),
-('8028', 'Autres engagements re√ßus', 0),
+('8024', 'CrÈances escomptÈes non Èchues', 0),
+('8026', 'Engagements reÁus pour utilisation en crÈdit-bail', 0),
+('80261', 'CrÈdit-bail mobilier', 0),
+('80265', 'CrÈdit-bail immobilier', 0),
+('8028', 'Autres engagements reÁus', 0),
 ('809', 'Contrepartie des engagements', 0),
 ('8091', 'Contrepartie 801', 0),
 ('8092', 'Contrepartie 802', 0),
-('88', 'R√©sultat en instance d''affectation', 0),
+('88', 'RÈsultat en instance d''affectation', 0),
 ('89', 'Bilan', 0),
 ('512101', 'Compte en euros', 1);
 
@@ -7070,7 +7070,7 @@ CREATE TABLE IF NOT EXISTS `references_tags` (
   `ref_rules` varchar(32) NOT NULL default '',
   `last_id` bigint(20) unsigned NOT NULL default '0',
   PRIMARY KEY  (`id_reference`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COMMENT='Regles de g√©n√©ration des r√©f√©rences uniques' AUTO_INCREMENT=38 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COMMENT='Regles de gÈnÈration des rÈfÈrences uniques' AUTO_INCREMENT=38 ;
 
 --
 -- Contenu de la table `references_tags`
@@ -7080,12 +7080,12 @@ INSERT INTO `references_tags` (`id_reference`, `lib_reference`, `lib_table`, `ch
 (1, 'Articles', 'articles', 'ref_article', 'A', '2,3', 0),
 (2, 'Contacts', 'annuaire', 'ref_contact', 'C', '2,3', 0),
 (3, 'Utilisateurs', 'users', 'ref_user', 'U', '2,3', 0),
-(4, 'Articles cat√©gories', 'art_categs', 'ref_art_categ', 'A.C', '5,0', 0),
+(4, 'Articles catÈgories', 'art_categs', 'ref_art_categ', 'A.C', '5,0', 0),
 (5, 'Adresses', 'adresses', 'ref_adresse', 'ADR', '2,3', 0),
-(6, 'Coordonn√©es', 'coordonnees', 'ref_coord', 'COO', '2,3', 0),
+(6, 'CoordonnÈes', 'coordonnees', 'ref_coord', 'COO', '2,3', 0),
 (7, 'Sites internet', 'sites_web', 'ref_site', 'SIT', '2,3', 0),
 (8, 'Articles caracs', 'art_categs_caracs', 'ref_carac', 'ACC', '5,0', 0),
-(9, 'Groupes de caract√©ristiques', 'art_categs_caracs_groupes', 'ref_carac_groupe', 'ACG', '5,0', 0),
+(9, 'Groupes de caractÈristiques', 'art_categs_caracs_groupes', 'ref_carac_groupe', 'ACG', '5,0', 0),
 (10, 'Composants', 'articles_composants', 'ref_lot_contenu', 'A.L', '5,0', 0),
 (11, 'Devis Client', 'documents', 'ref_doc', 'DEV', '3,2', 0),
 (12, 'Ligne de document', 'docs_lines', 'ref_doc_line', 'RDL', '5,0', 0),
@@ -7097,21 +7097,21 @@ INSERT INTO `references_tags` (`id_reference`, `lib_reference`, `lib_table`, `ch
 (18, 'Facture Client', 'documents', 'ref_doc', 'FAC', '3,2', 0),
 (19, 'Devis Fournisseur', 'documents', 'ref_doc', 'DEF', '3,2', 0),
 (20, 'Commande Fournisseur', 'documents', 'ref_doc', 'CDF', '3,2', 0),
-(21, 'Bon de r√©ception Fournisseur', 'documents', 'ref_doc', 'BLF', '3,2', 0),
+(21, 'Bon de rÈception Fournisseur', 'documents', 'ref_doc', 'BLF', '3,2', 0),
 (22, 'Facture Fournisseur', 'documents', 'ref_doc', 'FAF', '3,2', 0),
-(23, 'R√®glements', 'reglements', 'ref_reglement', 'RGM', '5,0', 0),
+(23, 'RËglements', 'reglements', 'ref_reglement', 'RGM', '5,0', 0),
 (24, 'Transfert de Marchandises', 'documents', 'ref_doc', 'TRM', '3,2', 0),
 (25, 'Avoir Client', 'documents', 'ref_doc', 'AVC', '3,2', 0),
 (26, 'Panier Client', 'documents', 'ref_doc', 'PAC', '3,2', 0),
 (27, 'Inventaire', 'documents', 'ref_doc', 'INV', '3,2', 0),
 (28, 'Bon de Fabrication', 'documents', 'ref_doc', 'FAB', '3,2', 0),
-(29, 'Bon de D√©sassemblage', 'documents', 'ref_doc', 'DES', '3,2', 0),
-(30, 'Mod√®le', 'documents', 'ref_doc', 'MOD', '3,2', 0),
+(29, 'Bon de DÈsassemblage', 'documents', 'ref_doc', 'DES', '3,2', 0),
+(30, 'ModËle', 'documents', 'ref_doc', 'MOD', '3,2', 0),
 (31, 'Ticket de caisse', 'documents', 'ref_doc', 'TIC', '3,2', 1),
 (32, 'Agenda Reservation Ressource', 'agendas', 'ref_agenda', 'AGRR', '3,2', 2),
 (33, 'Agenda Contact', 'agendas', 'ref_agenda', 'AG_C', '3,2', 2),
 (34, 'Agenda Location Materiel', 'agendas', 'ref_agenda', 'AGLM', '3,2', 2),
-(35, 'Ev√®nement', 'agendas_events', 'ref_agenda_event', 'EVT', '3,2', 2),
+(35, 'EvËnement', 'agendas_events', 'ref_agenda_event', 'EVT', '3,2', 2),
 (36, 'Ressource', 'ressources', 'ref_ressource', 'RES', '3,2', 2),
 (37, 'Cotation Client', 'documents', 'ref_doc', 'COT', '3,2', 0);
 
@@ -7134,7 +7134,7 @@ CREATE TABLE IF NOT EXISTS `reglements` (
   KEY `ref_contact` (`ref_contact`),
   KEY `date_reglement` (`date_reglement`),
   KEY `id_reglement_mode` (`id_reglement_mode`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Liste des r√®glements per√ßus';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Liste des rËglements perÁus';
 
 --
 -- Contenu de la table `reglements`
@@ -7155,7 +7155,7 @@ CREATE TABLE IF NOT EXISTS `reglements_docs` (
   KEY `ref_reglement` (`ref_reglement`),
   KEY `ref_doc` (`ref_doc`),
   KEY `liaison_valide` (`liaison_valide`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Association des r√®glements aux documents';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Association des rËglements aux documents';
 
 --
 -- Contenu de la table `reglements_docs`
@@ -7178,32 +7178,32 @@ CREATE TABLE IF NOT EXISTS `reglements_modes` (
   `allow_date_echeance` tinyint(4) NOT NULL,
   `actif` tinyint(4) NOT NULL,
   PRIMARY KEY  (`id_reglement_mode`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COMMENT='Liste des modes de r√®glement disponibles' AUTO_INCREMENT=20 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COMMENT='Liste des modes de rËglement disponibles' AUTO_INCREMENT=20 ;
 
 --
 -- Contenu de la table `reglements_modes`
 --
 
 INSERT INTO `reglements_modes` (`id_reglement_mode`, `lib_reglement_mode`, `abrev_reglement_mode`, `type_reglement`, `emission`, `destination`, `allow_date_echeance`, `actif`) VALUES
-(1, 'Esp√®ces', 'ESP', 'entrant', 'caisse', 'caisse', 0, 0),
-(2, 'Ch√®que', 'CHQ', 'entrant', 'compte_bancaire', 'caisse', 1, 0),
+(1, 'EspËces', 'ESP', 'entrant', 'caisse', 'caisse', 0, 0),
+(2, 'ChËque', 'CHQ', 'entrant', 'compte_bancaire', 'caisse', 1, 0),
 (3, 'Carte bancaire', 'CB', 'entrant', 'carte_bancaire', 'tpe', 0, 0),
 (4, 'Virement Bancaire', 'VIR', 'entrant', 'compte_bancaire', 'compte_bancaire', 1, 0),
 (5, 'Traite Non Accept', 'LCR', 'entrant', 'compte_bancaire', 'compte_bancaire', 1, 0),
-(6, 'Pr√©l√®vement Bancaire', 'PRB', 'entrant', 'compte_bancaire', 'compte_bancaire', 1, 0),
-(7, 'Esp√®ces', 'ESP', 'sortant', 'caisse', '', 0, 0),
-(8, 'Ch√®que', 'CHQ', 'sortant', 'compte_bancaire', '', 1, 0),
+(6, 'PrÈlËvement Bancaire', 'PRB', 'entrant', 'compte_bancaire', 'compte_bancaire', 1, 0),
+(7, 'EspËces', 'ESP', 'sortant', 'caisse', '', 0, 0),
+(8, 'ChËque', 'CHQ', 'sortant', 'compte_bancaire', '', 1, 0),
 (9, 'Carte bancaire', 'CB', 'sortant', 'carte_bancaire', 'caisse', 1, 0),
 (10, 'Virement Bancaire', 'VIR', 'sortant', 'compte_bancaire', 'compte_bancaire', 1, 0),
 (11, 'Traite Non Accept', 'LCR', 'sortant', 'compte_bancaire', 'compte_bancaire', 1, 0),
-(12, 'Pr√©l√®vement Bancaire', 'PRB', 'sortant', 'compte_bancaire', 'compte_bancaire', 1, 0),
+(12, 'PrÈlËvement Bancaire', 'PRB', 'sortant', 'compte_bancaire', 'compte_bancaire', 1, 0),
 (13, 'Usage Bon d''Achat Client', 'AVC', 'entrant', 'caisse', 'caisse', 0, 1),
-(14, 'Cr√©ation Bon d''Achat Client', 'C-AVC', 'sortant', '', '', 0, 1),
+(14, 'CrÈation Bon d''Achat Client', 'C-AVC', 'sortant', '', '', 0, 1),
 (15, 'Usage Bon d''Achat Fournisseur', 'AVF', 'sortant', 'caisse', 'caisse', 0, 1),
-(16, 'Cr√©ation Bon d''Achat Fournisseur', 'C-AVF', 'entrant', 'caisse', 'caisse', 0, 1),
+(16, 'CrÈation Bon d''Achat Fournisseur', 'C-AVF', 'entrant', 'caisse', 'caisse', 0, 1),
 (17, 'Carte bancaire', 'CB', 'entrant', 'carte_bancaire', 'tpe', 0, 0),
-(18, 'Traite Accept√©e', 'LC', 'entrant', 'compte_bancaire', 'compte_bancaire', 1, 0),
-(19, 'Traite Accept√©e', 'LC', 'sortant', 'compte_bancaire', 'compte_bancaire', 1, 0);
+(18, 'Traite AcceptÈe', 'LC', 'entrant', 'compte_bancaire', 'compte_bancaire', 1, 0),
+(19, 'Traite AcceptÈe', 'LC', 'sortant', 'compte_bancaire', 'compte_bancaire', 1, 0);
 
 -- --------------------------------------------------------
 
@@ -7254,7 +7254,7 @@ CREATE TABLE IF NOT EXISTS `regmt_e_cb` (
   PRIMARY KEY  (`ref_reglement`),
   KEY `id_compte_tpe_dest` (`id_compte_tpe_dest`),
   KEY `id_compte_caisse_move` (`id_compte_caisse_move`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Informations compl√©mentaires sur les paiements entrant en ca';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Informations complÈmentaires sur les paiements entrant en ca';
 
 --
 -- Contenu de la table `regmt_e_cb`
@@ -7275,7 +7275,7 @@ CREATE TABLE IF NOT EXISTS `regmt_e_chq` (
   `info_compte` varchar(64) NOT NULL,
   PRIMARY KEY  (`ref_reglement`),
   KEY `id_compte_caisse_move` (`id_compte_caisse_move`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Informations compl√©mentaires sur les paiements entrant en es';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Informations complÈmentaires sur les paiements entrant en es';
 
 --
 -- Contenu de la table `regmt_e_chq`
@@ -7293,7 +7293,7 @@ CREATE TABLE IF NOT EXISTS `regmt_e_esp` (
   `id_compte_caisse_move` smallint(5) unsigned default NULL,
   PRIMARY KEY  (`ref_reglement`),
   KEY `id_compte_caisse_move` (`id_compte_caisse_move`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Informations compl√©mentaires sur les paiements entrant en es';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Informations complÈmentaires sur les paiements entrant en es';
 
 --
 -- Contenu de la table `regmt_e_esp`
@@ -7314,7 +7314,7 @@ CREATE TABLE IF NOT EXISTS `regmt_e_lcr` (
   PRIMARY KEY  (`ref_reglement`),
   KEY `id_compte_bancaire_source` (`id_compte_bancaire_source`),
   KEY `id_compte_bancaire_dest` (`id_compte_bancaire_dest`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Informations compl√©mentaires sur les paiements par virement';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Informations complÈmentaires sur les paiements par virement';
 
 --
 -- Contenu de la table `regmt_e_lcr`
@@ -7335,7 +7335,7 @@ CREATE TABLE IF NOT EXISTS `regmt_e_prb` (
   PRIMARY KEY  (`ref_reglement`),
   KEY `id_compte_bancaire_source` (`id_compte_bancaire_source`),
   KEY `id_compte_bancaire_dest` (`id_compte_bancaire_dest`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Informations compl√©mentaires sur les paiements par virement';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Informations complÈmentaires sur les paiements par virement';
 
 --
 -- Contenu de la table `regmt_e_prb`
@@ -7371,7 +7371,7 @@ CREATE TABLE IF NOT EXISTS `regmt_e_vir` (
   `id_compte_bancaire_dest` smallint(5) unsigned default NULL,
   PRIMARY KEY  (`ref_reglement`),
   KEY `id_compte_bancaire_dest` (`id_compte_bancaire_dest`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Informations compl√©mentaires sur les paiements par virement';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Informations complÈmentaires sur les paiements par virement';
 
 --
 -- Contenu de la table `regmt_e_vir`
@@ -7389,7 +7389,7 @@ CREATE TABLE IF NOT EXISTS `regmt_s_cb` (
   `id_compte_cb` smallint(5) unsigned NOT NULL,
   PRIMARY KEY  (`ref_reglement`),
   KEY `id_compte_cb` (`id_compte_cb`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Informations compl√©mentaires sur les paiements par CB';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Informations complÈmentaires sur les paiements par CB';
 
 --
 -- Contenu de la table `regmt_s_cb`
@@ -7408,7 +7408,7 @@ CREATE TABLE IF NOT EXISTS `regmt_s_chq` (
   `numero_cheque` varchar(32) NOT NULL,
   PRIMARY KEY  (`ref_reglement`),
   KEY `id_compte_caisse_dest` (`id_compte_bancaire_source`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Informations compl√©mentaires sur les paiements entrant en es';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Informations complÈmentaires sur les paiements entrant en es';
 
 --
 -- Contenu de la table `regmt_s_chq`
@@ -7426,7 +7426,7 @@ CREATE TABLE IF NOT EXISTS `regmt_s_esp` (
   `id_compte_caisse_move` smallint(5) unsigned default NULL,
   PRIMARY KEY  (`ref_reglement`),
   KEY `id_compte_caisse_move` (`id_compte_caisse_move`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Informations compl√©mentaires sur les paiements sortant en es';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Informations complÈmentaires sur les paiements sortant en es';
 
 --
 -- Contenu de la table `regmt_s_esp`
@@ -7444,7 +7444,7 @@ CREATE TABLE IF NOT EXISTS `regmt_s_lcr` (
   `id_compte_bancaire_source` smallint(5) unsigned NOT NULL default '0',
   PRIMARY KEY  (`ref_reglement`),
   KEY `id_compte_bancaire_source` (`id_compte_bancaire_source`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Informations compl√©mentaires sur les paiements par virement';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Informations complÈmentaires sur les paiements par virement';
 
 --
 -- Contenu de la table `regmt_s_lcr`
@@ -7462,7 +7462,7 @@ CREATE TABLE IF NOT EXISTS `regmt_s_prb` (
   `id_compte_bancaire_source` smallint(5) unsigned NOT NULL default '0',
   PRIMARY KEY  (`ref_reglement`),
   KEY `id_compte_bancaire_source` (`id_compte_bancaire_source`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Informations compl√©mentaires sur les paiements par virement';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Informations complÈmentaires sur les paiements par virement';
 
 --
 -- Contenu de la table `regmt_s_prb`
@@ -7482,7 +7482,7 @@ CREATE TABLE IF NOT EXISTS `regmt_s_vir` (
   PRIMARY KEY  (`ref_reglement`),
   KEY `id_compte_bancaire_source` (`id_compte_bancaire_source`),
   KEY `id_compte_bancaire_dest` (`id_compte_bancaire_dest`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Informations compl√©mentaires sur les paiements par virement';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Informations complÈmentaires sur les paiements par virement';
 
 --
 -- Contenu de la table `regmt_s_vir`
@@ -7656,7 +7656,7 @@ CREATE TABLE IF NOT EXISTS `stocks_articles_sn` (
   `sn_qte` double NOT NULL default '1',
   KEY `numero_serie` (`numero_serie`),
   KEY `ref_stock_article` (`ref_stock_article`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Liste des num√©ros de s√©rie des articles en stock';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Liste des numÈros de sÈrie des articles en stock';
 
 --
 -- Contenu de la table `stocks_articles_sn`
@@ -7726,7 +7726,7 @@ CREATE TABLE IF NOT EXISTS `taches` (
   `note` mediumblob NOT NULL,
   PRIMARY KEY  (`id_tache`),
   KEY `ref_user_createur` (`ref_user_createur`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Liste des taches allou√©es aux collaborateurs' AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Liste des taches allouÈes aux collaborateurs' AUTO_INCREMENT=1 ;
 
 --
 -- Contenu de la table `taches`
@@ -7754,20 +7754,20 @@ CREATE TABLE IF NOT EXISTS `taches_admin` (
 --
 
 INSERT INTO `taches_admin` (`id_tache_admin`, `lib_tache_admin`, `description`, `url_action`, `date_creation`, `date_execution`) VALUES
-(30, 'Renseignements sur l''entreprise', 'Veuillez d√©finir la date de debut d''activit√© de votre entreprise.', 'configuration_activite.php', '2011-05-01 13:57:37', '0000-00-00 00:00:00'),
-(31, 'Configuration du catalogue', 'Etape importante et d√©licate, vous permet de d√©finir les r√®gles de gestion de votre catalogue d''article.', 'configuration_catalogue.php', '2011-05-01 13:57:37', '0000-00-00 00:00:00'),
-(32, 'G√©rer les lieux de stockage', 'Si vous poss√©dez plusieurs lieux de stockage et d√©sirez g√©rer le stock pour chacun d''entre eux.<br />Par exemple : Magasin, Entrep√¥t ', 'catalogue_stockage.php', '2011-05-01 13:57:37', '0000-00-00 00:00:00'),
-(33, 'Configuration les param√®tres tarifaires', 'Permet de d√©finir les donn√©es par d√©faut pour la gestion des Prix ausi que les grilles de tarifs', 'configuration_tarifs.php', '2011-05-01 13:57:37', '0000-00-00 00:00:00'),
-(34, 'G√©rer les points de vente', 'Si vous poss√©dez plusieurs points de vente. (Un magasin de e-commerce est consid√©r√© comme un point de vente √† part enti√®re)<br />Par exemple : Magasin Le Vigan, Magasin Montpellier, monsite.fr', 'catalogue_magasins.php', '2011-05-01 13:57:37', '0000-00-00 00:00:00'),
-(35, 'G√©rer les cat√©gories de clients', 'Par exemple : Particulier, Revendeur<br />\r\n(Vous pourrez param√©trer par la m√™me occasion l''application automatique d''une grille tarifaire aux diff√©rentes cat√©gories de clients.) <br />Permet √©galement d''avoir des statistiques d√©taill√©es sur vos ventes.', 'annuaire_gestion_categories_client.php', '2011-05-01 13:57:37', '0000-00-00 00:00:00'),
-(36, 'G√©rer les cat√©gories de fournisseurs', 'Par exemple : Prestataires de services, Grossistes.<br />Permet √©galement d''avoir des statistiques d√©taill√©es sur vos achats.', 'annuaire_gestion_categories_fournisseur.php', '2011-05-01 13:57:37', '0000-00-00 00:00:00'),
-(37, 'Gestion des exercices comptables', 'Veuillez d√©finir la date de fin de votre premier exercice comptable.', 'compta_exercices.php', '2011-05-01 13:57:37', '0000-00-00 00:00:00'),
-(38, 'Gestion des cat√©gories d''article du catalogue g√©n√©ral', 'Vous permet de d√©finir les cat√©gories et sous cat√©gories d''articles. Ainsi, vous pouvez d√©finir les diff√©rents taux de marge pour chacune d''elles.<br />Permet √©galement d''obtenir des statistiques d√©taill√©es sur vos ventes.', 'catalogue_categorie.php', '2011-05-01 13:57:37', '0000-00-00 00:00:00'),
-(39, 'Gestion des comptes bancaires', 'Permet de suivre vos comptes bancaires et d''automatiser certaines taches de comptabilit√© avec SoothERP.', 'compta_compte_bancaire.php', '2011-05-01 13:57:37', '0000-00-00 00:00:00'),
-(40, 'Gestion des TPE', 'Si vous utiliser un Terminal de Paiement Electronique.<br />Permet de g√©rer les encaissements par Carte Bancaire.', 'compta_compte_tpes.php', '2011-05-01 13:57:37', '0000-00-00 00:00:00'),
-(41, 'Gestion des caisses', 'Si vous utilisez plusieurs caisses (r√©parties sur 1 ou plusieurs points de vente).<br />Permet de g√©rer les encaissements par ch√®que et esp√®ces.', 'compta_compte_caisse.php', '2011-05-01 13:57:37', '0000-00-00 00:00:00'),
-(42, 'Gestion des cartes bancaires', 'Si vous poss√©dez une carte bancaire.<br />\r\nPermet de g√©rer les r√®glements par Carte Bancaire (d√©caissement).', 'compta_compte_cbs.php', '2011-05-01 13:57:37', '0000-00-00 00:00:00'),
-(43, 'Configuration PDF', 'Permet de personnalis√©s les documents imprim√©s (Devis, Factures.)', 'configuration_pdf.php', '2011-05-01 13:57:37', '0000-00-00 00:00:00');
+(30, 'Renseignements sur l''entreprise', 'Veuillez dÈfinir la date de debut d''activitÈ de votre entreprise.', 'configuration_activite.php', '2011-05-01 13:57:37', '0000-00-00 00:00:00'),
+(31, 'Configuration du catalogue', 'Etape importante et dÈlicate, vous permet de dÈfinir les rËgles de gestion de votre catalogue d''article.', 'configuration_catalogue.php', '2011-05-01 13:57:37', '0000-00-00 00:00:00'),
+(32, 'GÈrer les lieux de stockage', 'Si vous possÈdez plusieurs lieux de stockage et dÈsirez gÈrer le stock pour chacun d''entre eux.<br />Par exemple : Magasin, EntrepÙt ', 'catalogue_stockage.php', '2011-05-01 13:57:37', '0000-00-00 00:00:00'),
+(33, 'Configuration les paramËtres tarifaires', 'Permet de dÈfinir les donnÈes par dÈfaut pour la gestion des Prix ausi que les grilles de tarifs', 'configuration_tarifs.php', '2011-05-01 13:57:37', '0000-00-00 00:00:00'),
+(34, 'GÈrer les points de vente', 'Si vous possÈdez plusieurs points de vente. (Un magasin de e-commerce est considÈrÈ comme un point de vente ‡ part entiËre)<br />Par exemple : Magasin Le Vigan, Magasin Montpellier, monsite.fr', 'catalogue_magasins.php', '2011-05-01 13:57:37', '0000-00-00 00:00:00'),
+(35, 'GÈrer les catÈgories de clients', 'Par exemple : Particulier, Revendeur<br />\r\n(Vous pourrez paramÈtrer par la mÍme occasion l''application automatique d''une grille tarifaire aux diffÈrentes catÈgories de clients.) <br />Permet Ègalement d''avoir des statistiques dÈtaillÈes sur vos ventes.', 'annuaire_gestion_categories_client.php', '2011-05-01 13:57:37', '0000-00-00 00:00:00'),
+(36, 'GÈrer les catÈgories de fournisseurs', 'Par exemple : Prestataires de services, Grossistes.<br />Permet Ègalement d''avoir des statistiques dÈtaillÈes sur vos achats.', 'annuaire_gestion_categories_fournisseur.php', '2011-05-01 13:57:37', '0000-00-00 00:00:00'),
+(37, 'Gestion des exercices comptables', 'Veuillez dÈfinir la date de fin de votre premier exercice comptable.', 'compta_exercices.php', '2011-05-01 13:57:37', '0000-00-00 00:00:00'),
+(38, 'Gestion des catÈgories d''article du catalogue gÈnÈral', 'Vous permet de dÈfinir les catÈgories et sous catÈgories d''articles. Ainsi, vous pouvez dÈfinir les diffÈrents taux de marge pour chacune d''elles.<br />Permet Ègalement d''obtenir des statistiques dÈtaillÈes sur vos ventes.', 'catalogue_categorie.php', '2011-05-01 13:57:37', '0000-00-00 00:00:00'),
+(39, 'Gestion des comptes bancaires', 'Permet de suivre vos comptes bancaires et d''automatiser certaines taches de comptabilitÈ avec SoothERP.', 'compta_compte_bancaire.php', '2011-05-01 13:57:37', '0000-00-00 00:00:00'),
+(40, 'Gestion des TPE', 'Si vous utiliser un Terminal de Paiement Electronique.<br />Permet de gÈrer les encaissements par Carte Bancaire.', 'compta_compte_tpes.php', '2011-05-01 13:57:37', '0000-00-00 00:00:00'),
+(41, 'Gestion des caisses', 'Si vous utilisez plusieurs caisses (rÈparties sur 1 ou plusieurs points de vente).<br />Permet de gÈrer les encaissements par chËque et espËces.', 'compta_compte_caisse.php', '2011-05-01 13:57:37', '0000-00-00 00:00:00'),
+(42, 'Gestion des cartes bancaires', 'Si vous possÈdez une carte bancaire.<br />\r\nPermet de gÈrer les rËglements par Carte Bancaire (dÈcaissement).', 'compta_compte_cbs.php', '2011-05-01 13:57:37', '0000-00-00 00:00:00'),
+(43, 'Configuration PDF', 'Permet de personnalisÈs les documents imprimÈs (Devis, Factures.)', 'configuration_pdf.php', '2011-05-01 13:57:37', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -7780,7 +7780,7 @@ CREATE TABLE IF NOT EXISTS `taches_collabs` (
   `id_tache` bigint(20) unsigned NOT NULL,
   UNIQUE KEY `id_tache` (`id_tache`,`ref_contact`),
   KEY `ref_contact` (`ref_contact`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Collaborateurs assign√©s aux taches';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Collaborateurs assignÈs aux taches';
 
 --
 -- Contenu de la table `taches_collabs`
@@ -7818,7 +7818,7 @@ CREATE TABLE IF NOT EXISTS `tarifs_listes` (
   `marge_moyenne` varchar(32) NOT NULL,
   `ordre` smallint(5) unsigned NOT NULL,
   PRIMARY KEY  (`id_tarif`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COMMENT='Liste des grilles de tarifs appliqu√©es au sein de l''entrepri' AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COMMENT='Liste des grilles de tarifs appliquÈes au sein de l''entrepri' AUTO_INCREMENT=2 ;
 
 --
 -- Contenu de la table `tarifs_listes`
@@ -7991,7 +7991,7 @@ CREATE TABLE IF NOT EXISTS `users_creations_invitations` (
   `code` varchar(255) NOT NULL,
   PRIMARY KEY  (`id_creation_invitation`),
   KEY `ref_coord` (`ref_coord`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Liste des invitations envoy√©es en vue de la cr√©ation d''un co' AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Liste des invitations envoyÈes en vue de la crÈation d''un co' AUTO_INCREMENT=1 ;
 
 --
 -- Contenu de la table `users_creations_invitations`
@@ -8059,7 +8059,7 @@ CREATE TABLE IF NOT EXISTS `users_permissions` (
   `value` varchar(1024) NOT NULL,
   PRIMARY KEY  (`ref_user`,`id_permission`),
   KEY `id_perm` (`id_permission`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Liste des permissions associ√©es aux utilisateurs';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Liste des permissions associÈes aux utilisateurs';
 
 --
 -- Contenu de la table `users_permissions`
@@ -65614,7 +65614,7 @@ INSERT INTO `villes` (`id_ville`, `code_postal`, `ville`, `id_etat`, `id_pays`) 
 (57380, '98899', 'NOUMEA CEDEX', NULL, 77);
 
 --
--- Contraintes pour les tables export√©es
+-- Contraintes pour les tables exportÈes
 --
 
 --
