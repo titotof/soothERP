@@ -5712,10 +5712,10 @@ CREATE TABLE IF NOT EXISTS `pdf_modeles` (
 
 INSERT INTO `pdf_modeles` (`id_pdf_modele`, `id_pdf_type`, `lib_modele`, `desc_modele`, `code_pdf_modele`) VALUES
 (1, 1, 'Document Standard LMB', 'Modèle d''impression standard d''un document commercial', 'doc_standard'),
-(2, 1, 'Facture Client LMB', 'Facture standard au modèle LMB', 'doc_fac_lmb'),
-(4, 1, 'Bon de Livraison Client LMB', 'Bon de Livraison standard au modèle LMB', 'doc_blc_lmb'),
-(5, 1, 'Bon de Commande Client LMB', 'Bon de Commande standard au modèle LMB', 'doc_cdc_lmb'),
-(6, 1, 'Devis Client LMB', 'Devis standard au modèle LMB', 'doc_dev_lmb'),
+(2, 1, 'Ancienne Facture Client LMB', 'Facture standard au modèle LMB', 'doc_fac_lmb'),
+(4, 1, 'Ancien Bon de Livraison Client LMB', 'Bon de Livraison standard au modèle LMB', 'doc_blc_lmb'),
+(5, 1, 'Ancien Bon de Commande Client LMB', 'Bon de Commande standard au modèle LMB', 'doc_cdc_lmb'),
+(6, 1, 'Ancien Devis Client LMB', 'Devis standard au modèle LMB', 'doc_dev_lmb'),
 (7, 1, 'Transfert de Marchandises LMB', 'Modèle d''impression standard d''un Transfert de Marchandises', 'doc_trm_lmb'),
 (8, 1, 'Bon de Fabrication LMB', 'Modèle d''impression standard d''un Bon de Fabrication', 'doc_fab_lmb'),
 (9, 1, 'Facture Client avec BVR Suisse', 'Modèle d''impression d''une facture client avec BVR Suisse', 'doc_fac_lmb_bvr'),
